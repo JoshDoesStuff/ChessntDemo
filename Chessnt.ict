@@ -6,15 +6,56 @@ libs:
   place:
     gridX: 1024
     gridY: 1024
-  pointer: {}
+  pointer:
+    startlocked: false
   keyboard: {}
   keyboard.polyfill: {}
   pointer.polyfill: {}
 startroom: -1
 contentTypes: []
-actions: []
+actions:
+  - name: Press
+    methods:
+      - code: pointer.Primary
+  - name: AltPress
+    methods:
+      - code: pointer.Secondary
+      - code: pointer.Double
+  - name: Scale
+    methods:
+      - code: pointer.DeltaPinch
+      - code: pointer.Wheel
 scripts: []
-assets: []
+assets:
+  - type: room
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    gridX: 64
+    gridY: 64
+    diagonalGrid: false
+    disableGrid: false
+    simulate: true
+    width: 1280
+    height: 720
+    restrictCamera: false
+    restrictMaxX: 1280
+    restrictMinX: 1280
+    restrictMaxY: 720
+    restrictMinY: 720
+    isUi: false
+    name: mainBoard
+    backgroundColor: '#000000'
+    follow: -1
+    backgrounds: []
+    copies: []
+    tiles: []
+    extends: {}
+    lastmod: 1712094005266
+    events: []
+    behaviors: []
+    uid: 3tggffFWR35Kfr
 settings:
   authoring:
     author: ''
@@ -64,3 +105,4 @@ settings:
     hideLoadingLogo: false
     alternativeLogo: false
     customLoadingText: ''
+  fps: 30
