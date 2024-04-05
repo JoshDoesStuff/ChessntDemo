@@ -27,46 +27,269 @@ actions:
       - code: pointer.Wheel
 scripts: []
 assets:
-  - type: room
-    oncreate: ''
-    onstep: ''
-    ondraw: ''
-    onleave: ''
-    gridX: 64
-    gridY: 64
-    diagonalGrid: false
-    disableGrid: false
-    simulate: true
-    width: 1280
-    height: 720
-    restrictCamera: false
-    restrictMaxX: 1280
-    restrictMinX: 1280
-    restrictMaxY: 720
-    restrictMinY: 720
-    isUi: false
-    name: mainBoard
-    backgroundColor: '#000000'
-    follow: -1
-    backgrounds: []
-    copies: []
-    tiles: []
-    extends: {}
-    lastmod: 1712094005266
-    events: []
-    behaviors: []
-    uid: 3tggffFWR35Kfr
+  - type: folder
+    uid: GDRFKMT4pct1P2
+    colorClass: act
+    icon: help-circle
+    name: Textures
+    lastmod: 1712356303007
+    entries:
+      - lastmod: 1712356956492
+        type: texture
+        name: background
+        untill: 1
+        grid:
+          - 1
+          - 1
+        axis:
+          - 640
+          - 360
+        marginx: 0
+        marginy: 0
+        imgWidth: 1280
+        imgHeight: 720
+        width: 1280
+        height: 720
+        offx: 0
+        offy: 0
+        origname: i1b2dG94czJH8q5.png
+        shape: rect
+        left: 640
+        right: 640
+        top: 360
+        bottom: 360
+        uid: 1b2dG94czJH8q5
+        padding: 1
+        isBlank: false
+        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\background.gif'
+        tiled: true
+      - lastmod: 1712356463812
+        type: texture
+        name: logo
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 558
+          - 98
+        marginx: 0
+        marginy: 0
+        imgWidth: 1116
+        imgHeight: 196
+        width: 1116
+        height: 196
+        offx: 0
+        offy: 0
+        origname: iK3jhgP7tWb3WtQ.png
+        shape: rect
+        left: 558
+        right: 558
+        top: 98
+        bottom: 98
+        uid: K3jhgP7tWb3WtQ
+        padding: 1
+        isBlank: false
+        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\logo.png'
+      - lastmod: 1712356637433
+        type: texture
+        name: StartPlaceHolder
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 128
+          - 32
+        marginx: 0
+        marginy: 0
+        imgWidth: 256
+        imgHeight: 64
+        width: 256
+        height: 64
+        offx: 0
+        offy: 0
+        origname: iNz5K5wMKcWTWzh.png
+        shape: rect
+        left: 128
+        right: 128
+        top: 32
+        bottom: 32
+        uid: Nz5K5wMKcWTWzh
+        padding: 1
+        isBlank: false
+  - type: folder
+    uid: 29mQ3bfWdbqLRz
+    colorClass: act
+    icon: help-circle
+    name: Rooms
+    lastmod: 1712356310814
+    entries:
+      - type: room
+        oncreate: ''
+        onstep: ''
+        ondraw: ''
+        onleave: ''
+        gridX: 32
+        gridY: 32
+        diagonalGrid: false
+        disableGrid: false
+        simulate: true
+        width: 1280
+        height: 720
+        restrictCamera: true
+        restrictMaxX: 1280
+        restrictMinX: 1280
+        restrictMaxY: 720
+        restrictMinY: 720
+        isUi: false
+        name: mainMenu
+        backgroundColor: '#000000'
+        follow: -1
+        backgrounds:
+          - depth: 0
+            texture: 1b2dG94czJH8q5
+            shiftX: 0
+            shiftY: 0
+            parallaxX: 1
+            parallaxY: 1
+            movementX: 0
+            movementY: 0
+            scaleX: 1
+            scaleY: 1
+            repeat: repeat
+        copies:
+          - x: 640
+            'y': 128
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: gKc33BgtFBBqc7
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 640
+            'y': 512
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: B2qTKw5kRrBjpt
+            exts: {}
+            customProperties: {}
+            bindings: {}
+        tiles: []
+        extends: {}
+        lastmod: 1712357069979
+        events: []
+        behaviors: []
+        uid: 3tggffFWR35Kfr
+      - type: room
+        oncreate: ''
+        onstep: ''
+        ondraw: ''
+        onleave: ''
+        gridX: 64
+        gridY: 64
+        diagonalGrid: false
+        disableGrid: false
+        simulate: true
+        width: 1280
+        height: 720
+        restrictCamera: false
+        restrictMaxX: 1280
+        restrictMinX: 1280
+        restrictMaxY: 720
+        restrictMinY: 720
+        isUi: false
+        name: difficultySelect
+        backgroundColor: '#000000'
+        follow: -1
+        backgrounds:
+          - depth: 0
+            texture: 1b2dG94czJH8q5
+            shiftX: 0
+            shiftY: 0
+            parallaxX: 1
+            parallaxY: 1
+            movementX: 0
+            movementY: 0
+            scaleX: 1
+            scaleY: 1
+            repeat: repeat
+        copies: []
+        tiles: []
+        extends: {}
+        lastmod: 1712356726362
+        events: []
+        behaviors: []
+        uid: hh19kzTFzRPrjf
+  - type: folder
+    uid: 7R3m6Nf9n8bg1q
+    colorClass: act
+    icon: help-circle
+    name: Templates
+    lastmod: 1712356327558
+    entries:
+      - type: template
+        baseClass: AnimatedSprite
+        name: StartPlaceHolder
+        depth: 0
+        texture: Nz5K5wMKcWTWzh
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnPointerClick
+            code: rooms.switch("difficultySelect")
+            arguments: {}
+            lib: core
+        extends: {}
+        lastmod: 1712356677936
+        uid: B2qTKw5kRrBjpt
+        behaviors: []
+        defaultText: ''
+        textStyle: -1
+        nineSliceSettings:
+          top: 16
+          left: 16
+          bottom: 16
+          right: 16
+          autoUpdate: true
+        hoverTexture: -1
+        pressedTexture: -1
+        disabledTexture: -1
+      - type: template
+        baseClass: AnimatedSprite
+        name: logo
+        depth: 0
+        texture: K3jhgP7tWb3WtQ
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events: []
+        extends: {}
+        lastmod: 1712356527752
+        uid: gKc33BgtFBBqc7
+        behaviors: []
 settings:
   authoring:
-    author: ''
+    author: Josh G & Skye Y
     site: ''
-    title: ''
+    title: Chessn't
     version:
       - 0
       - 0
-      - 0
+      - 1
     versionPostfix: ''
-    appId: ''
+    appId: com.halfbakedsoftware.chessnt
   rendering:
     usePixiLegacy: true
     transparent: false
@@ -102,7 +325,8 @@ settings:
     splashScreen: -1
     forceSmoothIcons: false
     forceSmoothSplashScreen: false
-    hideLoadingLogo: false
+    hideLoadingLogo: true
     alternativeLogo: false
-    customLoadingText: ''
+    customLoadingText: Loading Chaos....
   fps: 30
+palette: []
