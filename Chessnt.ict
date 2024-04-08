@@ -118,6 +118,88 @@ assets:
         uid: Nz5K5wMKcWTWzh
         padding: 1
         isBlank: false
+      - lastmod: 1712614393838
+        type: texture
+        name: PlaceholderWhiteTile
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 32
+          - 32
+        marginx: 0
+        marginy: 0
+        imgWidth: 64
+        imgHeight: 64
+        width: 64
+        height: 64
+        offx: 0
+        offy: 0
+        origname: ikc5hwmkdMdGzht.png
+        shape: rect
+        left: 32
+        right: 32
+        top: 32
+        bottom: 32
+        uid: kc5hwmkdMdGzht
+        padding: 1
+        isBlank: false
+      - lastmod: 1712614399154
+        type: texture
+        name: PlaceholderBlackTile
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 32
+          - 32
+        marginx: 0
+        marginy: 0
+        imgWidth: 64
+        imgHeight: 64
+        width: 64
+        height: 64
+        offx: 0
+        offy: 0
+        origname: iLtfkwwDmBh2KbG.png
+        shape: rect
+        left: 32
+        right: 32
+        top: 32
+        bottom: 32
+        uid: LtfkwwDmBh2KbG
+        padding: 1
+        isBlank: false
+      - lastmod: 1712616144807
+        type: texture
+        name: startButton
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 180
+          - 90
+        marginx: 0
+        marginy: 0
+        imgWidth: 360
+        imgHeight: 180
+        width: 360
+        height: 180
+        offx: 0
+        offy: 0
+        origname: i1ttRptHrF3RPcD.png
+        shape: rect
+        left: 180
+        right: 180
+        top: 90
+        bottom: 90
+        uid: 1ttRptHrF3RPcD
+        padding: 1
+        isBlank: false
+        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsstart.png'
   - type: folder
     uid: 29mQ3bfWdbqLRz
     colorClass: act
@@ -171,7 +253,7 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 640
+          - x: 672
             'y': 512
             opacity: 1
             tint: 16777215
@@ -179,13 +261,13 @@ assets:
               x: 1
               'y': 1
             rotation: 0
-            uid: B2qTKw5kRrBjpt
+            uid: 5Ct5mrz791BLcW
             exts: {}
             customProperties: {}
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1712357069979
+        lastmod: 1712616209670
         events: []
         behaviors: []
         uid: 3tggffFWR35Kfr
@@ -194,8 +276,8 @@ assets:
         onstep: ''
         ondraw: ''
         onleave: ''
-        gridX: 64
-        gridY: 64
+        gridX: 32
+        gridY: 32
         diagonalGrid: false
         disableGrid: false
         simulate: true
@@ -225,10 +307,39 @@ assets:
         copies: []
         tiles: []
         extends: {}
-        lastmod: 1712356726362
+        lastmod: 1712614664501
         events: []
         behaviors: []
         uid: hh19kzTFzRPrjf
+      - type: room
+        oncreate: ''
+        onstep: ''
+        ondraw: ''
+        onleave: ''
+        gridX: 64
+        gridY: 64
+        diagonalGrid: false
+        disableGrid: false
+        simulate: true
+        width: 1280
+        height: 720
+        restrictCamera: false
+        restrictMaxX: 1280
+        restrictMinX: 1280
+        restrictMaxY: 720
+        restrictMinY: 720
+        isUi: false
+        name: gameplay
+        backgroundColor: '#000000'
+        follow: -1
+        backgrounds: []
+        copies: []
+        tiles: []
+        extends: {}
+        lastmod: 1712614429080
+        events: []
+        behaviors: []
+        uid: rmpQWHHn6F2fCp
   - type: folder
     uid: 7R3m6Nf9n8bg1q
     colorClass: act
@@ -236,35 +347,6 @@ assets:
     name: Templates
     lastmod: 1712356327558
     entries:
-      - type: template
-        baseClass: AnimatedSprite
-        name: StartPlaceHolder
-        depth: 0
-        texture: Nz5K5wMKcWTWzh
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnPointerClick
-            code: rooms.switch("difficultySelect")
-            arguments: {}
-            lib: core
-        extends: {}
-        lastmod: 1712356677936
-        uid: B2qTKw5kRrBjpt
-        behaviors: []
-        defaultText: ''
-        textStyle: -1
-        nineSliceSettings:
-          top: 16
-          left: 16
-          bottom: 16
-          right: 16
-          autoUpdate: true
-        hoverTexture: -1
-        pressedTexture: -1
-        disabledTexture: -1
       - type: template
         baseClass: AnimatedSprite
         name: logo
@@ -278,6 +360,60 @@ assets:
         extends: {}
         lastmod: 1712356527752
         uid: gKc33BgtFBBqc7
+        behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: PlaceholderBlackTile
+        depth: 0
+        texture: LtfkwwDmBh2KbG
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnStep
+            lib: core
+            code: this.move();
+            arguments: {}
+        extends: {}
+        lastmod: 1712614404556
+        uid: WcQ2h8JGPcKB5B
+        behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: PlaceholderWhiteTile
+        depth: 0
+        texture: kc5hwmkdMdGzht
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnStep
+            lib: core
+            code: this.move();
+            arguments: {}
+        extends: {}
+        lastmod: 1712614410803
+        uid: W3HPLwz7qjRr27
+        behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: startButton
+        depth: 0
+        texture: 1ttRptHrF3RPcD
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnPointerClick
+            code: rooms.switch("difficultySelect")
+            arguments: {}
+            lib: core
+        extends: {}
+        lastmod: 1712616192572
+        uid: 5Ct5mrz791BLcW
         behaviors: []
 settings:
   authoring:
