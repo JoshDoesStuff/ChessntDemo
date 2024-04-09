@@ -11,7 +11,13 @@ libs:
   keyboard: {}
   keyboard.polyfill: {}
   pointer.polyfill: {}
-startroom: -1
+  gamepad: {}
+  random: {}
+  flow: {}
+  tween: {}
+  transition: {}
+  storage: {}
+startroom: pM5mTt3wDQNBNG
 contentTypes: []
 actions:
   - name: Press
@@ -25,6 +31,43 @@ actions:
     methods:
       - code: pointer.DeltaPinch
       - code: pointer.Wheel
+  - name: Up
+    methods:
+      - code: keyboard.ArrowUp
+      - code: keyboard.KeyW
+      - code: gamepad.Up
+  - name: Down
+    methods:
+      - code: keyboard.KeyS
+      - code: keyboard.ArrowDown
+      - code: gamepad.Down
+  - name: Left
+    methods:
+      - code: keyboard.KeyA
+      - code: keyboard.ArrowLeft
+      - code: gamepad.Left
+  - name: Right
+    methods:
+      - code: keyboard.ArrowRight
+      - code: keyboard.KeyD
+      - code: gamepad.Right
+  - name: Enter/Select
+    methods:
+      - code: keyboard.Enter
+      - code: gamepad.Button1
+  - name: Back/Cancel
+    methods:
+      - code: keyboard.Escape
+      - code: gamepad.Button2
+  - name: Pause
+    methods:
+      - code: gamepad.Select
+  - name: XJoystick
+    methods:
+      - code: gamepad.LStickX
+  - name: YJoystick
+    methods:
+      - code: gamepad.LStickY
 scripts: []
 assets:
   - type: folder
@@ -34,35 +77,6 @@ assets:
     name: Textures
     lastmod: 1712356303007
     entries:
-      - lastmod: 1712356956492
-        type: texture
-        name: background
-        untill: 1
-        grid:
-          - 1
-          - 1
-        axis:
-          - 640
-          - 360
-        marginx: 0
-        marginy: 0
-        imgWidth: 1280
-        imgHeight: 720
-        width: 1280
-        height: 720
-        offx: 0
-        offy: 0
-        origname: i1b2dG94czJH8q5.png
-        shape: rect
-        left: 640
-        right: 640
-        top: 360
-        bottom: 360
-        uid: 1b2dG94czJH8q5
-        padding: 1
-        isBlank: false
-        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\background.gif'
-        tiled: true
       - lastmod: 1712356463812
         type: texture
         name: logo
@@ -91,88 +105,7 @@ assets:
         padding: 1
         isBlank: false
         source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\logo.png'
-      - lastmod: 1712356637433
-        type: texture
-        name: StartPlaceHolder
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 128
-          - 32
-        marginx: 0
-        marginy: 0
-        imgWidth: 256
-        imgHeight: 64
-        width: 256
-        height: 64
-        offx: 0
-        offy: 0
-        origname: iNz5K5wMKcWTWzh.png
-        shape: rect
-        left: 128
-        right: 128
-        top: 32
-        bottom: 32
-        uid: Nz5K5wMKcWTWzh
-        padding: 1
-        isBlank: false
-      - lastmod: 1712614393838
-        type: texture
-        name: PlaceholderWhiteTile
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 32
-          - 32
-        marginx: 0
-        marginy: 0
-        imgWidth: 64
-        imgHeight: 64
-        width: 64
-        height: 64
-        offx: 0
-        offy: 0
-        origname: ikc5hwmkdMdGzht.png
-        shape: rect
-        left: 32
-        right: 32
-        top: 32
-        bottom: 32
-        uid: kc5hwmkdMdGzht
-        padding: 1
-        isBlank: false
-      - lastmod: 1712614399154
-        type: texture
-        name: PlaceholderBlackTile
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 32
-          - 32
-        marginx: 0
-        marginy: 0
-        imgWidth: 64
-        imgHeight: 64
-        width: 64
-        height: 64
-        offx: 0
-        offy: 0
-        origname: iLtfkwwDmBh2KbG.png
-        shape: rect
-        left: 32
-        right: 32
-        top: 32
-        bottom: 32
-        uid: LtfkwwDmBh2KbG
-        padding: 1
-        isBlank: false
-      - lastmod: 1712616144807
+      - lastmod: 1712699667556
         type: texture
         name: startButton
         untill: 0
@@ -200,6 +133,64 @@ assets:
         padding: 1
         isBlank: false
         source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsstart.png'
+      - lastmod: 1712697782691
+        type: texture
+        name: buttonRandomDifficulty
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 128
+          - 32
+        marginx: 0
+        marginy: 0
+        imgWidth: 256
+        imgHeight: 64
+        width: 256
+        height: 64
+        offx: 0
+        offy: 0
+        origname: iJQhj9rwjqMKftf.png
+        shape: rect
+        left: 128
+        right: 128
+        top: 32
+        bottom: 32
+        uid: JQhj9rwjqMKftf
+        padding: 1
+        isBlank: false
+        source: >-
+          C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonRandomDifficulty.png
+      - lastmod: 1712699554515
+        type: texture
+        name: background
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 640
+          - 360
+        marginx: 0
+        marginy: 0
+        imgWidth: 1280
+        imgHeight: 720
+        width: 1280
+        height: 720
+        offx: 0
+        offy: 0
+        origname: iTqn3Ng77WK9tzM.png
+        shape: rect
+        left: 640
+        right: 640
+        top: 360
+        bottom: 360
+        uid: Tqn3Ng77WK9tzM
+        padding: 128
+        isBlank: false
+        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\background.gif'
+        tiled: true
   - type: folder
     uid: 29mQ3bfWdbqLRz
     colorClass: act
@@ -207,110 +198,6 @@ assets:
     name: Rooms
     lastmod: 1712356310814
     entries:
-      - type: room
-        oncreate: ''
-        onstep: ''
-        ondraw: ''
-        onleave: ''
-        gridX: 32
-        gridY: 32
-        diagonalGrid: false
-        disableGrid: false
-        simulate: true
-        width: 1280
-        height: 720
-        restrictCamera: true
-        restrictMaxX: 1280
-        restrictMinX: 1280
-        restrictMaxY: 720
-        restrictMinY: 720
-        isUi: false
-        name: mainMenu
-        backgroundColor: '#000000'
-        follow: -1
-        backgrounds:
-          - depth: 0
-            texture: 1b2dG94czJH8q5
-            shiftX: 0
-            shiftY: 0
-            parallaxX: 1
-            parallaxY: 1
-            movementX: 0
-            movementY: 0
-            scaleX: 1
-            scaleY: 1
-            repeat: repeat
-        copies:
-          - x: 640
-            'y': 128
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 1
-              'y': 1
-            rotation: 0
-            uid: gKc33BgtFBBqc7
-            exts: {}
-            customProperties: {}
-            bindings: {}
-          - x: 672
-            'y': 512
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 1
-              'y': 1
-            rotation: 0
-            uid: 5Ct5mrz791BLcW
-            exts: {}
-            customProperties: {}
-            bindings: {}
-        tiles: []
-        extends: {}
-        lastmod: 1712616209670
-        events: []
-        behaviors: []
-        uid: 3tggffFWR35Kfr
-      - type: room
-        oncreate: ''
-        onstep: ''
-        ondraw: ''
-        onleave: ''
-        gridX: 32
-        gridY: 32
-        diagonalGrid: false
-        disableGrid: false
-        simulate: true
-        width: 1280
-        height: 720
-        restrictCamera: false
-        restrictMaxX: 1280
-        restrictMinX: 1280
-        restrictMaxY: 720
-        restrictMinY: 720
-        isUi: false
-        name: difficultySelect
-        backgroundColor: '#000000'
-        follow: -1
-        backgrounds:
-          - depth: 0
-            texture: 1b2dG94czJH8q5
-            shiftX: 0
-            shiftY: 0
-            parallaxX: 1
-            parallaxY: 1
-            movementX: 0
-            movementY: 0
-            scaleX: 1
-            scaleY: 1
-            repeat: repeat
-        copies: []
-        tiles: []
-        extends: {}
-        lastmod: 1712614664501
-        events: []
-        behaviors: []
-        uid: hh19kzTFzRPrjf
       - type: room
         oncreate: ''
         onstep: ''
@@ -336,10 +223,103 @@ assets:
         copies: []
         tiles: []
         extends: {}
-        lastmod: 1712614429080
+        lastmod: 1712702539976
         events: []
         behaviors: []
         uid: rmpQWHHn6F2fCp
+      - type: room
+        oncreate: ''
+        onstep: ''
+        ondraw: ''
+        onleave: ''
+        gridX: 32
+        gridY: 32
+        diagonalGrid: false
+        disableGrid: false
+        simulate: true
+        width: 1280
+        height: 720
+        restrictCamera: true
+        restrictMaxX: 1280
+        restrictMinX: 1280
+        restrictMaxY: 720
+        restrictMinY: 720
+        isUi: false
+        name: mainMenu
+        backgroundColor: '#000000'
+        follow: -1
+        backgrounds:
+          - depth: 0
+            texture: Tqn3Ng77WK9tzM
+            shiftX: 0
+            shiftY: 0
+            parallaxX: 1
+            parallaxY: 1
+            movementX: 0
+            movementY: 0
+            scaleX: 1
+            scaleY: 1
+            repeat: repeat
+        copies:
+          - x: 640
+            'y': 192
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: gKc33BgtFBBqc7
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 640
+            'y': 544
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: 5Ct5mrz791BLcW
+            exts: {}
+            customProperties: {}
+            bindings: {}
+        tiles: []
+        extends: {}
+        lastmod: 1712702597435
+        events: []
+        behaviors: []
+        uid: pM5mTt3wDQNBNG
+      - type: room
+        oncreate: ''
+        onstep: ''
+        ondraw: ''
+        onleave: ''
+        gridX: 64
+        gridY: 64
+        diagonalGrid: false
+        disableGrid: false
+        simulate: true
+        width: 1280
+        height: 720
+        restrictCamera: false
+        restrictMaxX: 1280
+        restrictMinX: 1280
+        restrictMaxY: 720
+        restrictMinY: 720
+        isUi: false
+        name: difficultySelect
+        backgroundColor: '#000000'
+        follow: -1
+        backgrounds: []
+        copies: []
+        tiles: []
+        extends: {}
+        lastmod: 1712702055850
+        events: []
+        behaviors: []
+        uid: kQ857Frpn9wDm2
   - type: folder
     uid: 7R3m6Nf9n8bg1q
     colorClass: act
@@ -356,46 +336,40 @@ assets:
         loopAnimation: true
         animationFPS: 30
         visible: true
-        events: []
+        events:
+          - eventKey: OnDraw
+            code: |-
+              if (localStorage.getItem('chachaslide') == 'true') {
+                  tween.add({
+                          obj: this,
+                          fields: {
+                              x: this.x + 49
+                          },
+                          curve: tween.ease,
+                          duration: 250
+                      }).then(() => {
+                          this.zIndex = 0;
+                          this.moving = false;
+
+                          tween.add({
+                          obj: this,
+                          fields: {
+                              x: -270
+                          },
+                          duration: 150,
+                          curve: tween.ease
+                      }).then(() => {
+                          this.zIndex = 0;
+                          this.moving = false;
+                      });
+                      });
+                  localStorage.setItem('chachaslide', 'false')
+              }
+            arguments: {}
+            lib: core
         extends: {}
-        lastmod: 1712356527752
+        lastmod: 1712702637868
         uid: gKc33BgtFBBqc7
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: PlaceholderBlackTile
-        depth: 0
-        texture: LtfkwwDmBh2KbG
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnStep
-            lib: core
-            code: this.move();
-            arguments: {}
-        extends: {}
-        lastmod: 1712614404556
-        uid: WcQ2h8JGPcKB5B
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: PlaceholderWhiteTile
-        depth: 0
-        texture: kc5hwmkdMdGzht
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnStep
-            lib: core
-            code: this.move();
-            arguments: {}
-        extends: {}
-        lastmod: 1712614410803
-        uid: W3HPLwz7qjRr27
         behaviors: []
       - type: template
         baseClass: AnimatedSprite
@@ -408,12 +382,43 @@ assets:
         visible: true
         events:
           - eventKey: OnPointerClick
-            code: rooms.switch("difficultySelect")
+            code: 'localStorage.setItem(''chachaslide'' , ''true'')'
+            arguments: {}
+            lib: core
+          - eventKey: OnCreate
+            code: 'localStorage.setItem(''chachaslide'' , ''true'')'
+            arguments: {}
+            lib: core
+          - eventKey: OnDraw
+            code: |-
+              let chachaslide = Boolean(localStorage.getItem('chachaslide'))
+              if (chachaslide === true) {
+                  console.log('cha cha real smooth')
+                  localStorage.setItem('chachaslide', 'false')
+              }
             arguments: {}
             lib: core
         extends: {}
-        lastmod: 1712616192572
+        lastmod: 1712703152495
         uid: 5Ct5mrz791BLcW
+        behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: buttonRandomDifficulty
+        depth: 0
+        texture: JQhj9rwjqMKftf
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnPointerClick
+            code: rooms.switch("gameplay")
+            arguments: {}
+            lib: core
+        extends: {}
+        lastmod: 1712697842496
+        uid: kbMRckzc3HhmR5
         behaviors: []
 settings:
   authoring:
@@ -430,7 +435,7 @@ settings:
     usePixiLegacy: true
     transparent: false
     maxFPS: 60
-    pixelatedrender: false
+    pixelatedrender: true
     highDensity: true
     desktopMode: maximized
     hideCursor: false
@@ -456,7 +461,7 @@ settings:
       script: false
   branding:
     accent: '#446adb'
-    invertPreloaderScheme: true
+    invertPreloaderScheme: false
     icon: -1
     splashScreen: -1
     forceSmoothIcons: false
