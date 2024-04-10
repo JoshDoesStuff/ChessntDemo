@@ -191,6 +191,33 @@ assets:
         isBlank: false
         source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\background.gif'
         tiled: true
+      - lastmod: 1712787035413
+        type: texture
+        name: blackScreen
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 0
+          - 0
+        marginx: 0
+        marginy: 0
+        imgWidth: 1280
+        imgHeight: 720
+        width: 1280
+        height: 720
+        offx: 0
+        offy: 0
+        origname: iP6gcthTW1KPpb8.png
+        shape: rect
+        left: 0
+        right: 1280
+        top: 0
+        bottom: 720
+        uid: P6gcthTW1KPpb8
+        padding: 1
+        isBlank: false
   - type: folder
     uid: 29mQ3bfWdbqLRz
     colorClass: act
@@ -223,7 +250,7 @@ assets:
         copies: []
         tiles: []
         extends: {}
-        lastmod: 1712702539976
+        lastmod: 1712789018360
         events: []
         behaviors: []
         uid: rmpQWHHn6F2fCp
@@ -285,9 +312,21 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 0
+            'y': 0
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kzgrhWD99djDgj
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1712702597435
+        lastmod: 1712789014829
         events: []
         behaviors: []
         uid: pM5mTt3wDQNBNG
@@ -296,8 +335,8 @@ assets:
         onstep: ''
         ondraw: ''
         onleave: ''
-        gridX: 64
-        gridY: 64
+        gridX: 32
+        gridY: 32
         diagonalGrid: false
         disableGrid: false
         simulate: true
@@ -312,11 +351,82 @@ assets:
         name: difficultySelect
         backgroundColor: '#000000'
         follow: -1
-        backgrounds: []
-        copies: []
+        backgrounds:
+          - depth: 0
+            texture: Tqn3Ng77WK9tzM
+            shiftX: 0
+            shiftY: 0
+            parallaxX: 1
+            parallaxY: 1
+            movementX: 0
+            movementY: 0
+            scaleX: 1
+            scaleY: 1
+            repeat: repeat
+        copies:
+          - x: 640
+            'y': 640
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kbMRckzc3HhmR5
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 224
+            'y': 384
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kbMRckzc3HhmR5
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 224
+            'y': 480
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kbMRckzc3HhmR5
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 224
+            'y': 576
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kbMRckzc3HhmR5
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 0
+            'y': 0
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kzgrhWD99djDgj
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1712702055850
+        lastmod: 1712789016435
         events: []
         behaviors: []
         uid: kQ857Frpn9wDm2
@@ -337,38 +447,19 @@ assets:
         animationFPS: 30
         visible: true
         events:
-          - eventKey: OnDraw
-            code: |-
-              if (localStorage.getItem('chachaslide') == 'true') {
-                  tween.add({
-                          obj: this,
-                          fields: {
-                              x: this.x + 49
-                          },
-                          curve: tween.ease,
-                          duration: 250
-                      }).then(() => {
-                          this.zIndex = 0;
-                          this.moving = false;
+          - eventKey: OnCreate
+            code: |+
+              localStorage.setItem('transitioning','1')
 
-                          tween.add({
-                          obj: this,
-                          fields: {
-                              x: -270
-                          },
-                          duration: 150,
-                          curve: tween.ease
-                      }).then(() => {
-                          this.zIndex = 0;
-                          this.moving = false;
-                      });
-                      });
-                  localStorage.setItem('chachaslide', 'false')
-              }
+
+            arguments: {}
+            lib: core
+          - eventKey: OnDraw
+            code: '// localStorage.setItem(''transitioning'',''0'')'
             arguments: {}
             lib: core
         extends: {}
-        lastmod: 1712702637868
+        lastmod: 1712789407147
         uid: gKc33BgtFBBqc7
         behaviors: []
       - type: template
@@ -381,25 +472,28 @@ assets:
         animationFPS: 30
         visible: true
         events:
-          - eventKey: OnPointerClick
-            code: 'localStorage.setItem(''chachaslide'' , ''true'')'
-            arguments: {}
-            lib: core
-          - eventKey: OnCreate
-            code: 'localStorage.setItem(''chachaslide'' , ''true'')'
-            arguments: {}
-            lib: core
           - eventKey: OnDraw
             code: |-
-              let chachaslide = Boolean(localStorage.getItem('chachaslide'))
-              if (chachaslide === true) {
-                  console.log('cha cha real smooth')
-                  localStorage.setItem('chachaslide', 'false')
+              if (localStorage.getItem('transitioning') === '1') {
+                  localStorage.setItem('isBlackNeeded','0')
+                  transition.slideIn(500, 'left')
+                  localStorage.setItem('transitioning', '0')
               }
             arguments: {}
             lib: core
+          - eventKey: OnPointerClick
+            code: |-
+              let transitionOut = transition.slideOut(500,'left')
+              // let transitionIn = 
+              transitionOut.then(() => {
+                  localStorage.setItem('transitioning', '1')
+                  rooms.switch('difficultySelect')
+                  localStorage.setItem('transitioning','0')
+              })
+            arguments: {}
+            lib: core
         extends: {}
-        lastmod: 1712703152495
+        lastmod: 1712789467652
         uid: 5Ct5mrz791BLcW
         behaviors: []
       - type: template
@@ -413,13 +507,87 @@ assets:
         visible: true
         events:
           - eventKey: OnPointerClick
-            code: rooms.switch("gameplay")
+            code: |-
+              let transitionOut = transition.slideOut(500,'left')
+
+              // let transitionIn = 
+              transitionOut.then(() => {
+                  localStorage.setItem('transitioning', '1')
+                  rooms.switch('mainMenu')
+              })
+            arguments: {}
+            lib: core
+          - eventKey: OnDraw
+            code: |-
+              if (localStorage.getItem('transitioning') === '1') {
+                  localStorage.setItem('isBlackNeeded','0')
+                  transition.slideIn(500, 'left')
+                  localStorage.setItem('transitioning', '0')
+              }
+            arguments: {}
+            lib: core
+          - eventKey: OnCreate
+            code: 'localStorage.setItem(''transitioning'', ''1'')'
             arguments: {}
             lib: core
         extends: {}
-        lastmod: 1712697842496
+        lastmod: 1712789529765
         uid: kbMRckzc3HhmR5
         behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: blackScreen
+        depth: 0
+        texture: P6gcthTW1KPpb8
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnStep
+            lib: core
+            code: |
+              if (localStorage.getItem('isBlackNeeded') === '0') {
+                  this.x = -1280
+                  localStorage.setItem('isBlackNeeded', '1')
+              } 
+            arguments: {}
+          - eventKey: OnCreate
+            code: |+
+
+            arguments: {}
+            lib: core
+        extends: {}
+        lastmod: 1712789216108
+        uid: kzgrhWD99djDgj
+        behaviors: []
+  - type: folder
+    uid: wt7zbhKgJFR14m
+    colorClass: act
+    icon: help-circle
+    name: Behaviors
+    lastmod: 1712788023612
+    entries:
+      - type: behavior
+        name: TransitionGoBrrrr
+        behaviorType: template
+        events:
+          - eventKey: OnPointerClick
+            code: ''
+            arguments: {}
+            lib: core
+          - eventKey: OnDraw
+            code: |-
+              if (localStorage.getItem('transitioning') === '1') {
+                  localStorage.setItem('isBlackNeeded','0')
+                  transition.slideIn(500, 'left')
+                  localStorage.setItem('transitioning', '0')
+              }
+            arguments: {}
+            lib: core
+        specification: []
+        lastmod: 1712788593001
+        uid: mkq8NKRBw3DPDK
 settings:
   authoring:
     author: Josh G & Skye Y
@@ -460,8 +628,8 @@ settings:
       tandem: false
       script: false
   branding:
-    accent: '#446adb'
-    invertPreloaderScheme: false
+    accent: '#000000'
+    invertPreloaderScheme: true
     icon: -1
     splashScreen: -1
     forceSmoothIcons: false
