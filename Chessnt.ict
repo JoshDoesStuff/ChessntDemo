@@ -17,6 +17,7 @@ libs:
   tween: {}
   transition: {}
   storage: {}
+  vkeys: {}
 startroom: pM5mTt3wDQNBNG
 contentTypes: []
 actions:
@@ -133,7 +134,7 @@ assets:
         padding: 1
         isBlank: false
         source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsstart.png'
-      - lastmod: 1712697782691
+      - lastmod: 1712870999745
         type: texture
         name: buttonRandomDifficulty
         untill: 0
@@ -218,6 +219,131 @@ assets:
         uid: P6gcthTW1KPpb8
         padding: 1
         isBlank: false
+      - lastmod: 1712867034612
+        type: texture
+        name: Placeholder
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 0
+          - 0
+        marginx: 0
+        marginy: 0
+        imgWidth: 128
+        imgHeight: 128
+        width: 128
+        height: 128
+        offx: 0
+        offy: 0
+        origname: ipLL8GmbdN4t5gf.png
+        shape: rect
+        left: 0
+        right: 128
+        top: 0
+        bottom: 128
+        uid: pLL8GmbdN4t5gf
+        padding: 1
+        isBlank: false
+      - lastmod: 1712872158534
+        type: texture
+        name: buttondiffcultlylock
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 128
+          - 32
+        marginx: 0
+        marginy: 0
+        imgWidth: 256
+        imgHeight: 80
+        width: 256
+        height: 80
+        offx: 0
+        offy: 0
+        origname: iWMngdbmMCkrKrL.png
+        shape: rect
+        left: 128
+        right: 128
+        top: 32
+        bottom: 32
+        uid: WMngdbmMCkrKrL
+        padding: 1
+        isBlank: false
+        source: >-
+          C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttondiffcultlylock.png
+        stripPoints:
+          - x: 0
+            'y': -40
+          - x: 122
+            'y': -12
+          - x: 75
+            'y': 32
+          - x: -75
+            'y': 32
+          - x: -122
+            'y': -12
+        closedStrip: true
+        r: 40
+      - lastmod: 1712871867785
+        type: texture
+        name: buttonsexit
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 180
+          - 90
+        marginx: 0
+        marginy: 0
+        imgWidth: 360
+        imgHeight: 180
+        width: 360
+        height: 180
+        offx: 0
+        offy: 0
+        origname: inKKJG5TWpzMNK1.png
+        shape: rect
+        left: 180
+        right: 180
+        top: 90
+        bottom: 90
+        uid: nKKJG5TWpzMNK1
+        padding: 1
+        isBlank: false
+        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsexit.png'
+      - lastmod: 1712871934448
+        type: texture
+        name: buttonsoptions
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 180
+          - 90
+        marginx: 0
+        marginy: 0
+        imgWidth: 360
+        imgHeight: 180
+        width: 360
+        height: 180
+        offx: 0
+        offy: 0
+        origname: iwQhQ1TrMR72F85.png
+        shape: rect
+        left: 180
+        right: 180
+        top: 90
+        bottom: 90
+        uid: wQhQ1TrMR72F85
+        padding: 1
+        isBlank: false
+        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsoptions.png'
   - type: folder
     uid: 29mQ3bfWdbqLRz
     colorClass: act
@@ -250,7 +376,7 @@ assets:
         copies: []
         tiles: []
         extends: {}
-        lastmod: 1712789018360
+        lastmod: 1712872914714
         events: []
         behaviors: []
         uid: rmpQWHHn6F2fCp
@@ -259,8 +385,8 @@ assets:
         onstep: ''
         ondraw: ''
         onleave: ''
-        gridX: 32
-        gridY: 32
+        gridX: 16
+        gridY: 16
         diagonalGrid: false
         disableGrid: false
         simulate: true
@@ -300,15 +426,51 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 640
-            'y': 544
+          - x: 154
+            'y': 579
             opacity: 1
             tint: 16777215
             scale:
-              x: 1
-              'y': 1
+              x: 0.67777778
+              'y': 0.67777778
             rotation: 0
             uid: 5Ct5mrz791BLcW
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 806
+            'y': 579
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.67777778
+              'y': 0.67777778
+            rotation: 0
+            uid: R6W2BMhH7DtHhP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 490
+            'y': 579
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.67777778
+              'y': 0.67777778
+            rotation: 0
+            uid: Dp4jT3JNfNLjmF
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 1126
+            'y': 579
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.67777778
+              'y': 0.67777778
+            rotation: 0
+            uid: R6W2BMhH7DtHhP
             exts: {}
             customProperties: {}
             bindings: {}
@@ -326,7 +488,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1712789014829
+        lastmod: 1712872849158
         events: []
         behaviors: []
         uid: pM5mTt3wDQNBNG
@@ -377,7 +539,7 @@ assets:
             customProperties: {}
             bindings: {}
           - x: 224
-            'y': 384
+            'y': 576
             opacity: 1
             tint: 16777215
             scale:
@@ -396,19 +558,31 @@ assets:
               x: 1
               'y': 1
             rotation: 0
-            uid: kbMRckzc3HhmR5
+            uid: BwM98jDjjTrhQB
             exts: {}
             customProperties: {}
             bindings: {}
           - x: 224
-            'y': 576
+            'y': 384
             opacity: 1
             tint: 16777215
             scale:
               x: 1
               'y': 1
             rotation: 0
-            uid: kbMRckzc3HhmR5
+            uid: BwM98jDjjTrhQB
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 224
+            'y': 288
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: BwM98jDjjTrhQB
             exts: {}
             customProperties: {}
             bindings: {}
@@ -426,7 +600,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1712789016435
+        lastmod: 1712872858619
         events: []
         behaviors: []
         uid: kQ857Frpn9wDm2
@@ -561,6 +735,78 @@ assets:
         lastmod: 1712789216108
         uid: kzgrhWD99djDgj
         behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: Placeholder
+        depth: 0
+        texture: pLL8GmbdN4t5gf
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnStep
+            lib: core
+            code: this.move();
+            arguments: {}
+        extends: {}
+        lastmod: 1712870656503
+        uid: WJDNFN9HJ5m3L2
+        behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: buttonsexit
+        depth: 0
+        texture: nKKJG5TWpzMNK1
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnStep
+            lib: core
+            code: this.move();
+            arguments: {}
+        extends: {}
+        lastmod: 1712871916674
+        uid: Dp4jT3JNfNLjmF
+        behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: buttondiffcultlylock
+        depth: 0
+        texture: WMngdbmMCkrKrL
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnStep
+            lib: core
+            code: this.move();
+            arguments: {}
+        extends: {}
+        lastmod: 1712871907843
+        uid: BwM98jDjjTrhQB
+        behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: buttonsoptions
+        depth: 0
+        texture: wQhQ1TrMR72F85
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnStep
+            lib: core
+            code: this.move();
+            arguments: {}
+        extends: {}
+        lastmod: 1712871940290
+        uid: R6W2BMhH7DtHhP
+        behaviors: []
   - type: folder
     uid: wt7zbhKgJFR14m
     colorClass: act
@@ -596,7 +842,7 @@ settings:
     version:
       - 0
       - 0
-      - 1
+      - 2
     versionPostfix: ''
     appId: com.halfbakedsoftware.chessnt
   rendering:
@@ -615,7 +861,7 @@ settings:
     linux: true
     mac: true
     functionWrap: false
-    codeModifier: none
+    codeModifier: minify
     bundleAssetTree: false
     bundleAssetTypes:
       texture: true
