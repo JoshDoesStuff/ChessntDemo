@@ -106,7 +106,7 @@ assets:
         padding: 1
         isBlank: false
         source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\logo.png'
-      - lastmod: 1712699667556
+      - lastmod: 1712959693889
         type: texture
         name: startButton
         untill: 0
@@ -133,7 +133,7 @@ assets:
         uid: 1ttRptHrF3RPcD
         padding: 1
         isBlank: false
-        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsstart.png'
+        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonmainplay.png'
       - lastmod: 1712870999745
         type: texture
         name: buttonRandomDifficulty
@@ -219,33 +219,6 @@ assets:
         uid: P6gcthTW1KPpb8
         padding: 1
         isBlank: false
-      - lastmod: 1712867034612
-        type: texture
-        name: Placeholder
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 0
-          - 0
-        marginx: 0
-        marginy: 0
-        imgWidth: 128
-        imgHeight: 128
-        width: 128
-        height: 128
-        offx: 0
-        offy: 0
-        origname: ipLL8GmbdN4t5gf.png
-        shape: rect
-        left: 0
-        right: 128
-        top: 0
-        bottom: 128
-        uid: pLL8GmbdN4t5gf
-        padding: 1
-        isBlank: false
       - lastmod: 1712872158534
         type: texture
         name: buttondiffcultlylock
@@ -288,7 +261,7 @@ assets:
             'y': -12
         closedStrip: true
         r: 40
-      - lastmod: 1712871867785
+      - lastmod: 1712959747147
         type: texture
         name: buttonsexit
         untill: 0
@@ -344,6 +317,174 @@ assets:
         padding: 1
         isBlank: false
         source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsoptions.png'
+      - lastmod: 1712960317203
+        type: texture
+        name: buttoniconlock
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 32
+          - 32
+        marginx: 0
+        marginy: 0
+        imgWidth: 64
+        imgHeight: 64
+        width: 64
+        height: 64
+        offx: 0
+        offy: 0
+        origname: it63BjJFjHnNtmB.png
+        shape: rect
+        left: 32
+        right: 32
+        top: 32
+        bottom: 32
+        uid: t63BjJFjHnNtmB
+        padding: 1
+        isBlank: false
+        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttoniconlock.png'
+      - lastmod: 1712960317216
+        type: texture
+        name: buttoniconpause
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 32
+          - 32
+        marginx: 0
+        marginy: 0
+        imgWidth: 64
+        imgHeight: 64
+        width: 64
+        height: 64
+        offx: 0
+        offy: 0
+        origname: ibDM5gQMphr4mTh.png
+        shape: rect
+        left: 32
+        right: 32
+        top: 32
+        bottom: 32
+        uid: bDM5gQMphr4mTh
+        padding: 1
+        isBlank: false
+        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttoniconpause.png'
+      - lastmod: 1712960317228
+        type: texture
+        name: buttoniconplay
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 32
+          - 32
+        marginx: 0
+        marginy: 0
+        imgWidth: 64
+        imgHeight: 64
+        width: 64
+        height: 64
+        offx: 0
+        offy: 0
+        origname: icbDptw2MwQqbKf.png
+        shape: rect
+        left: 32
+        right: 32
+        top: 32
+        bottom: 32
+        uid: cbDptw2MwQqbKf
+        padding: 1
+        isBlank: false
+        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttoniconplay.png'
+      - lastmod: 1712960317237
+        type: texture
+        name: buttonquit
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 128
+          - 32
+        marginx: 0
+        marginy: 0
+        imgWidth: 256
+        imgHeight: 64
+        width: 256
+        height: 64
+        offx: 0
+        offy: 0
+        origname: iNCc8PK3w6PmPdr.png
+        shape: rect
+        left: 128
+        right: 128
+        top: 32
+        bottom: 32
+        uid: NCc8PK3w6PmPdr
+        padding: 1
+        isBlank: false
+        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonquit.png'
+      - lastmod: 1712960147791
+        type: texture
+        name: buttonmaincredits
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 180
+          - 90
+        marginx: 0
+        marginy: 0
+        imgWidth: 360
+        imgHeight: 180
+        width: 360
+        height: 180
+        offx: 0
+        offy: 0
+        origname: i6Ptcd4fMjL8K5Q.png
+        shape: rect
+        left: 180
+        right: 180
+        top: 90
+        bottom: 90
+        uid: 6Ptcd4fMjL8K5Q
+        padding: 1
+        isBlank: false
+        source: >-
+          C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonmaincredits.png
+      - lastmod: 1712961388597
+        type: texture
+        name: PauseTest
+        untill: 0
+        grid:
+          - 1
+          - 1
+        axis:
+          - 0
+          - 0
+        marginx: 0
+        marginy: 0
+        imgWidth: 64
+        imgHeight: 64
+        width: 64
+        height: 64
+        offx: 0
+        offy: 0
+        origname: ik3Q9H7hN5ndPwg.png
+        shape: rect
+        left: 0
+        right: 64
+        top: 0
+        bottom: 64
+        uid: k3Q9H7hN5ndPwg
+        padding: 1
+        isBlank: false
   - type: folder
     uid: 29mQ3bfWdbqLRz
     colorClass: act
@@ -372,11 +513,22 @@ assets:
         name: gameplay
         backgroundColor: '#000000'
         follow: -1
-        backgrounds: []
+        backgrounds:
+          - depth: 0
+            texture: Tqn3Ng77WK9tzM
+            shiftX: 0
+            shiftY: 0
+            parallaxX: 1
+            parallaxY: 1
+            movementX: 0
+            movementY: 0
+            scaleX: 1
+            scaleY: 1
+            repeat: repeat
         copies: []
         tiles: []
         extends: {}
-        lastmod: 1712872914714
+        lastmod: 1712961059234
         events: []
         behaviors: []
         uid: rmpQWHHn6F2fCp
@@ -426,51 +578,63 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 154
-            'y': 579
+          - x: 159.9999996
+            'y': 584.0000001
             opacity: 1
             tint: 16777215
             scale:
-              x: 0.67777778
-              'y': 0.67777778
+              x: 0.62222222
+              'y': 0.62222222
             rotation: 0
             uid: 5Ct5mrz791BLcW
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 806
-            'y': 579
+          - x: 479.9999996
+            'y': 584.0000001
             opacity: 1
             tint: 16777215
             scale:
-              x: 0.67777778
-              'y': 0.67777778
+              x: 0.62222222
+              'y': 0.62222222
             rotation: 0
             uid: R6W2BMhH7DtHhP
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 490
-            'y': 579
+          - x: 1119.9999998
+            'y': 584.0000001
             opacity: 1
             tint: 16777215
             scale:
-              x: 0.67777778
-              'y': 0.67777778
+              x: 0.62222222
+              'y': 0.62222222
             rotation: 0
             uid: Dp4jT3JNfNLjmF
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 1126
-            'y': 579
+          - x: 799.9999997
+            'y': 584.0000001
             opacity: 1
             tint: 16777215
             scale:
-              x: 0.67777778
-              'y': 0.67777778
+              x: 0.62222222
+              'y': 0.62222222
             rotation: 0
-            uid: R6W2BMhH7DtHhP
+            uid: 7CQzdkkMW5p6jf
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 624
+            'y': 400
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: HN9mmpJrKdccKP
             exts: {}
             customProperties: {}
             bindings: {}
@@ -488,7 +652,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1712872849158
+        lastmod: 1712961809302
         events: []
         behaviors: []
         uid: pM5mTt3wDQNBNG
@@ -586,6 +750,150 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 960
+            'y': 576
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 1056
+            'y': 576
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 1152
+            'y': 576
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 960
+            'y': 480
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 1056
+            'y': 480
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 1152
+            'y': 480
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 1152
+            'y': 384
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 1056
+            'y': 384
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 960
+            'y': 384
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 960
+            'y': 288
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 1056
+            'y': 288
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 1152
+            'y': 288
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: mHNBFkM2wRPTtP
+            exts: {}
+            customProperties: {}
+            bindings: {}
           - x: 0
             'y': 0
             opacity: 1
@@ -600,10 +908,75 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1712872858619
+        lastmod: 1712961793376
         events: []
         behaviors: []
         uid: kQ857Frpn9wDm2
+      - type: room
+        oncreate: ''
+        onstep: ''
+        ondraw: ''
+        onleave: ''
+        gridX: 32
+        gridY: 32
+        diagonalGrid: false
+        disableGrid: false
+        simulate: true
+        width: 1280
+        height: 720
+        restrictCamera: false
+        restrictMaxX: 1280
+        restrictMinX: 1280
+        restrictMaxY: 720
+        restrictMinY: 720
+        isUi: true
+        name: pauseMenu
+        backgroundColor: '#B0B0B0'
+        follow: -1
+        backgrounds: []
+        copies:
+          - x: 640
+            'y': 608
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: QqCMzhHwDW4cBL
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 640
+            'y': 480
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: QqCMzhHwDW4cBL
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 640
+            'y': 352
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: QqCMzhHwDW4cBL
+            exts: {}
+            customProperties: {}
+            bindings: {}
+        tiles: []
+        extends: {}
+        lastmod: 1712961761365
+        events: []
+        behaviors: []
+        uid: PkqRw2Bn3PBj6H
   - type: folder
     uid: 7R3m6Nf9n8bg1q
     colorClass: act
@@ -737,24 +1110,6 @@ assets:
         behaviors: []
       - type: template
         baseClass: AnimatedSprite
-        name: Placeholder
-        depth: 0
-        texture: pLL8GmbdN4t5gf
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnStep
-            lib: core
-            code: this.move();
-            arguments: {}
-        extends: {}
-        lastmod: 1712870656503
-        uid: WJDNFN9HJ5m3L2
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
         name: buttonsexit
         depth: 0
         texture: nKKJG5TWpzMNK1
@@ -807,21 +1162,70 @@ assets:
         lastmod: 1712871940290
         uid: R6W2BMhH7DtHhP
         behaviors: []
-  - type: folder
-    uid: wt7zbhKgJFR14m
-    colorClass: act
-    icon: help-circle
-    name: Behaviors
-    lastmod: 1712788023612
-    entries:
-      - type: behavior
-        name: TransitionGoBrrrr
-        behaviorType: template
+      - type: template
+        baseClass: AnimatedSprite
+        name: buttonmaincredits
+        depth: 0
+        texture: 6Ptcd4fMjL8K5Q
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
         events:
-          - eventKey: OnPointerClick
-            code: ''
-            arguments: {}
+          - eventKey: OnStep
             lib: core
+            code: this.move();
+            arguments: {}
+        extends: {}
+        lastmod: 1712960277184
+        uid: 7CQzdkkMW5p6jf
+        behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: buttoniconlock
+        depth: 0
+        texture: t63BjJFjHnNtmB
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnStep
+            lib: core
+            code: this.move();
+            arguments: {}
+        extends: {}
+        lastmod: 1712960271275
+        uid: mHNBFkM2wRPTtP
+        behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: buttoniconplay
+        depth: 0
+        texture: cbDptw2MwQqbKf
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnStep
+            lib: core
+            code: this.move();
+            arguments: {}
+        extends: {}
+        lastmod: 1712960273761
+        uid: GFPgrct74JmHkj
+        behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: buttonquit
+        depth: 0
+        texture: NCc8PK3w6PmPdr
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
           - eventKey: OnDraw
             code: |-
               if (localStorage.getItem('transitioning') === '1') {
@@ -831,9 +1235,48 @@ assets:
               }
             arguments: {}
             lib: core
-        specification: []
-        lastmod: 1712788593001
-        uid: mkq8NKRBw3DPDK
+          - eventKey: OnPointerClick
+            code: |-
+              let transitionOut = transition.slideOut(500,'left')
+              // let transitionIn = 
+              transitionOut.then(() => {
+                  localStorage.setItem('transitioning', '1')
+                  rooms.switch('mainMenu')
+                  localStorage.setItem('transitioning','0')
+              })
+            arguments: {}
+            lib: core
+        extends: {}
+        lastmod: 1712961774526
+        uid: QqCMzhHwDW4cBL
+        behaviors: []
+      - type: template
+        baseClass: AnimatedSprite
+        name: PauseTest
+        depth: 0
+        texture: k3Q9H7hN5ndPwg
+        playAnimationOnStart: false
+        loopAnimation: true
+        animationFPS: 30
+        visible: true
+        events:
+          - eventKey: OnPointerClick
+            code: |-
+              localStorage.setItem('transitioning','0')
+              rooms.append('pauseMenu', {isUI:true})
+            arguments: {}
+            lib: core
+        extends: {}
+        lastmod: 1712961638943
+        uid: HN9mmpJrKdccKP
+        behaviors: []
+  - type: folder
+    uid: wt7zbhKgJFR14m
+    colorClass: act
+    icon: help-circle
+    name: Behaviors
+    lastmod: 1712788023612
+    entries: []
 settings:
   authoring:
     author: Josh G & Skye Y
@@ -842,7 +1285,7 @@ settings:
     version:
       - 0
       - 0
-      - 2
+      - 1
     versionPostfix: ''
     appId: com.halfbakedsoftware.chessnt
   rendering:
