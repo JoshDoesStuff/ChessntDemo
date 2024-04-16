@@ -1,7 +1,7 @@
 ctjsVersion: 4.0.2
 backups: 3
 language: typescript
-notes: /* empty */
+notes: ''
 libs:
   place:
     gridX: 1024
@@ -78,413 +78,602 @@ assets:
     name: Textures
     lastmod: 1712356303007
     entries:
-      - lastmod: 1712356463812
-        type: texture
-        name: logo
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 558
-          - 98
-        marginx: 0
-        marginy: 0
-        imgWidth: 1116
-        imgHeight: 196
-        width: 1116
-        height: 196
-        offx: 0
-        offy: 0
-        origname: iK3jhgP7tWb3WtQ.png
-        shape: rect
-        left: 558
-        right: 558
-        top: 98
-        bottom: 98
-        uid: K3jhgP7tWb3WtQ
-        padding: 1
-        isBlank: false
-        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\logo.png'
-      - lastmod: 1712959693889
-        type: texture
-        name: startButton
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 180
-          - 90
-        marginx: 0
-        marginy: 0
-        imgWidth: 360
-        imgHeight: 180
-        width: 360
-        height: 180
-        offx: 0
-        offy: 0
-        origname: i1ttRptHrF3RPcD.png
-        shape: rect
-        left: 180
-        right: 180
-        top: 90
-        bottom: 90
-        uid: 1ttRptHrF3RPcD
-        padding: 1
-        isBlank: false
-        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonmainplay.png'
-      - lastmod: 1712870999745
-        type: texture
-        name: buttonRandomDifficulty
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 128
-          - 32
-        marginx: 0
-        marginy: 0
-        imgWidth: 256
-        imgHeight: 64
-        width: 256
-        height: 64
-        offx: 0
-        offy: 0
-        origname: iJQhj9rwjqMKftf.png
-        shape: rect
-        left: 128
-        right: 128
-        top: 32
-        bottom: 32
-        uid: JQhj9rwjqMKftf
-        padding: 1
-        isBlank: false
-        source: >-
-          C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonRandomDifficulty.png
-      - lastmod: 1712699554515
-        type: texture
-        name: background
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 640
-          - 360
-        marginx: 0
-        marginy: 0
-        imgWidth: 1280
-        imgHeight: 720
-        width: 1280
-        height: 720
-        offx: 0
-        offy: 0
-        origname: iTqn3Ng77WK9tzM.png
-        shape: rect
-        left: 640
-        right: 640
-        top: 360
-        bottom: 360
-        uid: Tqn3Ng77WK9tzM
-        padding: 128
-        isBlank: false
-        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\background.gif'
-        tiled: true
-      - lastmod: 1712787035413
-        type: texture
-        name: blackScreen
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 0
-          - 0
-        marginx: 0
-        marginy: 0
-        imgWidth: 1280
-        imgHeight: 720
-        width: 1280
-        height: 720
-        offx: 0
-        offy: 0
-        origname: iP6gcthTW1KPpb8.png
-        shape: rect
-        left: 0
-        right: 1280
-        top: 0
-        bottom: 720
-        uid: P6gcthTW1KPpb8
-        padding: 1
-        isBlank: false
-      - lastmod: 1712872158534
-        type: texture
-        name: buttondiffcultlylock
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 128
-          - 32
-        marginx: 0
-        marginy: 0
-        imgWidth: 256
-        imgHeight: 80
-        width: 256
-        height: 80
-        offx: 0
-        offy: 0
-        origname: iWMngdbmMCkrKrL.png
-        shape: rect
-        left: 128
-        right: 128
-        top: 32
-        bottom: 32
-        uid: WMngdbmMCkrKrL
-        padding: 1
-        isBlank: false
-        source: >-
-          C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttondiffcultlylock.png
-        stripPoints:
-          - x: 0
-            'y': -40
-          - x: 122
-            'y': -12
-          - x: 75
-            'y': 32
-          - x: -75
-            'y': 32
-          - x: -122
-            'y': -12
-        closedStrip: true
-        r: 40
-      - lastmod: 1712959747147
-        type: texture
-        name: buttonsexit
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 180
-          - 90
-        marginx: 0
-        marginy: 0
-        imgWidth: 360
-        imgHeight: 180
-        width: 360
-        height: 180
-        offx: 0
-        offy: 0
-        origname: inKKJG5TWpzMNK1.png
-        shape: rect
-        left: 180
-        right: 180
-        top: 90
-        bottom: 90
-        uid: nKKJG5TWpzMNK1
-        padding: 1
-        isBlank: false
-        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsexit.png'
-      - lastmod: 1712871934448
-        type: texture
-        name: buttonsoptions
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 180
-          - 90
-        marginx: 0
-        marginy: 0
-        imgWidth: 360
-        imgHeight: 180
-        width: 360
-        height: 180
-        offx: 0
-        offy: 0
-        origname: iwQhQ1TrMR72F85.png
-        shape: rect
-        left: 180
-        right: 180
-        top: 90
-        bottom: 90
-        uid: wQhQ1TrMR72F85
-        padding: 1
-        isBlank: false
-        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsoptions.png'
-      - lastmod: 1712960317203
-        type: texture
-        name: buttoniconlock
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 32
-          - 32
-        marginx: 0
-        marginy: 0
-        imgWidth: 64
-        imgHeight: 64
-        width: 64
-        height: 64
-        offx: 0
-        offy: 0
-        origname: it63BjJFjHnNtmB.png
-        shape: rect
-        left: 32
-        right: 32
-        top: 32
-        bottom: 32
-        uid: t63BjJFjHnNtmB
-        padding: 1
-        isBlank: false
-        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttoniconlock.png'
-      - lastmod: 1712960317216
-        type: texture
-        name: buttoniconpause
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 32
-          - 32
-        marginx: 0
-        marginy: 0
-        imgWidth: 64
-        imgHeight: 64
-        width: 64
-        height: 64
-        offx: 0
-        offy: 0
-        origname: ibDM5gQMphr4mTh.png
-        shape: rect
-        left: 32
-        right: 32
-        top: 32
-        bottom: 32
-        uid: bDM5gQMphr4mTh
-        padding: 1
-        isBlank: false
-        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttoniconpause.png'
-      - lastmod: 1712960317228
-        type: texture
-        name: buttoniconplay
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 32
-          - 32
-        marginx: 0
-        marginy: 0
-        imgWidth: 64
-        imgHeight: 64
-        width: 64
-        height: 64
-        offx: 0
-        offy: 0
-        origname: icbDptw2MwQqbKf.png
-        shape: rect
-        left: 32
-        right: 32
-        top: 32
-        bottom: 32
-        uid: cbDptw2MwQqbKf
-        padding: 1
-        isBlank: false
-        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttoniconplay.png'
-      - lastmod: 1712960317237
-        type: texture
-        name: buttonquit
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 128
-          - 32
-        marginx: 0
-        marginy: 0
-        imgWidth: 256
-        imgHeight: 64
-        width: 256
-        height: 64
-        offx: 0
-        offy: 0
-        origname: iNCc8PK3w6PmPdr.png
-        shape: rect
-        left: 128
-        right: 128
-        top: 32
-        bottom: 32
-        uid: NCc8PK3w6PmPdr
-        padding: 1
-        isBlank: false
-        source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonquit.png'
-      - lastmod: 1712960147791
-        type: texture
-        name: buttonmaincredits
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 180
-          - 90
-        marginx: 0
-        marginy: 0
-        imgWidth: 360
-        imgHeight: 180
-        width: 360
-        height: 180
-        offx: 0
-        offy: 0
-        origname: i6Ptcd4fMjL8K5Q.png
-        shape: rect
-        left: 180
-        right: 180
-        top: 90
-        bottom: 90
-        uid: 6Ptcd4fMjL8K5Q
-        padding: 1
-        isBlank: false
-        source: >-
-          C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonmaincredits.png
-      - lastmod: 1712961388597
-        type: texture
-        name: PauseTest
-        untill: 0
-        grid:
-          - 1
-          - 1
-        axis:
-          - 0
-          - 0
-        marginx: 0
-        marginy: 0
-        imgWidth: 64
-        imgHeight: 64
-        width: 64
-        height: 64
-        offx: 0
-        offy: 0
-        origname: ik3Q9H7hN5ndPwg.png
-        shape: rect
-        left: 0
-        right: 64
-        top: 0
-        bottom: 64
-        uid: k3Q9H7hN5ndPwg
-        padding: 1
-        isBlank: false
+      - type: folder
+        uid: 4FKbgwcj5L8m1g
+        colorClass: act
+        icon: help-circle
+        name: UI
+        lastmod: 1713301766809
+        entries:
+          - type: folder
+            uid: Jd7pfcR5dLcQDj
+            colorClass: act
+            icon: help-circle
+            name: Pause Menu
+            lastmod: 1713301781728
+            entries:
+              - lastmod: 1712960317216
+                type: texture
+                name: buttoniconpause
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 32
+                  - 32
+                marginx: 0
+                marginy: 0
+                imgWidth: 64
+                imgHeight: 64
+                width: 64
+                height: 64
+                offx: 0
+                offy: 0
+                origname: ibDM5gQMphr4mTh.png
+                shape: rect
+                left: 32
+                right: 32
+                top: 32
+                bottom: 32
+                uid: bDM5gQMphr4mTh
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttoniconpause.png
+              - lastmod: 1712960317228
+                type: texture
+                name: buttoniconplay
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 32
+                  - 32
+                marginx: 0
+                marginy: 0
+                imgWidth: 64
+                imgHeight: 64
+                width: 64
+                height: 64
+                offx: 0
+                offy: 0
+                origname: icbDptw2MwQqbKf.png
+                shape: rect
+                left: 32
+                right: 32
+                top: 32
+                bottom: 32
+                uid: cbDptw2MwQqbKf
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttoniconplay.png
+              - lastmod: 1713299717516
+                type: texture
+                name: Buttonresume
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 128
+                  - 32
+                marginx: 0
+                marginy: 0
+                imgWidth: 256
+                imgHeight: 64
+                width: 256
+                height: 64
+                offx: 0
+                offy: 0
+                origname: iPBnP1zjQ1NJG97.png
+                shape: rect
+                left: 128
+                right: 128
+                top: 32
+                bottom: 32
+                uid: PBnP1zjQ1NJG97
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\ChessntDemo\Assets\Buttonresume.png
+              - lastmod: 1712960317237
+                type: texture
+                name: buttonquit
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 128
+                  - 32
+                marginx: 0
+                marginy: 0
+                imgWidth: 256
+                imgHeight: 64
+                width: 256
+                height: 64
+                offx: 0
+                offy: 0
+                origname: iNCc8PK3w6PmPdr.png
+                shape: rect
+                left: 128
+                right: 128
+                top: 32
+                bottom: 32
+                uid: NCc8PK3w6PmPdr
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonquit.png
+              - lastmod: 1713299738683
+                type: texture
+                name: Buttonoptions
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 128
+                  - 32
+                marginx: 0
+                marginy: 0
+                imgWidth: 256
+                imgHeight: 64
+                width: 256
+                height: 64
+                offx: 0
+                offy: 0
+                origname: iNCgKdKH9rkhm4k.png
+                shape: rect
+                left: 128
+                right: 128
+                top: 32
+                bottom: 32
+                uid: NCgKdKH9rkhm4k
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\ChessntDemo\Assets\Buttonoptions.png
+              - lastmod: 1712960317203
+                type: texture
+                name: buttoniconlock
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 32
+                  - 32
+                marginx: 0
+                marginy: 0
+                imgWidth: 64
+                imgHeight: 64
+                width: 64
+                height: 64
+                offx: 0
+                offy: 0
+                origname: it63BjJFjHnNtmB.png
+                shape: rect
+                left: 32
+                right: 32
+                top: 32
+                bottom: 32
+                uid: t63BjJFjHnNtmB
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttoniconlock.png
+              - lastmod: 1712870999745
+                type: texture
+                name: buttonRandomDifficulty
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 128
+                  - 32
+                marginx: 0
+                marginy: 0
+                imgWidth: 256
+                imgHeight: 64
+                width: 256
+                height: 64
+                offx: 0
+                offy: 0
+                origname: iJQhj9rwjqMKftf.png
+                shape: rect
+                left: 128
+                right: 128
+                top: 32
+                bottom: 32
+                uid: JQhj9rwjqMKftf
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonRandomDifficulty.png
+              - lastmod: 1713299727276
+                type: texture
+                name: Buttonstart
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 128
+                  - 32
+                marginx: 0
+                marginy: 0
+                imgWidth: 256
+                imgHeight: 64
+                width: 256
+                height: 64
+                offx: 0
+                offy: 0
+                origname: iCtj1NqgzKRJMbr.png
+                shape: rect
+                left: 128
+                right: 128
+                top: 32
+                bottom: 32
+                uid: Ctj1NqgzKRJMbr
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\ChessntDemo\Assets\Buttonstart.png
+              - lastmod: 1713299803890
+                type: texture
+                name: Difficulty
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 260
+                  - 50
+                marginx: 0
+                marginy: 0
+                imgWidth: 520
+                imgHeight: 100
+                width: 520
+                height: 100
+                offx: 0
+                offy: 0
+                origname: i663dbcMqt1LQGM.png
+                shape: rect
+                left: 260
+                right: 260
+                top: 50
+                bottom: 50
+                uid: 663dbcMqt1LQGM
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\ChessntDemo\Assets\Difficulty.png
+              - lastmod: 1712872158534
+                type: texture
+                name: buttondiffcultlylock
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 128
+                  - 32
+                marginx: 0
+                marginy: 0
+                imgWidth: 256
+                imgHeight: 80
+                width: 256
+                height: 80
+                offx: 0
+                offy: 0
+                origname: iWMngdbmMCkrKrL.png
+                shape: rect
+                left: 128
+                right: 128
+                top: 32
+                bottom: 32
+                uid: WMngdbmMCkrKrL
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttondiffcultlylock.png
+                stripPoints:
+                  - x: 0
+                    'y': -40
+                  - x: 122
+                    'y': -12
+                  - x: 75
+                    'y': 32
+                  - x: -75
+                    'y': 32
+                  - x: -122
+                    'y': -12
+                closedStrip: true
+                r: 40
+          - type: folder
+            uid: dmfh537tz5Bw6t
+            colorClass: act
+            icon: help-circle
+            name: Main Menu
+            lastmod: 1713301797392
+            entries:
+              - lastmod: 1712959693889
+                type: texture
+                name: startButton
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 180
+                  - 90
+                marginx: 0
+                marginy: 0
+                imgWidth: 360
+                imgHeight: 180
+                width: 360
+                height: 180
+                offx: 0
+                offy: 0
+                origname: i1ttRptHrF3RPcD.png
+                shape: rect
+                left: 180
+                right: 180
+                top: 90
+                bottom: 90
+                uid: 1ttRptHrF3RPcD
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonmainplay.png
+              - lastmod: 1712959747147
+                type: texture
+                name: buttonsexit
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 180
+                  - 90
+                marginx: 0
+                marginy: 0
+                imgWidth: 360
+                imgHeight: 180
+                width: 360
+                height: 180
+                offx: 0
+                offy: 0
+                origname: inKKJG5TWpzMNK1.png
+                shape: rect
+                left: 180
+                right: 180
+                top: 90
+                bottom: 90
+                uid: nKKJG5TWpzMNK1
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsexit.png
+              - lastmod: 1712871934448
+                type: texture
+                name: buttonsoptions
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 180
+                  - 90
+                marginx: 0
+                marginy: 0
+                imgWidth: 360
+                imgHeight: 180
+                width: 360
+                height: 180
+                offx: 0
+                offy: 0
+                origname: iwQhQ1TrMR72F85.png
+                shape: rect
+                left: 180
+                right: 180
+                top: 90
+                bottom: 90
+                uid: wQhQ1TrMR72F85
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsoptions.png
+              - lastmod: 1712960147791
+                type: texture
+                name: buttonmaincredits
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 180
+                  - 90
+                marginx: 0
+                marginy: 0
+                imgWidth: 360
+                imgHeight: 180
+                width: 360
+                height: 180
+                offx: 0
+                offy: 0
+                origname: i6Ptcd4fMjL8K5Q.png
+                shape: rect
+                left: 180
+                right: 180
+                top: 90
+                bottom: 90
+                uid: 6Ptcd4fMjL8K5Q
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonmaincredits.png
+              - lastmod: 1712356463812
+                type: texture
+                name: logo
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 558
+                  - 98
+                marginx: 0
+                marginy: 0
+                imgWidth: 1116
+                imgHeight: 196
+                width: 1116
+                height: 196
+                offx: 0
+                offy: 0
+                origname: iK3jhgP7tWb3WtQ.png
+                shape: rect
+                left: 558
+                right: 558
+                top: 98
+                bottom: 98
+                uid: K3jhgP7tWb3WtQ
+                padding: 1
+                isBlank: false
+                source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\logo.png'
+          - type: folder
+            uid: kbP5hb5H6wKKg7
+            colorClass: act
+            icon: help-circle
+            name: Difficulty Select
+            lastmod: 1713301802584
+            entries: []
+          - lastmod: 1713299696372
+            type: texture
+            name: Creators
+            untill: 0
+            grid:
+              - 1
+              - 1
+            axis:
+              - 162
+              - 200
+            marginx: 0
+            marginy: 0
+            imgWidth: 325
+            imgHeight: 400
+            width: 325
+            height: 400
+            offx: 0
+            offy: 0
+            origname: iJh5bHCRC2LGqHR.png
+            shape: rect
+            left: 162
+            right: 163
+            top: 200
+            bottom: 200
+            uid: Jh5bHCRC2LGqHR
+            padding: 1
+            isBlank: false
+            source: >-
+              C:\Users\702029128\Documents\GitHub\ChessntDemo\Assets\Creators.png
+          - lastmod: 1712699554515
+            type: texture
+            name: background
+            untill: 0
+            grid:
+              - 1
+              - 1
+            axis:
+              - 640
+              - 360
+            marginx: 0
+            marginy: 0
+            imgWidth: 1280
+            imgHeight: 720
+            width: 1280
+            height: 720
+            offx: 0
+            offy: 0
+            origname: iTqn3Ng77WK9tzM.png
+            shape: rect
+            left: 640
+            right: 640
+            top: 360
+            bottom: 360
+            uid: Tqn3Ng77WK9tzM
+            padding: 128
+            isBlank: false
+            source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\background.gif'
+            tiled: true
+          - lastmod: 1712787035413
+            type: texture
+            name: blackScreen
+            untill: 0
+            grid:
+              - 1
+              - 1
+            axis:
+              - 0
+              - 0
+            marginx: 0
+            marginy: 0
+            imgWidth: 1280
+            imgHeight: 720
+            width: 1280
+            height: 720
+            offx: 0
+            offy: 0
+            origname: iP6gcthTW1KPpb8.png
+            shape: rect
+            left: 0
+            right: 1280
+            top: 0
+            bottom: 720
+            uid: P6gcthTW1KPpb8
+            padding: 1
+            isBlank: false
+      - type: folder
+        uid: NwKJ346McgqMH6
+        colorClass: act
+        icon: help-circle
+        name: Gameplay
+        lastmod: 1713301772096
+        entries:
+          - lastmod: 1713299706481
+            type: texture
+            name: chessboard
+            untill: 0
+            grid:
+              - 1
+              - 1
+            axis:
+              - 280
+              - 280
+            marginx: 0
+            marginy: 0
+            imgWidth: 560
+            imgHeight: 560
+            width: 560
+            height: 560
+            offx: 0
+            offy: 0
+            origname: iTg8GhRzKzGg2c9.png
+            shape: rect
+            left: 280
+            right: 280
+            top: 280
+            bottom: 280
+            uid: Tg8GhRzKzGg2c9
+            padding: 1
+            isBlank: false
+            source: >-
+              C:\Users\702029128\Documents\GitHub\ChessntDemo\Assets\chessboard.png
   - type: folder
     uid: 29mQ3bfWdbqLRz
     colorClass: act
@@ -497,8 +686,8 @@ assets:
         onstep: ''
         ondraw: ''
         onleave: ''
-        gridX: 64
-        gridY: 64
+        gridX: 16
+        gridY: 16
         diagonalGrid: false
         disableGrid: false
         simulate: true
@@ -525,10 +714,34 @@ assets:
             scaleX: 1
             scaleY: 1
             repeat: repeat
-        copies: []
+        copies:
+          - x: 64
+            'y': 64
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: DKWbh8rzq7dQFP
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 672
+            'y': 360
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: 4Gqfg1jrm89kpd
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1712961059234
+        lastmod: 1713299871078
         events: []
         behaviors: []
         uid: rmpQWHHn6F2fCp
@@ -623,18 +836,6 @@ assets:
               'y': 0.62222222
             rotation: 0
             uid: 7CQzdkkMW5p6jf
-            exts: {}
-            customProperties: {}
-            bindings: {}
-          - x: 624
-            'y': 400
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 1
-              'y': 1
-            rotation: 0
-            uid: HN9mmpJrKdccKP
             exts: {}
             customProperties: {}
             bindings: {}
@@ -894,21 +1095,21 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 0
-            'y': 0
+          - x: 640
+            'y': 128
             opacity: 1
             tint: 16777215
             scale:
-              x: 1
-              'y': 1
+              x: 1.5
+              'y': 1.5
             rotation: 0
-            uid: kzgrhWD99djDgj
+            uid: Ftwkrj6BH92Kgq
             exts: {}
             customProperties: {}
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1712961793376
+        lastmod: 1713300009255
         events: []
         behaviors: []
         uid: kQ857Frpn9wDm2
@@ -955,7 +1156,7 @@ assets:
               x: 1
               'y': 1
             rotation: 0
-            uid: QqCMzhHwDW4cBL
+            uid: 2dcrwq4crRb7QD
             exts: {}
             customProperties: {}
             bindings: {}
@@ -967,13 +1168,13 @@ assets:
               x: 1
               'y': 1
             rotation: 0
-            uid: QqCMzhHwDW4cBL
+            uid: chwhJPnqzwP3hr
             exts: {}
             customProperties: {}
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1712961761365
+        lastmod: 1713301430808
         events: []
         behaviors: []
         uid: PkqRw2Bn3PBj6H
@@ -984,292 +1185,433 @@ assets:
     name: Templates
     lastmod: 1712356327558
     entries:
-      - type: template
-        baseClass: AnimatedSprite
-        name: logo
-        depth: 0
-        texture: K3jhgP7tWb3WtQ
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnCreate
-            code: |+
-              localStorage.setItem('transitioning','1')
+      - type: folder
+        uid: R9N5dHrqtTDDcC
+        colorClass: act
+        icon: help-circle
+        name: UI
+        lastmod: 1713301440801
+        entries:
+          - type: folder
+            uid: q5j318W4gj4pG1
+            colorClass: act
+            icon: help-circle
+            name: Pause Menu
+            lastmod: 1713301472568
+            entries:
+              - type: template
+                baseClass: AnimatedSprite
+                name: buttoniconpause
+                depth: 0
+                texture: bDM5gQMphr4mTh
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: // if (localStorage.getItem)
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713301468241
+                uid: DKWbh8rzq7dQFP
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: buttoniconplay
+                depth: 0
+                texture: cbDptw2MwQqbKf
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1712960273761
+                uid: GFPgrct74JmHkj
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: buttonquit
+                depth: 0
+                texture: NCc8PK3w6PmPdr
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('transitioning') === '1') {
+                          localStorage.setItem('isBlackNeeded','0')
+                          transition.slideIn(500, 'left')
+                          localStorage.setItem('transitioning', '0')
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnPointerClick
+                    code: |-
+                      let transitionOut = transition.slideOut(500,'left')
+                      // let transitionIn = 
+                      transitionOut.then(() => {
+                          localStorage.setItem('transitioning', '1')
+                          rooms.switch('mainMenu')
+                          localStorage.setItem('transitioning','0')
+                      })
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1712961774526
+                uid: QqCMzhHwDW4cBL
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: Buttonresume
+                depth: 0
+                texture: PBnP1zjQ1NJG97
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: rooms.remove(this.getRoom())
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDestroy
+                    code: 'localStorage.setItem(''isPaused'',''1'')'
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713301188921
+                uid: chwhJPnqzwP3hr
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: Buttonoptions
+                depth: 0
+                texture: NCgKdKH9rkhm4k
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1713299746400
+                uid: 2dcrwq4crRb7QD
+                behaviors: []
+          - type: folder
+            uid: 6Gp71PcmW6dcqk
+            colorClass: act
+            icon: help-circle
+            name: Main Menu
+            lastmod: 1713301484680
+            entries:
+              - type: template
+                baseClass: AnimatedSprite
+                name: buttonmaincredits
+                depth: 0
+                texture: 6Ptcd4fMjL8K5Q
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1712960277184
+                uid: 7CQzdkkMW5p6jf
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: buttonsoptions
+                depth: 0
+                texture: wQhQ1TrMR72F85
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1712871940290
+                uid: R6W2BMhH7DtHhP
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: logo
+                depth: 0
+                texture: K3jhgP7tWb3WtQ
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnCreate
+                    code: |+
+                      localStorage.setItem('transitioning','1')
+                      localStorage.setItem('isPaused','0')
 
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: '// localStorage.setItem(''transitioning'',''0'')'
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713301276972
+                uid: gKc33BgtFBBqc7
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: startButton
+                depth: 0
+                texture: 1ttRptHrF3RPcD
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('transitioning') === '1') {
+                          localStorage.setItem('isBlackNeeded','0')
+                          transition.slideIn(500, 'left')
+                          localStorage.setItem('transitioning', '0')
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnPointerClick
+                    code: |-
+                      let transitionOut = transition.slideOut(500,'left')
+                      // let transitionIn = 
+                      transitionOut.then(() => {
+                          localStorage.setItem('transitioning', '1')
+                          rooms.switch('difficultySelect')
+                          localStorage.setItem('transitioning','0')
+                      })
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1712789467652
+                uid: 5Ct5mrz791BLcW
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: buttonsexit
+                depth: 0
+                texture: nKKJG5TWpzMNK1
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1712871916674
+                uid: Dp4jT3JNfNLjmF
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: Buttonstart
+                depth: 0
+                texture: Ctj1NqgzKRJMbr
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: |
+                      let transitionOut = transition.slideOut(500,'left')
 
-            arguments: {}
-            lib: core
-          - eventKey: OnDraw
-            code: '// localStorage.setItem(''transitioning'',''0'')'
-            arguments: {}
-            lib: core
-        extends: {}
-        lastmod: 1712789407147
-        uid: gKc33BgtFBBqc7
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: startButton
-        depth: 0
-        texture: 1ttRptHrF3RPcD
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnDraw
-            code: |-
-              if (localStorage.getItem('transitioning') === '1') {
-                  localStorage.setItem('isBlackNeeded','0')
-                  transition.slideIn(500, 'left')
-                  localStorage.setItem('transitioning', '0')
-              }
-            arguments: {}
-            lib: core
-          - eventKey: OnPointerClick
-            code: |-
-              let transitionOut = transition.slideOut(500,'left')
-              // let transitionIn = 
-              transitionOut.then(() => {
-                  localStorage.setItem('transitioning', '1')
-                  rooms.switch('difficultySelect')
-                  localStorage.setItem('transitioning','0')
-              })
-            arguments: {}
-            lib: core
-        extends: {}
-        lastmod: 1712789467652
-        uid: 5Ct5mrz791BLcW
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: buttonRandomDifficulty
-        depth: 0
-        texture: JQhj9rwjqMKftf
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnPointerClick
-            code: |-
-              let transitionOut = transition.slideOut(500,'left')
+                      // let transitionIn = 
+                      transitionOut.then(() => {
+                          localStorage.setItem('transitioning', '1')
+                          rooms.switch('mainMenu')
+                      })
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('transitioning') === '1') {
+                          localStorage.setItem('isBlackNeeded','0')
+                          transition.slideIn(500, 'left')
+                          localStorage.setItem('transitioning', '0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713301348625
+                uid: P6MbcPzkr5Pm9f
+                behaviors: []
+          - type: template
+            baseClass: AnimatedSprite
+            name: blackScreen
+            depth: 0
+            texture: P6gcthTW1KPpb8
+            playAnimationOnStart: false
+            loopAnimation: true
+            animationFPS: 30
+            visible: true
+            events:
+              - eventKey: OnStep
+                lib: core
+                code: |
+                  if (localStorage.getItem('isBlackNeeded') === '0') {
+                      this.x = -1280
+                      localStorage.setItem('isBlackNeeded', '1')
+                  } 
+                arguments: {}
+              - eventKey: OnCreate
+                code: |+
 
-              // let transitionIn = 
-              transitionOut.then(() => {
-                  localStorage.setItem('transitioning', '1')
-                  rooms.switch('mainMenu')
-              })
-            arguments: {}
-            lib: core
-          - eventKey: OnDraw
-            code: |-
-              if (localStorage.getItem('transitioning') === '1') {
-                  localStorage.setItem('isBlackNeeded','0')
-                  transition.slideIn(500, 'left')
-                  localStorage.setItem('transitioning', '0')
-              }
-            arguments: {}
-            lib: core
-          - eventKey: OnCreate
-            code: 'localStorage.setItem(''transitioning'', ''1'')'
-            arguments: {}
-            lib: core
-        extends: {}
-        lastmod: 1712789529765
-        uid: kbMRckzc3HhmR5
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: blackScreen
-        depth: 0
-        texture: P6gcthTW1KPpb8
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnStep
-            lib: core
-            code: |
-              if (localStorage.getItem('isBlackNeeded') === '0') {
-                  this.x = -1280
-                  localStorage.setItem('isBlackNeeded', '1')
-              } 
-            arguments: {}
-          - eventKey: OnCreate
-            code: |+
-
-            arguments: {}
-            lib: core
-        extends: {}
-        lastmod: 1712789216108
-        uid: kzgrhWD99djDgj
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: buttonsexit
-        depth: 0
-        texture: nKKJG5TWpzMNK1
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnStep
-            lib: core
-            code: this.move();
-            arguments: {}
-        extends: {}
-        lastmod: 1712871916674
-        uid: Dp4jT3JNfNLjmF
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: buttondiffcultlylock
-        depth: 0
-        texture: WMngdbmMCkrKrL
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnStep
-            lib: core
-            code: this.move();
-            arguments: {}
-        extends: {}
-        lastmod: 1712871907843
-        uid: BwM98jDjjTrhQB
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: buttonsoptions
-        depth: 0
-        texture: wQhQ1TrMR72F85
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnStep
-            lib: core
-            code: this.move();
-            arguments: {}
-        extends: {}
-        lastmod: 1712871940290
-        uid: R6W2BMhH7DtHhP
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: buttonmaincredits
-        depth: 0
-        texture: 6Ptcd4fMjL8K5Q
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnStep
-            lib: core
-            code: this.move();
-            arguments: {}
-        extends: {}
-        lastmod: 1712960277184
-        uid: 7CQzdkkMW5p6jf
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: buttoniconlock
-        depth: 0
-        texture: t63BjJFjHnNtmB
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnStep
-            lib: core
-            code: this.move();
-            arguments: {}
-        extends: {}
-        lastmod: 1712960271275
-        uid: mHNBFkM2wRPTtP
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: buttoniconplay
-        depth: 0
-        texture: cbDptw2MwQqbKf
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnStep
-            lib: core
-            code: this.move();
-            arguments: {}
-        extends: {}
-        lastmod: 1712960273761
-        uid: GFPgrct74JmHkj
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: buttonquit
-        depth: 0
-        texture: NCc8PK3w6PmPdr
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnDraw
-            code: |-
-              if (localStorage.getItem('transitioning') === '1') {
-                  localStorage.setItem('isBlackNeeded','0')
-                  transition.slideIn(500, 'left')
-                  localStorage.setItem('transitioning', '0')
-              }
-            arguments: {}
-            lib: core
-          - eventKey: OnPointerClick
-            code: |-
-              let transitionOut = transition.slideOut(500,'left')
-              // let transitionIn = 
-              transitionOut.then(() => {
-                  localStorage.setItem('transitioning', '1')
-                  rooms.switch('mainMenu')
-                  localStorage.setItem('transitioning','0')
-              })
-            arguments: {}
-            lib: core
-        extends: {}
-        lastmod: 1712961774526
-        uid: QqCMzhHwDW4cBL
-        behaviors: []
-      - type: template
-        baseClass: AnimatedSprite
-        name: PauseTest
-        depth: 0
-        texture: k3Q9H7hN5ndPwg
-        playAnimationOnStart: false
-        loopAnimation: true
-        animationFPS: 30
-        visible: true
-        events:
-          - eventKey: OnPointerClick
-            code: |-
-              localStorage.setItem('transitioning','0')
-              rooms.append('pauseMenu', {isUI:true})
-            arguments: {}
-            lib: core
-        extends: {}
-        lastmod: 1712961638943
-        uid: HN9mmpJrKdccKP
-        behaviors: []
+                arguments: {}
+                lib: core
+            extends: {}
+            lastmod: 1712789216108
+            uid: kzgrhWD99djDgj
+            behaviors: []
+          - type: template
+            baseClass: AnimatedSprite
+            name: Creators
+            depth: 0
+            texture: Jh5bHCRC2LGqHR
+            playAnimationOnStart: false
+            loopAnimation: true
+            animationFPS: 30
+            visible: true
+            events:
+              - eventKey: OnStep
+                lib: core
+                code: this.move();
+                arguments: {}
+            extends: {}
+            lastmod: 1713299777402
+            uid: kj6KqCzb194pBJ
+            behaviors: []
+          - type: folder
+            uid: B6JTn4p7Dq4gCN
+            colorClass: act
+            icon: help-circle
+            name: Difficulty Select
+            lastmod: 1713301678968
+            entries:
+              - type: template
+                baseClass: AnimatedSprite
+                name: buttondiffcultlylock
+                depth: 0
+                texture: WMngdbmMCkrKrL
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1712871907843
+                uid: BwM98jDjjTrhQB
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: buttoniconlock
+                depth: 0
+                texture: t63BjJFjHnNtmB
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1712960271275
+                uid: mHNBFkM2wRPTtP
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: buttonRandomDifficulty
+                depth: 0
+                texture: JQhj9rwjqMKftf
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnCreate
+                    code: 'localStorage.setItem(''transitioning'', ''1'')'
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713301380514
+                uid: kbMRckzc3HhmR5
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: Difficulty
+                depth: 0
+                texture: 663dbcMqt1LQGM
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1713299812170
+                uid: Ftwkrj6BH92Kgq
+                behaviors: []
+      - type: folder
+        uid: JJFBqHkwNT8PgQ
+        colorClass: act
+        icon: help-circle
+        name: Gameplay
+        lastmod: 1713301620601
+        entries:
+          - type: template
+            baseClass: AnimatedSprite
+            name: chessboard
+            depth: 0
+            texture: Tg8GhRzKzGg2c9
+            playAnimationOnStart: false
+            loopAnimation: true
+            animationFPS: 30
+            visible: true
+            events:
+              - eventKey: OnStep
+                lib: core
+                code: this.move();
+                arguments: {}
+            extends: {}
+            lastmod: 1713299762528
+            uid: 4Gqfg1jrm89kpd
+            behaviors: []
   - type: folder
     uid: wt7zbhKgJFR14m
     colorClass: act
