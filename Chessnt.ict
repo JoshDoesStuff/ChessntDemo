@@ -645,7 +645,7 @@ assets:
         name: Gameplay
         lastmod: 1713301772096
         entries:
-          - lastmod: 1713299706481
+          - lastmod: 1713302586668
             type: texture
             name: chessboard
             untill: 0
@@ -739,9 +739,21 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 0
+            'y': 0
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kzgrhWD99djDgj
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713299871078
+        lastmod: 1713302544183
         events: []
         behaviors: []
         uid: rmpQWHHn6F2fCp
@@ -891,18 +903,6 @@ assets:
             scaleY: 1
             repeat: repeat
         copies:
-          - x: 640
-            'y': 640
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 1
-              'y': 1
-            rotation: 0
-            uid: kbMRckzc3HhmR5
-            exts: {}
-            customProperties: {}
-            bindings: {}
           - x: 224
             'y': 576
             opacity: 1
@@ -1107,9 +1107,33 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 640
+            'y': 640
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: P6MbcPzkr5Pm9f
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 0
+            'y': 0
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kzgrhWD99djDgj
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713300009255
+        lastmod: 1713302556051
         events: []
         behaviors: []
         uid: kQ857Frpn9wDm2
@@ -1134,7 +1158,18 @@ assets:
         name: pauseMenu
         backgroundColor: '#B0B0B0'
         follow: -1
-        backgrounds: []
+        backgrounds:
+          - depth: 0
+            texture: Tqn3Ng77WK9tzM
+            shiftX: 0
+            shiftY: 0
+            parallaxX: 1
+            parallaxY: 1
+            movementX: 0
+            movementY: 0
+            scaleX: 1
+            scaleY: 1
+            repeat: repeat
         copies:
           - x: 640
             'y': 608
@@ -1174,7 +1209,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713301430808
+        lastmod: 1713302585123
         events: []
         behaviors: []
         uid: PkqRw2Bn3PBj6H
@@ -1210,11 +1245,18 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: // if (localStorage.getItem)
+                    code: |-
+                      if (localStorage.getItem('isPaused') === '0') {
+                          localStorage.setItem('isPaused','1')
+                          rooms.append('pauseMenu')
+                      } else  if (localStorage.getItem('isPaused') === '1'){
+                          //do nothing
+                          console.log('already paused idiot')
+                      }
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713301468241
+                lastmod: 1713302414059
                 uid: DKWbh8rzq7dQFP
                 behaviors: []
               - type: template
@@ -1280,15 +1322,17 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: rooms.remove(this.getRoom())
+                    code: |-
+
+                      rooms.remove(this.getRoom())
                     arguments: {}
                     lib: core
                   - eventKey: OnDestroy
-                    code: 'localStorage.setItem(''isPaused'',''1'')'
+                    code: 'localStorage.setItem(''isPaused'',''0'')'
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713301188921
+                lastmod: 1713302441860
                 uid: chwhJPnqzwP3hr
                 behaviors: []
               - type: template
@@ -1429,40 +1473,6 @@ assets:
                 lastmod: 1712871916674
                 uid: Dp4jT3JNfNLjmF
                 behaviors: []
-              - type: template
-                baseClass: AnimatedSprite
-                name: Buttonstart
-                depth: 0
-                texture: Ctj1NqgzKRJMbr
-                playAnimationOnStart: false
-                loopAnimation: true
-                animationFPS: 30
-                visible: true
-                events:
-                  - eventKey: OnPointerClick
-                    code: |
-                      let transitionOut = transition.slideOut(500,'left')
-
-                      // let transitionIn = 
-                      transitionOut.then(() => {
-                          localStorage.setItem('transitioning', '1')
-                          rooms.switch('mainMenu')
-                      })
-                    arguments: {}
-                    lib: core
-                  - eventKey: OnDraw
-                    code: |-
-                      if (localStorage.getItem('transitioning') === '1') {
-                          localStorage.setItem('isBlackNeeded','0')
-                          transition.slideIn(500, 'left')
-                          localStorage.setItem('transitioning', '0')
-                      }
-                    arguments: {}
-                    lib: core
-                extends: {}
-                lastmod: 1713301348625
-                uid: P6MbcPzkr5Pm9f
-                behaviors: []
           - type: template
             baseClass: AnimatedSprite
             name: blackScreen
@@ -1587,6 +1597,40 @@ assets:
                 lastmod: 1713299812170
                 uid: Ftwkrj6BH92Kgq
                 behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: Buttonstart
+                depth: 0
+                texture: Ctj1NqgzKRJMbr
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: |
+                      let transitionOut = transition.slideOut(500,'left')
+
+                      // let transitionIn = 
+                      transitionOut.then(() => {
+                          localStorage.setItem('transitioning', '1')
+                          rooms.switch('gameplay')
+                      })
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('transitioning') === '1') {
+                          localStorage.setItem('isBlackNeeded','0')
+                          transition.slideIn(500, 'left')
+                          localStorage.setItem('transitioning', '0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713302011267
+                uid: P6MbcPzkr5Pm9f
+                behaviors: []
       - type: folder
         uid: JJFBqHkwNT8PgQ
         colorClass: act
@@ -1604,12 +1648,23 @@ assets:
             animationFPS: 30
             visible: true
             events:
-              - eventKey: OnStep
-                lib: core
-                code: this.move();
+              - eventKey: OnDraw
+                code: |+
+                  if (localStorage.getItem('transitioning') === '1') {
+                      localStorage.setItem('isBlackNeeded','0')
+                      transition.slideIn(500, 'left')
+                      localStorage.setItem('transitioning', '0')
+                  }
+
+
                 arguments: {}
+                lib: core
+              - eventKey: OnCreate
+                code: 'localStorage.setItem(''transitioning'',''1'')'
+                arguments: {}
+                lib: core
             extends: {}
-            lastmod: 1713299762528
+            lastmod: 1713302520068
             uid: 4Gqfg1jrm89kpd
             behaviors: []
   - type: folder
