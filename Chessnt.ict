@@ -460,6 +460,7 @@ assets:
                 isBlank: false
                 source: >-
                   C:\Users\702029128\Documents\GitHub\Chessnt\Assets\buttonsexit.png
+                ignoreTiledUse: true
               - lastmod: 1712871934448
                 type: texture
                 name: buttonsoptions
@@ -638,6 +639,47 @@ assets:
             uid: P6gcthTW1KPpb8
             padding: 1
             isBlank: false
+          - lastmod: 1713386400354
+            type: texture
+            name: optionsNotFound
+            untill: 0
+            grid:
+              - 1
+              - 1
+            axis:
+              - 244
+              - 239
+            marginx: 0
+            marginy: 0
+            imgWidth: 512
+            imgHeight: 512
+            width: 512
+            height: 512
+            offx: 0
+            offy: 0
+            origname: ihnkktb5LKDKn48.png
+            shape: rect
+            left: 256
+            right: 256
+            top: 182
+            bottom: 141
+            uid: hnkktb5LKDKn48
+            padding: 1
+            isBlank: false
+            source: >-
+              C:\Users\702029128\Documents\GitHub\ChessntDemo\Assets\optionsNotFound.png
+            stripPoints:
+              - x: 0
+                'y': -256
+              - x: 243
+                'y': -79
+              - x: 150
+                'y': 207
+              - x: -150
+                'y': 207
+              - x: -243
+                'y': -79
+            closedStrip: true
       - type: folder
         uid: NwKJ346McgqMH6
         colorClass: act
@@ -741,7 +783,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713384906320
+        lastmod: 1713385083895
         events: []
         behaviors: []
         uid: rmpQWHHn6F2fCp
@@ -841,7 +883,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713384906553
+        lastmod: 1713385082195
         events: []
         behaviors: []
         uid: pM5mTt3wDQNBNG
@@ -1097,7 +1139,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713384906831
+        lastmod: 1713385080724
         events: []
         behaviors: []
         uid: kQ857Frpn9wDm2
@@ -1173,10 +1215,114 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713302585123
+        lastmod: 1713385085986
         events: []
         behaviors: []
         uid: PkqRw2Bn3PBj6H
+      - type: room
+        oncreate: ''
+        onstep: ''
+        ondraw: ''
+        onleave: ''
+        gridX: 32
+        gridY: 32
+        diagonalGrid: false
+        disableGrid: false
+        simulate: true
+        width: 1280
+        height: 720
+        restrictCamera: false
+        restrictMaxX: 1280
+        restrictMinX: 1280
+        restrictMaxY: 720
+        restrictMinY: 720
+        isUi: false
+        name: options
+        backgroundColor: '#000000'
+        follow: -1
+        backgrounds:
+          - depth: 0
+            texture: Tqn3Ng77WK9tzM
+            shiftX: 0
+            shiftY: 0
+            parallaxX: 1
+            parallaxY: 1
+            movementX: 0
+            movementY: 0
+            scaleX: 1
+            scaleY: 1
+            repeat: repeat
+        copies:
+          - x: 640
+            'y': 384
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: fJ1242NJm2Gnrw
+            exts: {}
+            customProperties: {}
+            bindings: {}
+        tiles: []
+        extends: {}
+        lastmod: 1713386412806
+        events: []
+        behaviors: []
+        uid: hdjp9Kjtdmm9Mh
+      - type: room
+        oncreate: ''
+        onstep: ''
+        ondraw: ''
+        onleave: ''
+        gridX: 32
+        gridY: 32
+        diagonalGrid: false
+        disableGrid: false
+        simulate: true
+        width: 1280
+        height: 720
+        restrictCamera: false
+        restrictMaxX: 1280
+        restrictMinX: 1280
+        restrictMaxY: 720
+        restrictMinY: 720
+        isUi: false
+        name: credits
+        backgroundColor: '#000000'
+        follow: -1
+        backgrounds:
+          - depth: 0
+            texture: Tqn3Ng77WK9tzM
+            shiftX: 0
+            shiftY: 0
+            parallaxX: 1
+            parallaxY: 1
+            movementX: 0
+            movementY: 0
+            scaleX: 1
+            scaleY: 1
+            repeat: repeat
+        copies:
+          - x: 640
+            'y': 352
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kj6KqCzb194pBJ
+            exts: {}
+            customProperties: {}
+            bindings: {}
+        tiles: []
+        extends: {}
+        lastmod: 1713385690034
+        events: []
+        behaviors: []
+        uid: 8F8L352CR9Fmmn
   - type: folder
     uid: 7R3m6Nf9n8bg1q
     colorClass: act
@@ -1334,12 +1480,28 @@ assets:
                 animationFPS: 30
                 visible: true
                 events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('transitioning') === '1') {
+                          localStorage.setItem('isBlackNeeded','0')
+                          transition.slideIn(500, 'left')
+                          localStorage.setItem('transitioning', '0')
+                      }
                     arguments: {}
+                    lib: core
+                  - eventKey: OnPointerClick
+                    code: |-
+                      let transitionOut = transition.slideOut(500,'left')
+                      // let transitionIn = 
+                      transitionOut.then(() => {
+                          localStorage.setItem('transitioning', '1')
+                          rooms.switch('credits')
+                          localStorage.setItem('transitioning','0')
+                      })
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1712960277184
+                lastmod: 1713385583916
                 uid: 7CQzdkkMW5p6jf
                 behaviors: []
               - type: template
@@ -1352,12 +1514,28 @@ assets:
                 animationFPS: 30
                 visible: true
                 events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('transitioning') === '1') {
+                          localStorage.setItem('isBlackNeeded','0')
+                          transition.slideIn(500, 'left')
+                          localStorage.setItem('transitioning', '0')
+                      }
                     arguments: {}
+                    lib: core
+                  - eventKey: OnPointerClick
+                    code: |-
+                      let transitionOut = transition.slideOut(500,'left')
+                      // let transitionIn = 
+                      transitionOut.then(() => {
+                          localStorage.setItem('transitioning', '1')
+                          rooms.switch('options')
+                          localStorage.setItem('transitioning','0')
+                      })
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1712871940290
+                lastmod: 1713385518337
                 uid: R6W2BMhH7DtHhP
                 behaviors: []
               - type: template
@@ -1428,15 +1606,15 @@ assets:
                 loopAnimation: true
                 animationFPS: 30
                 visible: true
-                events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
-                    arguments: {}
+                events: []
                 extends: {}
-                lastmod: 1712871916674
+                lastmod: 1713385587035
                 uid: Dp4jT3JNfNLjmF
                 behaviors: []
+                tilingSettings:
+                  scrollSpeedX: 0
+                  scrollSpeedY: 0
+                  isUi: false
           - type: template
             baseClass: AnimatedSprite
             name: blackScreen
@@ -1595,6 +1773,24 @@ assets:
                 lastmod: 1713302011267
                 uid: P6MbcPzkr5Pm9f
                 behaviors: []
+          - type: template
+            baseClass: AnimatedSprite
+            name: optionsNotFound
+            depth: 0
+            texture: hnkktb5LKDKn48
+            playAnimationOnStart: false
+            loopAnimation: true
+            animationFPS: 30
+            visible: true
+            events:
+              - eventKey: OnStep
+                lib: core
+                code: this.move();
+                arguments: {}
+            extends: {}
+            lastmod: 1713386207764
+            uid: fJ1242NJm2Gnrw
+            behaviors: []
       - type: folder
         uid: JJFBqHkwNT8PgQ
         colorClass: act
