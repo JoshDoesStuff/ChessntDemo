@@ -739,21 +739,9 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 0
-            'y': 0
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 1
-              'y': 1
-            rotation: 0
-            uid: kzgrhWD99djDgj
-            exts: {}
-            customProperties: {}
-            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713302544183
+        lastmod: 1713384906320
         events: []
         behaviors: []
         uid: rmpQWHHn6F2fCp
@@ -851,21 +839,9 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 0
-            'y': 0
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 1
-              'y': 1
-            rotation: 0
-            uid: kzgrhWD99djDgj
-            exts: {}
-            customProperties: {}
-            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1712961809302
+        lastmod: 1713384906553
         events: []
         behaviors: []
         uid: pM5mTt3wDQNBNG
@@ -1119,21 +1095,9 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 0
-            'y': 0
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 1
-              'y': 1
-            rotation: 0
-            uid: kzgrhWD99djDgj
-            exts: {}
-            customProperties: {}
-            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713302556051
+        lastmod: 1713384906831
         events: []
         behaviors: []
         uid: kQ857Frpn9wDm2
