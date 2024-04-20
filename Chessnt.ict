@@ -811,7 +811,7 @@ assets:
                 isBlank: false
                 source: >-
                   C:\Users\Josh\Documents\GitHub\ChessntDemo\Assets\Pieces\whitepiecequeen.png
-              - lastmod: 1713648477771
+              - lastmod: 1713655797478
                 type: texture
                 name: whitepiecepawn
                 untill: 0
@@ -831,8 +831,8 @@ assets:
                 offy: 0
                 origname: i5h2r6pwpc5FtcM.png
                 shape: rect
-                left: 39
-                right: 39
+                left: 64
+                right: 64
                 top: 64
                 bottom: 64
                 uid: 5h2r6pwpc5FtcM
@@ -990,7 +990,7 @@ assets:
                 isBlank: false
                 source: >-
                   C:\Users\Josh\Documents\GitHub\ChessntDemo\Assets\Pieces\blackpiecequeen.png
-              - lastmod: 1713649102597
+              - lastmod: 1713655807348
                 type: texture
                 name: blackpiecepawn
                 untill: 0
@@ -1010,8 +1010,8 @@ assets:
                 offy: 0
                 origname: iqFqjpg1Rz5wzG1.png
                 shape: rect
-                left: 39
-                right: 39
+                left: 64
+                right: 64
                 top: 64
                 bottom: 64
                 uid: qFqjpg1Rz5wzG1
@@ -1615,7 +1615,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713655585294
+        lastmod: 1713656038117
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
@@ -2802,130 +2802,6 @@ assets:
             lastmod: 1713302520068
             uid: 4Gqfg1jrm89kpd
             behaviors: []
-          - type: folder
-            uid: 4RbGTWt65N5c6m
-            colorClass: act
-            icon: help-circle
-            name: piecesWhite
-            lastmod: 1713649225575
-            entries:
-              - type: template
-                baseClass: AnimatedSprite
-                name: whitepiecepawn
-                depth: 0
-                texture: 5h2r6pwpc5FtcM
-                playAnimationOnStart: false
-                loopAnimation: true
-                animationFPS: 30
-                visible: true
-                events:
-                  - eventKey: OnPointerClick
-                    code: >-
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
-                          console.log('p1 has taken its turn')
-                          localStorage.setItem('whichPlayerTurn','2')
-                          return;
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
-                          console.log('it aint your turn fool')
-                          return;
-                      }
-                    arguments: {}
-                    lib: core
-                extends: {}
-                lastmod: 1713655653504
-                uid: L2HfLRgdwCq3h8
-                behaviors: []
-              - type: template
-                baseClass: AnimatedSprite
-                name: whitepieceknight
-                depth: 0
-                texture: MPBDTRRG5T5RhB
-                playAnimationOnStart: false
-                loopAnimation: true
-                animationFPS: 30
-                visible: true
-                events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
-                    arguments: {}
-                extends: {}
-                lastmod: 1713649173876
-                uid: W5NGLtKdr8Tmkr
-                behaviors: []
-              - type: template
-                baseClass: AnimatedSprite
-                name: whitepiecerook
-                depth: 0
-                texture: DH5B8Fwmg7c3Kk
-                playAnimationOnStart: false
-                loopAnimation: true
-                animationFPS: 30
-                visible: true
-                events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
-                    arguments: {}
-                extends: {}
-                lastmod: 1713649181242
-                uid: NfJqh1GcfLqdtB
-                behaviors: []
-              - type: template
-                baseClass: AnimatedSprite
-                name: whitepiecequeen
-                depth: 0
-                texture: Lpq9qncWgbPFqM
-                playAnimationOnStart: false
-                loopAnimation: true
-                animationFPS: 30
-                visible: true
-                events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
-                    arguments: {}
-                extends: {}
-                lastmod: 1713649179193
-                uid: Q1Rn3GzGNTK6Lf
-                behaviors: []
-              - type: template
-                baseClass: AnimatedSprite
-                name: whitepiecebishop
-                depth: 0
-                texture: JdtDG47H399NNk
-                playAnimationOnStart: false
-                loopAnimation: true
-                animationFPS: 30
-                visible: true
-                events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
-                    arguments: {}
-                extends: {}
-                lastmod: 1713649168415
-                uid: c191gHKgH6NQg8
-                behaviors: []
-              - type: template
-                baseClass: AnimatedSprite
-                name: whitepieceking
-                depth: 0
-                texture: j6h82JcCcWmMjb
-                playAnimationOnStart: false
-                loopAnimation: true
-                animationFPS: 30
-                visible: true
-                events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
-                    arguments: {}
-                extends: {}
-                lastmod: 1713649170388
-                uid: Trp2t7jtmF7HW3
-                behaviors: []
           - type: template
             baseClass: AnimatedSprite
             name: tileHighlight
@@ -3067,6 +2943,132 @@ assets:
                 extends: {}
                 lastmod: 1713649302505
                 uid: Q8rKpCqqHb8bBT
+                behaviors: []
+          - type: folder
+            uid: 4RbGTWt65N5c6m
+            colorClass: act
+            icon: help-circle
+            name: piecesWhite
+            lastmod: 1713649225575
+            entries:
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepiecepawn
+                depth: 0
+                texture: 5h2r6pwpc5FtcM
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >-
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          this.y += Math.sign(1) * 64;
+                          console.log('p1 has taken its turn')
+                          localStorage.setItem('whichPlayerTurn','2')
+                          return;
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '2') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713656425665
+                uid: L2HfLRgdwCq3h8
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepieceknight
+                depth: 0
+                texture: MPBDTRRG5T5RhB
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1713649173876
+                uid: W5NGLtKdr8Tmkr
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepiecerook
+                depth: 0
+                texture: DH5B8Fwmg7c3Kk
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1713649181242
+                uid: NfJqh1GcfLqdtB
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepiecequeen
+                depth: 0
+                texture: Lpq9qncWgbPFqM
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1713649179193
+                uid: Q1Rn3GzGNTK6Lf
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepiecebishop
+                depth: 0
+                texture: JdtDG47H399NNk
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1713649168415
+                uid: c191gHKgH6NQg8
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepieceking
+                depth: 0
+                texture: j6h82JcCcWmMjb
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1713649170388
+                uid: Trp2t7jtmF7HW3
                 behaviors: []
   - type: folder
     uid: wt7zbhKgJFR14m
