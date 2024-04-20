@@ -18,6 +18,7 @@ libs:
   transition: {}
   storage: {}
   vkeys: {}
+  desktop: {}
 startroom: pM5mTt3wDQNBNG
 contentTypes: []
 actions:
@@ -680,6 +681,35 @@ assets:
               - x: -243
                 'y': -79
             closedStrip: true
+          - lastmod: 1713646445922
+            type: texture
+            name: buttonIconBack
+            untill: 0
+            grid:
+              - 1
+              - 1
+            axis:
+              - 32
+              - 32
+            marginx: 0
+            marginy: 0
+            imgWidth: 64
+            imgHeight: 64
+            width: 64
+            height: 64
+            offx: 0
+            offy: 0
+            origname: ijkL3k74KfwqzRm.png
+            shape: rect
+            left: 32
+            right: 32
+            top: 32
+            bottom: 32
+            uid: jkL3k74KfwqzRm
+            padding: 1
+            isBlank: false
+            source: >-
+              C:\Users\Josh\Documents\GitHub\ChessntDemo\Assets\UI\buttonIconBack.png
       - type: folder
         uid: NwKJ346McgqMH6
         colorClass: act
@@ -1137,9 +1167,21 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 64
+            'y': 64
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kM7KtL3WdrCCqm
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713385080724
+        lastmod: 1713646725951
         events: []
         behaviors: []
         uid: kQ857Frpn9wDm2
@@ -1265,9 +1307,21 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 64
+            'y': 64
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kM7KtL3WdrCCqm
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713386412806
+        lastmod: 1713646744462
         events: []
         behaviors: []
         uid: hdjp9Kjtdmm9Mh
@@ -1317,9 +1371,21 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 64
+            'y': 64
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kM7KtL3WdrCCqm
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713385690034
+        lastmod: 1713646754900
         events: []
         behaviors: []
         uid: 8F8L352CR9Fmmn
@@ -1492,7 +1558,9 @@ assets:
                   - eventKey: OnPointerClick
                     code: |-
                       let transitionOut = transition.slideOut(500,'left')
-                      // let transitionIn = 
+
+                      localStorage.setItem('lastRoom','mainMenu')
+
                       transitionOut.then(() => {
                           localStorage.setItem('transitioning', '1')
                           rooms.switch('credits')
@@ -1501,7 +1569,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713385583916
+                lastmod: 1713646516951
                 uid: 7CQzdkkMW5p6jf
                 behaviors: []
               - type: template
@@ -1526,7 +1594,9 @@ assets:
                   - eventKey: OnPointerClick
                     code: |-
                       let transitionOut = transition.slideOut(500,'left')
-                      // let transitionIn = 
+
+                      localStorage.setItem('lastRoom','mainMenu')
+
                       transitionOut.then(() => {
                           localStorage.setItem('transitioning', '1')
                           rooms.switch('options')
@@ -1535,7 +1605,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713385518337
+                lastmod: 1713646527232
                 uid: R6W2BMhH7DtHhP
                 behaviors: []
               - type: template
@@ -1585,7 +1655,9 @@ assets:
                   - eventKey: OnPointerClick
                     code: |-
                       let transitionOut = transition.slideOut(500,'left')
-                      // let transitionIn = 
+
+                      localStorage.setItem('lastRoom','mainMenu')
+
                       transitionOut.then(() => {
                           localStorage.setItem('transitioning', '1')
                           rooms.switch('difficultySelect')
@@ -1594,7 +1666,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1712789467652
+                lastmod: 1713646510394
                 uid: 5Ct5mrz791BLcW
                 behaviors: []
               - type: template
@@ -1606,9 +1678,13 @@ assets:
                 loopAnimation: true
                 animationFPS: 30
                 visible: true
-                events: []
+                events:
+                  - eventKey: OnPointerClick
+                    code: desktop.quit()
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713385587035
+                lastmod: 1713646689786
                 uid: Dp4jT3JNfNLjmF
                 behaviors: []
                 tilingSettings:
@@ -1652,12 +1728,21 @@ assets:
             animationFPS: 30
             visible: true
             events:
-              - eventKey: OnStep
-                lib: core
-                code: this.move();
+              - eventKey: OnDraw
+                code: |-
+                  if (localStorage.getItem('transitioning') === '1') {
+                      localStorage.setItem('isBlackNeeded','0')
+                      transition.slideIn(500, 'left')
+                      localStorage.setItem('transitioning', '0')
+                  }
                 arguments: {}
+                lib: core
+              - eventKey: OnCreate
+                code: 'localStorage.setItem(''transitioning'', ''1'')'
+                arguments: {}
+                lib: core
             extends: {}
-            lastmod: 1713299777402
+            lastmod: 1713647050196
             uid: kj6KqCzb194pBJ
             behaviors: []
           - type: folder
@@ -1783,13 +1868,49 @@ assets:
             animationFPS: 30
             visible: true
             events:
-              - eventKey: OnStep
-                lib: core
-                code: this.move();
+              - eventKey: OnDraw
+                code: |-
+                  if (localStorage.getItem('transitioning') === '1') {
+                      localStorage.setItem('isBlackNeeded','0')
+                      transition.slideIn(500, 'left')
+                      localStorage.setItem('transitioning', '0')
+                  }
                 arguments: {}
+                lib: core
+              - eventKey: OnCreate
+                code: 'localStorage.setItem(''transitioning'', ''1'')'
+                arguments: {}
+                lib: core
             extends: {}
-            lastmod: 1713386207764
+            lastmod: 1713647045877
             uid: fJ1242NJm2Gnrw
+            behaviors: []
+          - type: template
+            baseClass: AnimatedSprite
+            name: buttonIconBack
+            depth: 0
+            texture: jkL3k74KfwqzRm
+            playAnimationOnStart: false
+            loopAnimation: true
+            animationFPS: 30
+            visible: true
+            events:
+              - eventKey: OnPointerClick
+                code: |-
+                  let transitionOut = transition.slideOut(500,'left')
+
+
+
+                  transitionOut.then(() => {
+                      localStorage.setItem('transitioning', '1')
+                      rooms.switch(localStorage.getItem('lastRoom'))
+                      localStorage.setItem('transitioning','0')
+                  })
+                arguments: {}
+                lib: core
+            extends: {}
+            lastmod: 1713646888783
+            uid: kM7KtL3WdrCCqm
             behaviors: []
       - type: folder
         uid: JJFBqHkwNT8PgQ
