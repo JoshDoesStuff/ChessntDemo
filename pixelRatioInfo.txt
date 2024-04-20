@@ -1,0 +1,4 @@
+Piece to highlight offset
+
+X: -1 (Ex: 512 to 511)
+Y: +4 (Ex: 197 to 201)

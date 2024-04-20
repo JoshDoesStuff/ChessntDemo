@@ -1135,6 +1135,35 @@ assets:
                 isBlank: false
                 source: >-
                   C:\Users\Josh\Documents\GitHub\ChessntDemo\Assets\Pieces\blackpiecerook.png
+          - lastmod: 1713654870500
+            type: texture
+            name: tileHighlight
+            untill: 0
+            grid:
+              - 1
+              - 1
+            axis:
+              - 32
+              - 32
+            marginx: 0
+            marginy: 0
+            imgWidth: 64
+            imgHeight: 64
+            width: 64
+            height: 64
+            offx: 0
+            offy: 0
+            origname: iW18rKh6wmJzt8B.png
+            shape: rect
+            left: 31
+            right: 31
+            top: 31
+            bottom: 31
+            uid: W18rKh6wmJzt8B
+            padding: 1
+            isBlank: false
+            source: >-
+              C:\Users\Josh\Documents\GitHub\ChessntDemo\Assets\tileHighlight.png
   - type: folder
     uid: 29mQ3bfWdbqLRz
     colorClass: act
@@ -1586,7 +1615,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713653616158
+        lastmod: 1713655585294
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
@@ -2790,12 +2819,21 @@ assets:
                 animationFPS: 30
                 visible: true
                 events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
+                  - eventKey: OnPointerClick
+                    code: >-
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          console.log('p1 has taken its turn')
+                          localStorage.setItem('whichPlayerTurn','2')
+                          return;
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '2') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
                     arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713649177191
+                lastmod: 1713655653504
                 uid: L2HfLRgdwCq3h8
                 behaviors: []
               - type: template
@@ -2888,6 +2926,24 @@ assets:
                 lastmod: 1713649170388
                 uid: Trp2t7jtmF7HW3
                 behaviors: []
+          - type: template
+            baseClass: AnimatedSprite
+            name: tileHighlight
+            depth: 0
+            texture: W18rKh6wmJzt8B
+            playAnimationOnStart: false
+            loopAnimation: true
+            animationFPS: 30
+            visible: true
+            events:
+              - eventKey: OnStep
+                lib: core
+                code: ''
+                arguments: {}
+            extends: {}
+            lastmod: 1713654643854
+            uid: LW4nkB3525ndtH
+            behaviors: []
           - type: folder
             uid: 39jQJRC8nWDkPF
             colorClass: act
@@ -2942,26 +2998,20 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      rooms.current.clearSpotHelp()
-                                    if (this.x <= 402 && this.y > 229) {
-                                        templates.copy('Spot Finder', this.x + 68, this.y - 42, { summoner: this })
-                                    }
-                                    else if (this.x >= 878 && this.y > 229) {
-                                        templates.copy('Spot Finder', this.x - 68, this.y - 42, { summoner: this })
-                                    }
-                                    else if (this.y > 229) {
-                                        templates.copy('Spot Finder', this.x + 68, this.y - 42, { summoner: this })
-                                        templates.copy('Spot Finder', this.x - 68, this.y - 42, { summoner: this })
-                                    }
-                    arguments: {}
-                    lib: core
-                  - eventKey: OnStep
-                    code: ''
+                    code: >-
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          console.log('p2 has taken its turn')
+                          localStorage.setItem('whichPlayerTurn','1')
+                          return;
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713649588703
+                lastmod: 1713655682250
                 uid: h1KgqHTcKTcdCQ
                 behaviors: []
               - type: template
