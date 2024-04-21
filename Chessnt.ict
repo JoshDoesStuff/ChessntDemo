@@ -1577,9 +1577,45 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 768
+            'y': 133
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.375
+              'y': 0.375
+            rotation: 0
+            uid: tb8z2np1JRqQ5R
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 832
+            'y': 133
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.375
+              'y': 0.375
+            rotation: 0
+            uid: fRPP2qMjHP5G36
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 896
+            'y': 133
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.375
+              'y': 0.375
+            rotation: 0
+            uid: 6Qj7nM9B5TR8fb
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713661291941
+        lastmod: 1713661380136
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
