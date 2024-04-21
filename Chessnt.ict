@@ -2812,12 +2812,22 @@ assets:
             animationFPS: 30
             visible: true
             events:
-              - eventKey: OnStep
-                lib: core
-                code: ''
+              - eventKey: OnPointerClick
+                code: |-
+                  var mvX = this.x + 1
+
+                  var mvY = (this.y - 4)
+
+                  localStorage.setItem('moveToX', mvX.toString())
+                  localStorage.setItem('moveToY', mvY.toString())
+
+                  localStorage.setItem('timeToMove','1')
+
+                  this.kill
                 arguments: {}
+                lib: core
             extends: {}
-            lastmod: 1713654643854
+            lastmod: 1713658912436
             uid: LW4nkB3525ndtH
             behaviors: []
           - type: folder
@@ -2874,20 +2884,36 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >-
-                      if (localStorage.getItem('whichPlayerTurn') === '2') {
-                          console.log('p2 has taken its turn')
-                          localStorage.setItem('whichPlayerTurn','1')
-                          return;
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
                       } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '1') {
+                      '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('timeToMove') === '1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713655682250
+                lastmod: 1713658858697
                 uid: h1KgqHTcKTcdCQ
                 behaviors: []
               - type: template
@@ -2953,7 +2979,7 @@ assets:
             entries:
               - type: template
                 baseClass: AnimatedSprite
-                name: whitepiecepawn
+                name: whitepiecepawn1
                 depth: 0
                 texture: 5h2r6pwpc5FtcM
                 playAnimationOnStart: false
@@ -2964,10 +2990,12 @@ assets:
                   - eventKey: OnPointerClick
                     code: >
                       if (localStorage.getItem('whichPlayerTurn') === '1') {
-                          this.y += Math.sign(1) * -64;
-                          console.log('p1 has taken its turn')
-                          localStorage.setItem('whichPlayerTurn','2')
-                          return;
+                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
                           
                       } else if (localStorage.getItem('whichPlayerTurn') ===
                       '2') {
@@ -2976,8 +3004,20 @@ assets:
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('timeToMove') === '1' && ) {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713657551772
+                lastmod: 1713658958713
                 uid: L2HfLRgdwCq3h8
                 behaviors: []
               - type: template
@@ -3069,6 +3109,307 @@ assets:
                 extends: {}
                 lastmod: 1713649170388
                 uid: Trp2t7jtmF7HW3
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepiecepawn2
+                depth: 0
+                texture: 5h2r6pwpc5FtcM
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '2') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('timeToMove') === '1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713658649095
+                uid: WMMNFgBMhWMghz
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepiecepawn3
+                depth: 0
+                texture: 5h2r6pwpc5FtcM
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '2') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('timeToMove') === '1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713658649095
+                uid: KKRnqJHBd8zNK6
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepiecepawn4
+                depth: 0
+                texture: 5h2r6pwpc5FtcM
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '2') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('timeToMove') === '1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713658649095
+                uid: qDKbwHtRPPbrD2
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepiecepawn5
+                depth: 0
+                texture: 5h2r6pwpc5FtcM
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '2') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('timeToMove') === '1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713658649095
+                uid: P5R5qjCdnqn52N
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepiecepawn6
+                depth: 0
+                texture: 5h2r6pwpc5FtcM
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '2') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('timeToMove') === '1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713658649095
+                uid: nQwW5mF5TrPDJ9
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepiecepawn7
+                depth: 0
+                texture: 5h2r6pwpc5FtcM
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '2') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('timeToMove') === '1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713658649095
+                uid: HThbL6PrFPFm7J
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: whitepiecepawn8
+                depth: 0
+                texture: 5h2r6pwpc5FtcM
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '2') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: |-
+                      if (localStorage.getItem('timeToMove') === '1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713658649095
+                uid: p6QDLHpfhMfG5c
                 behaviors: []
   - type: folder
     uid: wt7zbhKgJFR14m
