@@ -1229,90 +1229,6 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 512
-            'y': 197
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 0.375
-              'y': 0.375
-            rotation: 0
-            uid: h1KgqHTcKTcdCQ
-            exts: {}
-            customProperties: {}
-            bindings: {}
-          - x: 576
-            'y': 197
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 0.375
-              'y': 0.375
-            rotation: 0
-            uid: h1KgqHTcKTcdCQ
-            exts: {}
-            customProperties: {}
-            bindings: {}
-          - x: 704
-            'y': 197
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 0.375
-              'y': 0.375
-            rotation: 0
-            uid: h1KgqHTcKTcdCQ
-            exts: {}
-            customProperties: {}
-            bindings: {}
-          - x: 640
-            'y': 197
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 0.375
-              'y': 0.375
-            rotation: 0
-            uid: h1KgqHTcKTcdCQ
-            exts: {}
-            customProperties: {}
-            bindings: {}
-          - x: 768
-            'y': 197
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 0.375
-              'y': 0.375
-            rotation: 0
-            uid: h1KgqHTcKTcdCQ
-            exts: {}
-            customProperties: {}
-            bindings: {}
-          - x: 832
-            'y': 197
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 0.375
-              'y': 0.375
-            rotation: 0
-            uid: h1KgqHTcKTcdCQ
-            exts: {}
-            customProperties: {}
-            bindings: {}
-          - x: 896
-            'y': 197
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 0.375
-              'y': 0.375
-            rotation: 0
-            uid: h1KgqHTcKTcdCQ
-            exts: {}
-            customProperties: {}
-            bindings: {}
           - x: 448
             'y': 197
             opacity: 1
@@ -1409,18 +1325,6 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 896
-            'y': 133
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 0.375
-              'y': 0.375
-            rotation: 0
-            uid: 34tHBwnK2JD9G3
-            exts: {}
-            customProperties: {}
-            bindings: {}
           - x: 512
             'y': 133
             opacity: 1
@@ -1433,31 +1337,7 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 832
-            'y': 133
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 0.375
-              'y': 0.375
-            rotation: 0
-            uid: fc9KqcQ9Tpd6CT
-            exts: {}
-            customProperties: {}
-            bindings: {}
           - x: 576
-            'y': 133
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 0.375
-              'y': 0.375
-            rotation: 0
-            uid: fQqRH69jNHkNhJ
-            exts: {}
-            customProperties: {}
-            bindings: {}
-          - x: 768
             'y': 133
             opacity: 1
             tint: 16777215
@@ -1613,9 +1493,93 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 512
+            'y': 197
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.375
+              'y': 0.375
+            rotation: 0
+            uid: pCCFf6346MQNFK
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 576
+            'y': 197
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.375
+              'y': 0.375
+            rotation: 0
+            uid: PzJbpppGJhDRDz
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 640
+            'y': 197
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.375
+              'y': 0.375
+            rotation: 0
+            uid: THfbFcmLGHtQJm
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 704
+            'y': 197
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.375
+              'y': 0.375
+            rotation: 0
+            uid: RR3wKKhfDFJJ22
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 768
+            'y': 197
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.375
+              'y': 0.375
+            rotation: 0
+            uid: hg7wzWngKTddf8
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 832
+            'y': 197
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.375
+              'y': 0.375
+            rotation: 0
+            uid: 8Ht67d31fwdf6B
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 896
+            'y': 197
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.375
+              'y': 0.375
+            rotation: 0
+            uid: h31fgMcbN5BGrT
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713660048834
+        lastmod: 1713661291941
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
@@ -2839,7 +2803,7 @@ assets:
             entries:
               - type: template
                 baseClass: AnimatedSprite
-                name: blackpieceknight
+                name: blackpieceknight1
                 depth: 0
                 texture: NJnBR7dp7CL1dd
                 playAnimationOnStart: false
@@ -2850,8 +2814,8 @@ assets:
                   - eventKey: OnPointerClick
                     code: >
                       if (localStorage.getItem('whichPlayerTurn') === '2') {
-                          localStorage.setItem('pieceID', 'bpkn2')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          localStorage.setItem('pieceID', 'bpkn1')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
@@ -2865,8 +2829,21 @@ assets:
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpkn1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713660210463
+                lastmod: 1713661178104
                 uid: fc9KqcQ9Tpd6CT
                 behaviors: []
               - type: template
@@ -2879,17 +2856,44 @@ assets:
                 animationFPS: 30
                 visible: true
                 events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpq')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
                     arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpq') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713649311528
+                lastmod: 1713661198266
                 uid: gfwnqcmj7qr3W7
                 behaviors: []
               - type: template
                 baseClass: AnimatedSprite
-                name: blackpiecepawn
+                name: blackpiecepawn1
                 depth: 0
                 texture: qFqjpg1Rz5wzG1
                 playAnimationOnStart: false
@@ -2901,7 +2905,7 @@ assets:
                     code: >
                       if (localStorage.getItem('whichPlayerTurn') === '2') {
                           localStorage.setItem('pieceID', 'bpp1')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
@@ -2929,12 +2933,12 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713660162161
+                lastmod: 1713661156669
                 uid: h1KgqHTcKTcdCQ
                 behaviors: []
               - type: template
                 baseClass: AnimatedSprite
-                name: blackpiecerook
+                name: blackpiecerook1
                 depth: 0
                 texture: hk23tkhRL3dK2f
                 playAnimationOnStart: false
@@ -2942,17 +2946,44 @@ assets:
                 animationFPS: 30
                 visible: true
                 events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpr1')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
                     arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpr1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713649313380
+                lastmod: 1713661203522
                 uid: 34tHBwnK2JD9G3
                 behaviors: []
               - type: template
                 baseClass: AnimatedSprite
-                name: blackpiecebishop
+                name: blackpiecebishop1
                 depth: 0
                 texture: HfDCmH63QLk6c1
                 playAnimationOnStart: false
@@ -2960,12 +2991,39 @@ assets:
                 animationFPS: 30
                 visible: true
                 events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: ''
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpb1')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
                     arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpb1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713654357568
+                lastmod: 1713661163643
                 uid: fQqRH69jNHkNhJ
                 behaviors: []
               - type: template
@@ -2982,7 +3040,7 @@ assets:
                     code: >
                       if (localStorage.getItem('whichPlayerTurn') === '2') {
                           localStorage.setItem('pieceID', 'bpk')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
@@ -3010,8 +3068,458 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713660224796
+                lastmod: 1713661173770
                 uid: Q8rKpCqqHb8bBT
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: blackpiecebishop2
+                depth: 0
+                texture: HfDCmH63QLk6c1
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpb2')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpb2') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713661168871
+                uid: tb8z2np1JRqQ5R
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: blackpieceknight2
+                depth: 0
+                texture: NJnBR7dp7CL1dd
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpkn2')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpkn2') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713661182334
+                uid: fRPP2qMjHP5G36
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: blackpiecerook2
+                depth: 0
+                texture: hk23tkhRL3dK2f
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpr2')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpr2') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713661208457
+                uid: 6Qj7nM9B5TR8fb
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: blackpiecepawn2
+                depth: 0
+                texture: qFqjpg1Rz5wzG1
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpp2')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpp2') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713661057597
+                uid: pCCFf6346MQNFK
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: blackpiecepawn3
+                depth: 0
+                texture: qFqjpg1Rz5wzG1
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpp3')
+                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpp3') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713660999923
+                uid: PzJbpppGJhDRDz
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: blackpiecepawn4
+                depth: 0
+                texture: qFqjpg1Rz5wzG1
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpp4')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpp4') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713661052049
+                uid: THfbFcmLGHtQJm
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: blackpiecepawn5
+                depth: 0
+                texture: qFqjpg1Rz5wzG1
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpp5')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpp5') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713661118199
+                uid: RR3wKKhfDFJJ22
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: blackpiecepawn6
+                depth: 0
+                texture: qFqjpg1Rz5wzG1
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpp6')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpp6') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713661124177
+                uid: hg7wzWngKTddf8
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: blackpiecepawn7
+                depth: 0
+                texture: qFqjpg1Rz5wzG1
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpp7')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpp7') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713661210565
+                uid: 8Ht67d31fwdf6B
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: blackpiecepawn8
+                depth: 0
+                texture: qFqjpg1Rz5wzG1
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnPointerClick
+                    code: >
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          localStorage.setItem('pieceID', 'bpp8')
+                          templates.copy('tileHighlight', this.x - 1, this.y + 60)
+                          // this.y += Math.sign(1) * -64;
+                          // console.log('p1 has taken its turn')
+                          // localStorage.setItem('whichPlayerTurn','2')
+                          // return;
+                          
+                          
+                      } else if (localStorage.getItem('whichPlayerTurn') ===
+                      '1') {
+                          console.log('it aint your turn fool')
+                          return;
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'bpp8') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
+                extends: {}
+                lastmod: 1713661158813
+                uid: h31fgMcbN5BGrT
                 behaviors: []
           - type: folder
             uid: 4RbGTWt65N5c6m
