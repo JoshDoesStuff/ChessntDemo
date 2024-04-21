@@ -1135,7 +1135,7 @@ assets:
                 isBlank: false
                 source: >-
                   C:\Users\Josh\Documents\GitHub\ChessntDemo\Assets\Pieces\blackpiecerook.png
-          - lastmod: 1713654870500
+          - lastmod: 1713676724811
             type: texture
             name: tileHighlight
             untill: 0
@@ -1613,9 +1613,21 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 0
+            'y': 0
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kzgrhWD99djDgj
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713661380136
+        lastmod: 1713680159612
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
@@ -1731,7 +1743,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713653576002
+        lastmod: 1713680171267
         events: []
         behaviors: []
         uid: pM5mTt3wDQNBNG
@@ -2822,12 +2834,13 @@ assets:
                   localStorage.setItem('moveToY', mvY.toString())
 
                   localStorage.setItem('timeToMove','1')
+                  localStorage.setItem('moveTypeLocked','0')
 
                   this.kill = true
                 arguments: {}
                 lib: core
             extends: {}
-            lastmod: 1713659028249
+            lastmod: 1713676933905
             uid: LW4nkB3525ndtH
             behaviors: []
           - type: folder
@@ -3576,19 +3589,52 @@ assets:
                 events:
                   - eventKey: OnPointerClick
                     code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
-                          
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpp1')
+                          templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      //    if (localStorage.getItem('moveType') === '0') {
 
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                      //      templates.copy('tileHighlight', this.x - 1,this.y
+                      - 60) //for move up one
+
+                      //    } else if (localStorage.getItem('moveType') === '1')
+                      {
+
+                      //      templates.copy('tileHighlight', this.x - 1,this.y
+                      - 124) //for move up two
+
+                      //    } else if (localStorage.getItem('moveType') === '2')
+                      {
+
+                      //      templates.copy('tileHighlight', this.x - 1,this.y
+                      - 187) //for move up three
+
+                      //    } else if (localStorage.getItem('moveType') === '3')
+                      {
+
+                      //      templates.copy('tileHighlight', this.x - 1,this.y
+                      - 251) //for move up four
+
+                      //    } else if (localStorage.getItem('moveType') === '4')
+                      {
+
+                      //      templates.copy('tileHighlight', this.x - 1,this.y
+                      - 314)
+
+                      //    } else if (localStorage.getItem('moveType') === '5')
+                      {
+
+                      //      templates.copy('tileHighlight', this.x - 1,this.y
+                      - 124)
+
+                      //    } 
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                          
-                          
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
@@ -3608,9 +3654,10 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713659697386
+                lastmod: 1713679181693
                 uid: L2HfLRgdwCq3h8
-                behaviors: []
+                behaviors:
+                  - 9kQmCDF92f2LmF
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepieceknight1
@@ -3735,8 +3782,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713659765111
+                extends:
+                  cgroup: White
+                lastmod: 1713673221001
                 uid: c191gHKgH6NQg8
                 behaviors: []
               - type: template
@@ -4067,8 +4115,9 @@ assets:
                     arguments: {}
                     lib: core
                   - eventKey: OnDraw
-                    code: |-
-                      if (localStorage.getItem('timeToMove') === '1') {
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpp8') {
                           let mvY = localStorage.getItem('moveToY')
                           let mvX = localStorage.getItem('moveToX')
                           this.y = Number(mvY)
@@ -4079,7 +4128,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713659395559
+                lastmod: 1713672627215
                 uid: p6QDLHpfhMfG5c
                 behaviors: []
               - type: template
@@ -4184,7 +4233,52 @@ assets:
     icon: help-circle
     name: Behaviors
     lastmod: 1712788023612
-    entries: []
+    entries:
+      - type: behavior
+        name: MovementRNG
+        behaviorType: template
+        events:
+          - eventKey: OnPointerClick
+            code: |-
+              if (localStorage.getItem('moveTypeLocked') === '0') {
+                  let moveType = random(5)
+                  moveType = Math.round(moveType)
+                  localStorage.setItem('moveType',moveType.toString())
+              } else if (localStorage.getItem('moveTypeLocked') === '1'){
+                  console.log('Type Locked')
+              }
+            arguments: {}
+            lib: core
+        specification: []
+        lastmod: 1713675116680
+        uid: 9kQmCDF92f2LmF
+  - lastmod: 1713673669586
+    type: texture
+    name: RNGTest
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: iT2cRTbMdmfKT74.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: T2cRTbMdmfKT74
+    padding: 1
+    isBlank: false
 settings:
   authoring:
     author: Josh G & Skye Y
