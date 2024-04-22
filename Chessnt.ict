@@ -2927,8 +2927,15 @@ assets:
                   this.kill = true
                 arguments: {}
                 lib: core
+              - eventKey: OnCreate
+                code: |-
+                  if (place.occupied(this, this.x, this.y, 'White')) {
+                      this.kill = true;
+                  }
+                arguments: {}
+                lib: core
             extends: {}
-            lastmod: 1713821742024
+            lastmod: 1713826116345
             uid: LW4nkB3525ndtH
             behaviors: []
           - type: folder
@@ -3773,6 +3780,9 @@ assets:
                 events:
                   - eventKey: OnPointerClick
                     code: |
+                      let movesetType = Number(localStorage.getItem('moveType'))
+
+
                       if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpp1')
                        
@@ -3781,8 +3791,26 @@ assets:
                                   highlight.kill = true;
                           }
 
-                           templates.copy('tileHighlight', this.x - 1, this.y - 64)
-                          
+                          templates.copy('tileHighlight', this.x + 63, this.y - 124) // up two over one
+                          templates.copy('tileHighlight', this.x + 127, this.y - 60) //right two up one
+                          templates.copy('tileHighlight', this.x + 127, this.y + 60) //right two down one
+                          templates.copy('tileHighlight', this.x - 62, this.y + 124) //down two left one
+                          templates.copy('tileHighlight', this.x + 62, this.y + 124) //down two left one
+                          if (movesetType === 0) {
+                              //pawn movement
+                              templates.copy('tileHighlight', this.x - 1, this.y - 64)
+                          } else if (movesetType === 1) {
+                              //knight movement
+                             
+                          } else if (movesetType === 2) {
+                              //rook movement
+                          } else if (movesetType === 3) {
+                              //bishop movement
+                          } else if (movesetType === 4) {
+                              //queen movement
+                          } else if (movesetType === 5) {
+                              //king movement
+                          }
                       }
 
                        else if (localStorage.getItem('whichPlayerTurn') === '2') {
@@ -3804,8 +3832,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713821743920
+                extends:
+                  cgroup: White
+                lastmod: 1713826221425
                 uid: L2HfLRgdwCq3h8
                 behaviors:
                   - 9kQmCDF92f2LmF
@@ -4003,7 +4032,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713820817710
+                lastmod: 1713825870955
                 uid: c191gHKgH6NQg8
                 behaviors: []
               - type: template
