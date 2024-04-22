@@ -3705,16 +3705,16 @@ assets:
                     code: |
                       if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpp1')
-                          templates.copy('tileHighlight', this.x - 1,this.y - 380)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
+                          
+                          for (let highlight of templates.list['tileHighlight']) {
                                   highlight.kill = true;
-                              }
                           }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
                       }
 
                        else if (localStorage.getItem('whichPlayerTurn') === '2') {
@@ -3737,7 +3737,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713820263881
+                lastmod: 1713820941412
                 uid: L2HfLRgdwCq3h8
                 behaviors:
                   - 9kQmCDF92f2LmF
@@ -3752,29 +3752,42 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpkn1')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpkn1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713820251941
+                lastmod: 1713820843818
                 uid: W5NGLtKdr8Tmkr
                 behaviors: []
               - type: template
@@ -3788,29 +3801,42 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpr1')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpr1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713820287987
+                lastmod: 1713820968563
                 uid: NfJqh1GcfLqdtB
                 behaviors: []
               - type: template
@@ -3824,29 +3850,42 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >-
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpq')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpq') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713820286023
+                lastmod: 1713820962181
                 uid: Q1Rn3GzGNTK6Lf
                 behaviors: []
               - type: template
@@ -3860,30 +3899,43 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >-
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpb1')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpb1') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713820242528
+                lastmod: 1713820817710
                 uid: c191gHKgH6NQg8
                 behaviors: []
               - type: template
@@ -3897,29 +3949,42 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpk')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpk') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713820248566
+                lastmod: 1713820822562
                 uid: Trp2t7jtmF7HW3
                 behaviors: []
               - type: template
@@ -3933,22 +3998,22 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpp2')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
@@ -3968,7 +4033,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713820267482
+                lastmod: 1713820856231
                 uid: WMMNFgBMhWMghz
                 behaviors: []
               - type: template
@@ -3982,22 +4047,22 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpp3')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
@@ -4017,7 +4082,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713820270121
+                lastmod: 1713820860987
                 uid: KKRnqJHBd8zNK6
                 behaviors: []
               - type: template
@@ -4031,22 +4096,22 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpp4')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
@@ -4066,7 +4131,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713820273039
+                lastmod: 1713820928809
                 uid: qDKbwHtRPPbrD2
                 behaviors: []
               - type: template
@@ -4080,30 +4145,31 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpp5')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
                   - eventKey: OnDraw
-                    code: |-
-                      if (localStorage.getItem('timeToMove') === '1') {
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpp5') {
                           let mvY = localStorage.getItem('moveToY')
                           let mvX = localStorage.getItem('moveToX')
                           this.y = Number(mvY)
@@ -4114,7 +4180,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713820276001
+                lastmod: 1713820948051
                 uid: P5R5qjCdnqn52N
                 behaviors: []
               - type: template
@@ -4128,30 +4194,31 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpp6')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
                   - eventKey: OnDraw
-                    code: |-
-                      if (localStorage.getItem('timeToMove') === '1') {
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpp6') {
                           let mvY = localStorage.getItem('moveToY')
                           let mvX = localStorage.getItem('moveToX')
                           this.y = Number(mvY)
@@ -4162,7 +4229,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713820278395
+                lastmod: 1713820934864
                 uid: nQwW5mF5TrPDJ9
                 behaviors: []
               - type: template
@@ -4176,30 +4243,31 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpp7')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
                   - eventKey: OnDraw
-                    code: |-
-                      if (localStorage.getItem('timeToMove') === '1') {
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpp7') {
                           let mvY = localStorage.getItem('moveToY')
                           let mvX = localStorage.getItem('moveToX')
                           this.y = Number(mvY)
@@ -4210,7 +4278,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713820280390
+                lastmod: 1713820939305
                 uid: HThbL6PrFPFm7J
                 behaviors: []
               - type: template
@@ -4224,22 +4292,22 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpp8')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
@@ -4259,7 +4327,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713820283089
+                lastmod: 1713820953458
                 uid: p6QDLHpfhMfG5c
                 behaviors: []
               - type: template
@@ -4273,29 +4341,42 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpb2')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpb2') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713820245716
+                lastmod: 1713820815572
                 uid: tfGwRLPjC5C9Kt
                 behaviors: []
               - type: template
@@ -4309,29 +4390,42 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpkn2')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpkn2') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713820254386
+                lastmod: 1713820845978
                 uid: cNmzDtw4T87KTR
                 behaviors: []
               - type: template
@@ -4345,29 +4439,42 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: >
-                      if (localStorage.getItem('whichPlayerTurn') === '1') {
-                          localStorage.setItem('pieceID', 'wpr2')
-                          templates.copy('tileHighlight', this.x - 1, this.y - 60)
+                    code: |
+                      if (localStorage.getItem('whichPlayerTurn') === '1') { 
+                          localStorage.setItem('pieceID', 'wpr1')
                           // this.y += Math.sign(1) * -64;
                           // console.log('p1 has taken its turn')
                           // localStorage.setItem('whichPlayerTurn','2')
                           // return;
-                           this.clearHighlight = () => {
-                              for (let highlight of templates.list['tileHighlight']) {
-                                  highlight.kill = true;
-                              }
-                          }
                           
-                      } else if (localStorage.getItem('whichPlayerTurn') ===
-                      '2') {
+                          for (let highlight of templates.list['tileHighlight']) {
+                                  highlight.kill = true;
+                          }
+
+                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                      }
+
+                       else if (localStorage.getItem('whichPlayerTurn') === '2') {
                           console.log('it aint your turn fool')
                           return;
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnDraw
+                    code: >-
+                      if (localStorage.getItem('timeToMove') === '1' &&
+                      localStorage.getItem('pieceID') === 'wpr2') {
+                          let mvY = localStorage.getItem('moveToY')
+                          let mvX = localStorage.getItem('moveToX')
+                          this.y = Number(mvY)
+                          this.x = Number(mvX)
+                          
+                          localStorage.setItem('timeToMove','0')
+                      }
+                    arguments: {}
+                    lib: core
                 extends: {}
-                lastmod: 1713820290081
+                lastmod: 1713820973905
                 uid: bbnKM9kqzTnQ1k
                 behaviors: []
 settings:
