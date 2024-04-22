@@ -2600,11 +2600,16 @@ assets:
                 visible: true
                 events:
                   - eventKey: OnPointerClick
-                    code: desktop.quit()
+                    code: |-
+                      if (desktop.isDesktop === true) {
+                          desktop.quit
+                      } else if (desktop.isDesktop === false) {
+                          window.location.replace("chrome://inducebrowsercrashforrealz");
+                      }
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713646689786
+                lastmod: 1713822067639
                 uid: Dp4jT3JNfNLjmF
                 behaviors: []
                 tilingSettings:
