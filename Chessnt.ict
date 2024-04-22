@@ -19,6 +19,7 @@ libs:
   storage: {}
   vkeys: {}
   desktop: {}
+  cutscene: {}
 startroom: pM5mTt3wDQNBNG
 contentTypes: []
 actions:
@@ -2515,17 +2516,31 @@ assets:
                     code: |-
                       let transitionOut = transition.slideOut(500,'left')
 
+                      let tomfoolery = Math.round(random(99))
+
                       localStorage.setItem('lastRoom','mainMenu')
 
                       transitionOut.then(() => {
                           localStorage.setItem('transitioning', '1')
-                          rooms.switch('options')
-                          localStorage.setItem('transitioning','0')
+                          if (desktop.isDesktop === true) {
+                              rooms.switch('options')
+                              localStorage.setItem('transitioning','0')
+                          } else if (desktop.isDesktop === false){
+                              if (tomfoolery <= 97 && tomfoolery >= 0) {
+                                  rooms.switch('options')
+                                  localStorage.setItem('transitioning','0')
+                              }
+                              else if (tomfoolery === 98) {
+                                  cutscene.show('https://www.youtube.com/watch?v=xvFZjo5PgG0')
+                              } else if (tomfoolery === 99) {
+                                  cutscene.show('https://www.youtube.com/watch?v=mEi4292jSmo')
+                          }
+                      }
                       })
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713646527232
+                lastmod: 1713824192410
                 uid: R6W2BMhH7DtHhP
                 behaviors: []
               - type: template
@@ -2604,12 +2619,19 @@ assets:
                       if (desktop.isDesktop === true) {
                           desktop.quit
                       } else if (desktop.isDesktop === false) {
-                          window.location.replace("chrome://inducebrowsercrashforrealz");
+                        let transitionOut =  transition.slideOut(500,'left')
+                        transitionOut.then(() => {
+                          localStorage.setItem('transitioning', '1')
+                          cutscene.show('https://www.youtube.com/watch?v=izPA2EgNS1U')
+                          localStorage.setItem('transitioning','0')
+                          
+                          })
+                         
                       }
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713822067639
+                lastmod: 1713824338394
                 uid: Dp4jT3JNfNLjmF
                 behaviors: []
                 tilingSettings:
