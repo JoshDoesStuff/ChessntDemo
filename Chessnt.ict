@@ -549,6 +549,76 @@ assets:
                 padding: 1
                 isBlank: false
                 source: 'C:\Users\702029128\Documents\GitHub\Chessnt\Assets\logo.png'
+              - lastmod: 1713386400354
+                type: texture
+                name: optionsNotFound
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 244
+                  - 239
+                marginx: 0
+                marginy: 0
+                imgWidth: 512
+                imgHeight: 512
+                width: 512
+                height: 512
+                offx: 0
+                offy: 0
+                origname: ihnkktb5LKDKn48.png
+                shape: rect
+                left: 256
+                right: 256
+                top: 182
+                bottom: 141
+                uid: hnkktb5LKDKn48
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\ChessntDemo\Assets\optionsNotFound.png
+                stripPoints:
+                  - x: 0
+                    'y': -256
+                  - x: 243
+                    'y': -79
+                  - x: 150
+                    'y': 207
+                  - x: -150
+                    'y': 207
+                  - x: -243
+                    'y': -79
+                closedStrip: true
+              - lastmod: 1713299696372
+                type: texture
+                name: Creators
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 162
+                  - 200
+                marginx: 0
+                marginy: 0
+                imgWidth: 325
+                imgHeight: 400
+                width: 325
+                height: 400
+                offx: 0
+                offy: 0
+                origname: iJh5bHCRC2LGqHR.png
+                shape: rect
+                left: 162
+                right: 163
+                top: 200
+                bottom: 200
+                uid: Jh5bHCRC2LGqHR
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\702029128\Documents\GitHub\ChessntDemo\Assets\Creators.png
           - type: folder
             uid: kbP5hb5H6wKKg7
             colorClass: act
@@ -556,35 +626,6 @@ assets:
             name: Difficulty Select
             lastmod: 1713301802584
             entries: []
-          - lastmod: 1713299696372
-            type: texture
-            name: Creators
-            untill: 0
-            grid:
-              - 1
-              - 1
-            axis:
-              - 162
-              - 200
-            marginx: 0
-            marginy: 0
-            imgWidth: 325
-            imgHeight: 400
-            width: 325
-            height: 400
-            offx: 0
-            offy: 0
-            origname: iJh5bHCRC2LGqHR.png
-            shape: rect
-            left: 162
-            right: 163
-            top: 200
-            bottom: 200
-            uid: Jh5bHCRC2LGqHR
-            padding: 1
-            isBlank: false
-            source: >-
-              C:\Users\702029128\Documents\GitHub\ChessntDemo\Assets\Creators.png
           - lastmod: 1712699554515
             type: texture
             name: background
@@ -641,47 +682,6 @@ assets:
             uid: P6gcthTW1KPpb8
             padding: 1
             isBlank: false
-          - lastmod: 1713386400354
-            type: texture
-            name: optionsNotFound
-            untill: 0
-            grid:
-              - 1
-              - 1
-            axis:
-              - 244
-              - 239
-            marginx: 0
-            marginy: 0
-            imgWidth: 512
-            imgHeight: 512
-            width: 512
-            height: 512
-            offx: 0
-            offy: 0
-            origname: ihnkktb5LKDKn48.png
-            shape: rect
-            left: 256
-            right: 256
-            top: 182
-            bottom: 141
-            uid: hnkktb5LKDKn48
-            padding: 1
-            isBlank: false
-            source: >-
-              C:\Users\702029128\Documents\GitHub\ChessntDemo\Assets\optionsNotFound.png
-            stripPoints:
-              - x: 0
-                'y': -256
-              - x: 243
-                'y': -79
-              - x: 150
-                'y': 207
-              - x: -150
-                'y': 207
-              - x: -243
-                'y': -79
-            closedStrip: true
           - lastmod: 1713646445922
             type: texture
             name: buttonIconBack
@@ -711,6 +711,136 @@ assets:
             isBlank: false
             source: >-
               C:\Users\Josh\Documents\GitHub\ChessntDemo\Assets\UI\buttonIconBack.png
+          - type: folder
+            uid: ddnm2nbThd1Gm6
+            colorClass: act
+            icon: help-circle
+            name: Win Screen
+            lastmod: 1713902766168
+            entries:
+              - lastmod: 1713902762077
+                type: texture
+                name: WhiteWins
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 128
+                  - 64
+                marginx: 0
+                marginy: 0
+                imgWidth: 256
+                imgHeight: 128
+                width: 256
+                height: 128
+                offx: 0
+                offy: 0
+                origname: inNtQLbDBfQCKdp.png
+                shape: rect
+                left: 128
+                right: 128
+                top: 64
+                bottom: 64
+                uid: nNtQLbDBfQCKdp
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\Josh\Documents\GitHub\ChessntOrigins\Assets\src\UI\Base\WhiteWins.png
+              - lastmod: 1713902727960
+                type: texture
+                name: BlackWins
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 128
+                  - 64
+                marginx: 0
+                marginy: 0
+                imgWidth: 256
+                imgHeight: 128
+                width: 256
+                height: 128
+                offx: 0
+                offy: 0
+                origname: i8mrDbH4PfR7cnB.png
+                shape: rect
+                left: 128
+                right: 128
+                top: 64
+                bottom: 64
+                uid: 8mrDbH4PfR7cnB
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\Josh\Documents\GitHub\ChessntOrigins\Assets\src\UI\Base\BlackWins.png
+          - type: folder
+            uid: j49f49fhJNPJ5w
+            colorClass: act
+            icon: help-circle
+            name: Turn Indicator
+            lastmod: 1713902915865
+            entries:
+              - lastmod: 1713902746028
+                type: texture
+                name: Player2Turn
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 128
+                  - 64
+                marginx: 0
+                marginy: 0
+                imgWidth: 256
+                imgHeight: 128
+                width: 256
+                height: 128
+                offx: 0
+                offy: 0
+                origname: ipJpJCFkDfQhf9w.png
+                shape: rect
+                left: 128
+                right: 128
+                top: 64
+                bottom: 64
+                uid: pJpJCFkDfQhf9w
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\Josh\Documents\GitHub\ChessntOrigins\Assets\src\UI\Base\Player2Turn.png
+              - lastmod: 1713902755051
+                type: texture
+                name: Player1Turn
+                untill: 0
+                grid:
+                  - 1
+                  - 1
+                axis:
+                  - 128
+                  - 64
+                marginx: 0
+                marginy: 0
+                imgWidth: 256
+                imgHeight: 128
+                width: 256
+                height: 128
+                offx: 0
+                offy: 0
+                origname: i5fnhPWrdTC7GD5.png
+                shape: rect
+                left: 128
+                right: 128
+                top: 64
+                bottom: 64
+                uid: 5fnhPWrdTC7GD5
+                padding: 1
+                isBlank: false
+                source: >-
+                  C:\Users\Josh\Documents\GitHub\ChessntOrigins\Assets\src\UI\Base\Player1Turn.png
       - type: folder
         uid: NwKJ346McgqMH6
         colorClass: act
@@ -1614,21 +1744,33 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 0
-            'y': 0
+          - x: 192
+            'y': 192
             opacity: 1
             tint: 16777215
             scale:
               x: 1
               'y': 1
             rotation: 0
-            uid: kzgrhWD99djDgj
+            uid: QcPdRCgwq97KnD
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 192
+            'y': 192
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: JtGzFC5tqt2HHF
             exts: {}
             customProperties: {}
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713849345534
+        lastmod: 1713902959385
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
@@ -3083,6 +3225,24 @@ assets:
                 lastmod: 1713299746400
                 uid: 2dcrwq4crRb7QD
                 behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: WhiteWins
+                depth: 0
+                texture: nNtQLbDBfQCKdp
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1713902875498
+                uid: HcgDQQKnPzLRLm
+                behaviors: []
           - type: folder
             uid: 6Gp71PcmW6dcqk
             colorClass: act
@@ -3492,6 +3652,87 @@ assets:
             lastmod: 1713646888783
             uid: kM7KtL3WdrCCqm
             behaviors: []
+          - type: folder
+            uid: Nhkwk7QwnbMQ9r
+            colorClass: act
+            icon: help-circle
+            name: Turn Indicator
+            lastmod: 1713902891737
+            entries:
+              - type: template
+                baseClass: AnimatedSprite
+                name: Player1Turn
+                depth: 0
+                texture: 5fnhPWrdTC7GD5
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: |-
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          this.visible = false;
+                      }
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          this.visible = true;
+                      }
+                    arguments: {}
+                extends: {}
+                lastmod: 1713903058084
+                uid: QcPdRCgwq97KnD
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: Player2Turn
+                depth: 0
+                texture: pJpJCFkDfQhf9w
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: |-
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          this.visible = false;
+                      }
+
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          this.visible = true;
+                      }
+                    arguments: {}
+                extends: {}
+                lastmod: 1713903046445
+                uid: JtGzFC5tqt2HHF
+                behaviors: []
+          - type: folder
+            uid: Jg3J7Pzf4KfJ6n
+            colorClass: act
+            icon: help-circle
+            name: Win Screen
+            lastmod: 1713902903537
+            entries:
+              - type: template
+                baseClass: AnimatedSprite
+                name: BlackWins
+                depth: 0
+                texture: 8mrDbH4PfR7cnB
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: this.move();
+                    arguments: {}
+                extends: {}
+                lastmod: 1713902883096
+                uid: JQWPJdTLbJknm1
+                behaviors: []
       - type: folder
         uid: JJFBqHkwNT8PgQ
         colorClass: act
