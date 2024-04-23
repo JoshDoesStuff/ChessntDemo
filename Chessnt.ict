@@ -3884,7 +3884,7 @@ assets:
                     lib: core
                   - eventKey: OnDestroy
                     code: |-
-                      localStorage.setItem('winnerWinnerChickenDinner','Black')
+                      localStorage.setItem('winnerWinnerChickenDinner','White')
 
 
                       let transitionOut = transition.slideOut(500,'left')
@@ -3899,7 +3899,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713845239304
+                lastmod: 1713845483249
                 uid: Q8rKpCqqHb8bBT
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4749,7 +4749,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713845083457
+                lastmod: 1713845469269
                 uid: Trp2t7jtmF7HW3
                 behaviors:
                   - JpzwtHfC8W7DLL
