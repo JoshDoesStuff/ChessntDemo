@@ -5594,9 +5594,9 @@ settings:
     title: Chessn't
     version:
       - 0
-      - 0
-      - 2
-    versionPostfix: '2'
+      - 1
+      - 1
+    versionPostfix: '0'
     appId: com.halfbakedsoftware.chessnt
   rendering:
     usePixiLegacy: true
