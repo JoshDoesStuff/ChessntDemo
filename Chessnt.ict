@@ -1177,8 +1177,8 @@ assets:
         onstep: ''
         ondraw: ''
         onleave: ''
-        gridX: 16
-        gridY: 16
+        gridX: 1
+        gridY: 1
         diagonalGrid: false
         disableGrid: false
         simulate: true
@@ -1218,7 +1218,7 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 672
+          - x: 640
             'y': 360
             opacity: 1
             tint: 16777215
@@ -1230,8 +1230,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 448
-            'y': 197
+          - x: 415
+            'y': 201
             opacity: 1
             tint: 16777215
             scale:
@@ -1242,8 +1242,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 448
-            'y': 517
+          - x: 415
+            'y': 521
             opacity: 1
             tint: 16777215
             scale:
@@ -1254,8 +1254,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 448
-            'y': 581
+          - x: 415
+            'y': 585
             opacity: 1
             tint: 16777215
             scale:
@@ -1266,8 +1266,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 512
-            'y': 581
+          - x: 479
+            'y': 585
             opacity: 1
             tint: 16777215
             scale:
@@ -1278,8 +1278,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 576
-            'y': 581
+          - x: 543
+            'y': 585
             opacity: 1
             tint: 16777215
             scale:
@@ -1290,8 +1290,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 704
-            'y': 581
+          - x: 671
+            'y': 585
             opacity: 1
             tint: 16777215
             scale:
@@ -1302,8 +1302,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 640
-            'y': 581
+          - x: 607
+            'y': 585
             opacity: 1
             tint: 16777215
             scale:
@@ -1314,8 +1314,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 448
-            'y': 133
+          - x: 415
+            'y': 137
             opacity: 1
             tint: 16777215
             scale:
@@ -1326,8 +1326,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 512
-            'y': 133
+          - x: 479
+            'y': 137
             opacity: 1
             tint: 16777215
             scale:
@@ -1338,8 +1338,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 576
-            'y': 133
+          - x: 543
+            'y': 137
             opacity: 1
             tint: 16777215
             scale:
@@ -1350,8 +1350,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 704
-            'y': 133
+          - x: 671
+            'y': 137
             opacity: 1
             tint: 16777215
             scale:
@@ -1362,8 +1362,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 640
-            'y': 133
+          - x: 607
+            'y': 137
             opacity: 1
             tint: 16777215
             scale:
@@ -1374,8 +1374,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 768
-            'y': 581
+          - x: 735
+            'y': 585
             opacity: 1
             tint: 16777215
             scale:
@@ -1386,8 +1386,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 832
-            'y': 581
+          - x: 799
+            'y': 585
             opacity: 1
             tint: 16777215
             scale:
@@ -1398,8 +1398,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 896
-            'y': 581
+          - x: 863
+            'y': 585
             opacity: 1
             tint: 16777215
             scale:
@@ -1410,8 +1410,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 512
-            'y': 517
+          - x: 479
+            'y': 521
             opacity: 1
             tint: 16777215
             scale:
@@ -1422,8 +1422,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 576
-            'y': 517
+          - x: 543
+            'y': 521
             opacity: 1
             tint: 16777215
             scale:
@@ -1434,8 +1434,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 640
-            'y': 517
+          - x: 607
+            'y': 521
             opacity: 1
             tint: 16777215
             scale:
@@ -1446,8 +1446,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 704
-            'y': 517
+          - x: 671
+            'y': 521
             opacity: 1
             tint: 16777215
             scale:
@@ -1458,8 +1458,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 768
-            'y': 517
+          - x: 735
+            'y': 521
             opacity: 1
             tint: 16777215
             scale:
@@ -1470,8 +1470,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 896
-            'y': 517
+          - x: 863
+            'y': 521
             opacity: 1
             tint: 16777215
             scale:
@@ -1482,8 +1482,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 832
-            'y': 517
+          - x: 799
+            'y': 521
             opacity: 1
             tint: 16777215
             scale:
@@ -1494,8 +1494,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 512
-            'y': 197
+          - x: 479
+            'y': 201
             opacity: 1
             tint: 16777215
             scale:
@@ -1506,8 +1506,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 576
-            'y': 197
+          - x: 543
+            'y': 201
             opacity: 1
             tint: 16777215
             scale:
@@ -1518,8 +1518,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 640
-            'y': 197
+          - x: 607
+            'y': 201
             opacity: 1
             tint: 16777215
             scale:
@@ -1530,8 +1530,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 704
-            'y': 197
+          - x: 671
+            'y': 201
             opacity: 1
             tint: 16777215
             scale:
@@ -1542,8 +1542,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 768
-            'y': 197
+          - x: 735
+            'y': 201
             opacity: 1
             tint: 16777215
             scale:
@@ -1554,8 +1554,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 832
-            'y': 197
+          - x: 799
+            'y': 201
             opacity: 1
             tint: 16777215
             scale:
@@ -1566,8 +1566,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 896
-            'y': 197
+          - x: 863
+            'y': 201
             opacity: 1
             tint: 16777215
             scale:
@@ -1578,8 +1578,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 768
-            'y': 133
+          - x: 735
+            'y': 137
             opacity: 1
             tint: 16777215
             scale:
@@ -1590,8 +1590,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 832
-            'y': 133
+          - x: 799
+            'y': 137
             opacity: 1
             tint: 16777215
             scale:
@@ -1602,8 +1602,8 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 896
-            'y': 133
+          - x: 863
+            'y': 137
             opacity: 1
             tint: 16777215
             scale:
@@ -1614,21 +1614,9 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 0
-            'y': 0
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 1
-              'y': 1
-            rotation: 0
-            uid: kzgrhWD99djDgj
-            exts: {}
-            customProperties: {}
-            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713820138347
+        lastmod: 1713832992675
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
@@ -3791,14 +3779,17 @@ assets:
                                   highlight.kill = true;
                           }
 
-                          templates.copy('tileHighlight', this.x + 63, this.y - 124) // up two over one
-                          templates.copy('tileHighlight', this.x + 127, this.y - 60) //right two up one
-                          templates.copy('tileHighlight', this.x + 127, this.y + 60) //right two down one
-                          templates.copy('tileHighlight', this.x - 62, this.y + 124) //down two left one
-                          templates.copy('tileHighlight', this.x + 62, this.y + 124) //down two left one
+                          templates.copy('tileHighlight', this.x + 64, this.y - 128) // up two right one
+                          templates.copy('tileHighlight', this.x + 128, this.y - 64) //right two up one
+                          templates.copy('tileHighlight', this.x + 128, this.y + 64) //right two down one
+                          templates.copy('tileHighlight', this.x + 64, this.y + 128) //down two right one
+                          templates.copy('tileHighlight', this.x - 64, this.y + 128) //down two left one
+                          templates.copy('tileHighlight', this.x - 128, this.y + 64) // left two down one
+                          templates.copy('tileHighlight', this.x - 128, this.y - 64) // left two up one
+                          templates.copy('tileHighlight', this.x - 64, this.y - 128) // up two left one
                           if (movesetType === 0) {
                               //pawn movement
-                              templates.copy('tileHighlight', this.x - 1, this.y - 64)
+                              // templates.copy('tileHighlight', this.x - 1, this.y - 64)
                           } else if (movesetType === 1) {
                               //knight movement
                              
@@ -3834,7 +3825,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713826221425
+                lastmod: 1713832570991
                 uid: L2HfLRgdwCq3h8
                 behaviors:
                   - 9kQmCDF92f2LmF
@@ -4107,7 +4098,7 @@ assets:
                                   highlight.kill = true;
                           }
 
-                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
+                           templates.copy('tileHighlight', this.x, this.y - 64)
                       }
 
                        else if (localStorage.getItem('whichPlayerTurn') === '2') {
@@ -4130,7 +4121,7 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713820856231
+                lastmod: 1713832131310
                 uid: WMMNFgBMhWMghz
                 behaviors: []
               - type: template
