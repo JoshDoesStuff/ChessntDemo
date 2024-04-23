@@ -20,7 +20,7 @@ libs:
   vkeys: {}
   desktop: {}
   cutscene: {}
-startroom: pM5mTt3wDQNBNG
+startroom: rmpQWHHn6F2fCp
 contentTypes: []
 actions:
   - name: Press
@@ -2546,44 +2546,68 @@ assets:
                       if (localStorage.getItem('whichPlayerTurn') === '1') {
                           if (movesetType === 3) {
                           //bishop movement
-                          templates.copy('tileHighlight', this.x - 64, this.y - 64)
-                          templates.copy('tileHighlight', this.x - 64, this.y + 64)
-                          templates.copy('tileHighlight', this.x + 64, this.y - 64)
-                          templates.copy('tileHighlight', this.x + 64, this.y + 64)
-                          templates.copy('tileHighlight', this.x - 128, this.y - 128)
-                          templates.copy('tileHighlight', this.x - 128, this.y + 128)
-                          templates.copy('tileHighlight', this.x + 128, this.y - 128)
-                          templates.copy('tileHighlight', this.x + 128, this.y + 128)
-                          templates.copy('tileHighlight', this.x - 192, this.y - 192)
-                          templates.copy('tileHighlight', this.x - 192, this.y + 192)
-                          templates.copy('tileHighlight', this.x + 192, this.y - 192)
-                          templates.copy('tileHighlight', this.x + 192, this.y + 192)
-                          templates.copy('tileHighlight', this.x - 256, this.y - 256)
-                          templates.copy('tileHighlight', this.x - 256, this.y + 256)
-                          templates.copy('tileHighlight', this.x + 256, this.y - 256)
-                          templates.copy('tileHighlight', this.x + 256, this.y + 256)
-                          templates.copy('tileHighlight', this.x - 320, this.y - 320)
-                          templates.copy('tileHighlight', this.x - 320, this.y + 320)
-                          templates.copy('tileHighlight', this.x + 320, this.y - 320)
-                          templates.copy('tileHighlight', this.x + 320, this.y + 320)
-                          templates.copy('tileHighlight', this.x - 384, this.y - 384)
-                          templates.copy('tileHighlight', this.x - 384, this.y + 384)
-                          templates.copy('tileHighlight', this.x + 384, this.y - 384)
-                          templates.copy('tileHighlight', this.x + 384, this.y + 384)
-                          templates.copy('tileHighlight', this.x - 448, this.y - 448)
-                          templates.copy('tileHighlight', this.x - 448, this.y + 448)
-                          templates.copy('tileHighlight', this.x + 448, this.y - 448)
-                          templates.copy('tileHighlight', this.x + 448, this.y + 448)
-                          templates.copy('tileHighlight', this.x - 512, this.y - 512)
-                          templates.copy('tileHighlight', this.x - 512, this.y + 512)
-                          templates.copy('tileHighlight', this.x + 512, this.y - 512)
-                          templates.copy('tileHighlight', this.x + 512, this.y + 512)
+                          for (let direction of [[1,1],[1,-1],[-1,-1],[-1,1]]) {
+                              let pos = [this.x, this.y];
+                              let hit = false;
+                              while (!hit) {
+                                  pos[0] += direction[0]*64;
+                                  pos[1] += direction[1]*64;
+                                  if (pos[0] < 415-16 || pos[0] > 863+16 || pos[1] < 137-16 || pos[1] > 585+16) { // out of bounds
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (place.occupied(this, pos[0], pos[1], 'White')) { // hit friendly piece
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (place.occupied(this, pos[0], pos[1], 'Black')) { // hit enemy piece
+                                      templates.copy('tileHighlight', pos[0], pos[1]);
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (!hit) {
+                                      templates.copy('tileHighlight', pos[0], pos[1]);
+                                  }
+                              }
+                          }
+                          // templates.copy('tileHighlight', this.x - 64, this.y - 64)
+                          // templates.copy('tileHighlight', this.x - 64, this.y + 64)
+                          // templates.copy('tileHighlight', this.x + 64, this.y - 64)
+                          // templates.copy('tileHighlight', this.x + 64, this.y + 64)
+                          // templates.copy('tileHighlight', this.x - 128, this.y - 128)
+                          // templates.copy('tileHighlight', this.x - 128, this.y + 128)
+                          // templates.copy('tileHighlight', this.x + 128, this.y - 128)
+                          // templates.copy('tileHighlight', this.x + 128, this.y + 128)
+                          // templates.copy('tileHighlight', this.x - 192, this.y - 192)
+                          // templates.copy('tileHighlight', this.x - 192, this.y + 192)
+                          // templates.copy('tileHighlight', this.x + 192, this.y - 192)
+                          // templates.copy('tileHighlight', this.x + 192, this.y + 192)
+                          // templates.copy('tileHighlight', this.x - 256, this.y - 256)
+                          // templates.copy('tileHighlight', this.x - 256, this.y + 256)
+                          // templates.copy('tileHighlight', this.x + 256, this.y - 256)
+                          // templates.copy('tileHighlight', this.x + 256, this.y + 256)
+                          // templates.copy('tileHighlight', this.x - 320, this.y - 320)
+                          // templates.copy('tileHighlight', this.x - 320, this.y + 320)
+                          // templates.copy('tileHighlight', this.x + 320, this.y - 320)
+                          // templates.copy('tileHighlight', this.x + 320, this.y + 320)
+                          // templates.copy('tileHighlight', this.x - 384, this.y - 384)
+                          // templates.copy('tileHighlight', this.x - 384, this.y + 384)
+                          // templates.copy('tileHighlight', this.x + 384, this.y - 384)
+                          // templates.copy('tileHighlight', this.x + 384, this.y + 384)
+                          // templates.copy('tileHighlight', this.x - 448, this.y - 448)
+                          // templates.copy('tileHighlight', this.x - 448, this.y + 448)
+                          // templates.copy('tileHighlight', this.x + 448, this.y - 448)
+                          // templates.copy('tileHighlight', this.x + 448, this.y + 448)
+                          // templates.copy('tileHighlight', this.x - 512, this.y - 512)
+                          // templates.copy('tileHighlight', this.x - 512, this.y + 512)
+                          // templates.copy('tileHighlight', this.x + 512, this.y - 512)
+                          // templates.copy('tileHighlight', this.x + 512, this.y + 512)
                       }
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713841879560
+                lastmod: 1713906388350
                 uid: JpzwtHfC8W7DLL
               - type: behavior
                 name: kingMoveWhite
@@ -2660,81 +2684,105 @@ assets:
 
                       if (localStorage.getItem('whichPlayerTurn') === '1') {
                           if (movesetType === 4) {
-                          templates.copy('tileHighlight', this.x - 64, this.y - 64)
-                          templates.copy('tileHighlight', this.x - 64, this.y + 64)
-                          templates.copy('tileHighlight', this.x + 64, this.y - 64)
-                          templates.copy('tileHighlight', this.x + 64, this.y + 64)
-                          templates.copy('tileHighlight', this.x - 128, this.y - 128)
-                          templates.copy('tileHighlight', this.x - 128, this.y + 128)
-                          templates.copy('tileHighlight', this.x + 128, this.y - 128)
-                          templates.copy('tileHighlight', this.x + 128, this.y + 128)
-                          templates.copy('tileHighlight', this.x - 192, this.y - 192)
-                          templates.copy('tileHighlight', this.x - 192, this.y + 192)
-                          templates.copy('tileHighlight', this.x + 192, this.y - 192)
-                          templates.copy('tileHighlight', this.x + 192, this.y + 192)
-                          templates.copy('tileHighlight', this.x - 256, this.y - 256)
-                          templates.copy('tileHighlight', this.x - 256, this.y + 256)
-                          templates.copy('tileHighlight', this.x + 256, this.y - 256)
-                          templates.copy('tileHighlight', this.x + 256, this.y + 256)
-                          templates.copy('tileHighlight', this.x - 320, this.y - 320)
-                          templates.copy('tileHighlight', this.x - 320, this.y + 320)
-                          templates.copy('tileHighlight', this.x + 320, this.y - 320)
-                          templates.copy('tileHighlight', this.x + 320, this.y + 320)
-                          templates.copy('tileHighlight', this.x - 384, this.y - 384)
-                          templates.copy('tileHighlight', this.x - 384, this.y + 384)
-                          templates.copy('tileHighlight', this.x + 384, this.y - 384)
-                          templates.copy('tileHighlight', this.x + 384, this.y + 384)
-                          templates.copy('tileHighlight', this.x - 448, this.y - 448)
-                          templates.copy('tileHighlight', this.x - 448, this.y + 448)
-                          templates.copy('tileHighlight', this.x + 448, this.y - 448)
-                          templates.copy('tileHighlight', this.x + 448, this.y + 448)
-                          templates.copy('tileHighlight', this.x - 512, this.y - 512)
-                          templates.copy('tileHighlight', this.x - 512, this.y + 512)
-                          templates.copy('tileHighlight', this.x + 512, this.y - 512)
-                          templates.copy('tileHighlight', this.x + 512, this.y + 512)
+                          for (let direction of [[1,1],[1,-1],[-1,-1],[-1,1],[1,0],[0,1],[-1,0],[0,-1]]) {
+                              let pos = [this.x, this.y];
+                              let hit = false;
+                              while (!hit) {
+                                  pos[0] += direction[0]*64;
+                                  pos[1] += direction[1]*64;
+                                  if (pos[0] < 415-16 || pos[0] > 863+16 || pos[1] < 137-16 || pos[1] > 585+16) { // out of bounds
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (place.occupied(this, pos[0], pos[1], 'White')) { // hit friendly piece
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (place.occupied(this, pos[0], pos[1], 'Black')) { // hit enemy piece
+                                      templates.copy('tileHighlight', pos[0], pos[1]);
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (!hit) {
+                                      templates.copy('tileHighlight', pos[0], pos[1]);
+                                  }
+                              }
+                          }
+                          // templates.copy('tileHighlight', this.x - 64, this.y - 64)
+                          // templates.copy('tileHighlight', this.x - 64, this.y + 64)
+                          // templates.copy('tileHighlight', this.x + 64, this.y - 64)
+                          // templates.copy('tileHighlight', this.x + 64, this.y + 64)
+                          // templates.copy('tileHighlight', this.x - 128, this.y - 128)
+                          // templates.copy('tileHighlight', this.x - 128, this.y + 128)
+                          // templates.copy('tileHighlight', this.x + 128, this.y - 128)
+                          // templates.copy('tileHighlight', this.x + 128, this.y + 128)
+                          // templates.copy('tileHighlight', this.x - 192, this.y - 192)
+                          // templates.copy('tileHighlight', this.x - 192, this.y + 192)
+                          // templates.copy('tileHighlight', this.x + 192, this.y - 192)
+                          // templates.copy('tileHighlight', this.x + 192, this.y + 192)
+                          // templates.copy('tileHighlight', this.x - 256, this.y - 256)
+                          // templates.copy('tileHighlight', this.x - 256, this.y + 256)
+                          // templates.copy('tileHighlight', this.x + 256, this.y - 256)
+                          // templates.copy('tileHighlight', this.x + 256, this.y + 256)
+                          // templates.copy('tileHighlight', this.x - 320, this.y - 320)
+                          // templates.copy('tileHighlight', this.x - 320, this.y + 320)
+                          // templates.copy('tileHighlight', this.x + 320, this.y - 320)
+                          // templates.copy('tileHighlight', this.x + 320, this.y + 320)
+                          // templates.copy('tileHighlight', this.x - 384, this.y - 384)
+                          // templates.copy('tileHighlight', this.x - 384, this.y + 384)
+                          // templates.copy('tileHighlight', this.x + 384, this.y - 384)
+                          // templates.copy('tileHighlight', this.x + 384, this.y + 384)
+                          // templates.copy('tileHighlight', this.x - 448, this.y - 448)
+                          // templates.copy('tileHighlight', this.x - 448, this.y + 448)
+                          // templates.copy('tileHighlight', this.x + 448, this.y - 448)
+                          // templates.copy('tileHighlight', this.x + 448, this.y + 448)
+                          // templates.copy('tileHighlight', this.x - 512, this.y - 512)
+                          // templates.copy('tileHighlight', this.x - 512, this.y + 512)
+                          // templates.copy('tileHighlight', this.x + 512, this.y - 512)
+                          // templates.copy('tileHighlight', this.x + 512, this.y + 512)
 
-                          templates.copy('tileHighlight', this.x - 64, this.y) // left
-                              templates.copy('tileHighlight', this.x + 64, this.y)// right
-                              templates.copy('tileHighlight', this.x, this.y - 64) // up
-                              templates.copy('tileHighlight', this.x, this.y + 64) // down
-                              templates.copy('tileHighlight', this.x - 128, this.y) // left x2
-                              templates.copy('tileHighlight', this.x + 128, this.y) // right x2
-                              templates.copy('tileHighlight', this.x, this.y - 128) // up x2
-                              templates.copy('tileHighlight', this.x, this.y + 128) // down x2
-                              templates.copy('tileHighlight', this.x - 192, this.y) // left x3
-                              templates.copy('tileHighlight', this.x + 192, this.y) // right x3
-                              templates.copy('tileHighlight', this.x, this.y - 192) // up x3
-                              templates.copy('tileHighlight', this.x, this.y + 192) // down x3
-                              templates.copy('tileHighlight', this.x - 256, this.y) // left x4
-                              templates.copy('tileHighlight', this.x + 256, this.y) // right x4
-                              templates.copy('tileHighlight', this.x, this.y - 256) // up x4
-                              templates.copy('tileHighlight', this.x, this.y + 256) // down x4
-                              templates.copy('tileHighlight', this.x - 320, this.y) // left x5
-                              templates.copy('tileHighlight', this.x + 320, this.y) // right x5
-                              templates.copy('tileHighlight', this.x, this.y - 320) // up x5
-                              templates.copy('tileHighlight', this.x, this.y + 320) // down x5
-                              templates.copy('tileHighlight', this.x - 384, this.y) // left x6
-                              templates.copy('tileHighlight', this.x + 384, this.y) // right x6
-                              templates.copy('tileHighlight', this.x, this.y - 384) // up x6
-                              templates.copy('tileHighlight', this.x, this.y + 384) // down x6
-                              templates.copy('tileHighlight', this.x - 448, this.y) // left x7
-                              templates.copy('tileHighlight', this.x + 448, this.y) // right x7
-                              templates.copy('tileHighlight', this.x, this.y - 448) // up x7
-                              templates.copy('tileHighlight', this.x, this.y + 448) // down x7
-                              templates.copy('tileHighlight', this.x - 448, this.y) // left x8
-                              templates.copy('tileHighlight', this.x + 448, this.y) // right x8
-                              templates.copy('tileHighlight', this.x, this.y - 448) // up x8
-                              templates.copy('tileHighlight', this.x, this.y + 448) // down x8
-                              templates.copy('tileHighlight', this.x - 512, this.y) // left x8
-                              templates.copy('tileHighlight', this.x + 512, this.y) // right x8
-                              templates.copy('tileHighlight', this.x, this.y - 512) // up x8
-                              templates.copy('tileHighlight', this.x, this.y + 512) // down x8
+                          // templates.copy('tileHighlight', this.x - 64, this.y) // left
+                          //     templates.copy('tileHighlight', this.x + 64, this.y)// right
+                          //     templates.copy('tileHighlight', this.x, this.y - 64) // up
+                          //     templates.copy('tileHighlight', this.x, this.y + 64) // down
+                          //     templates.copy('tileHighlight', this.x - 128, this.y) // left x2
+                          //     templates.copy('tileHighlight', this.x + 128, this.y) // right x2
+                          //     templates.copy('tileHighlight', this.x, this.y - 128) // up x2
+                          //     templates.copy('tileHighlight', this.x, this.y + 128) // down x2
+                          //     templates.copy('tileHighlight', this.x - 192, this.y) // left x3
+                          //     templates.copy('tileHighlight', this.x + 192, this.y) // right x3
+                          //     templates.copy('tileHighlight', this.x, this.y - 192) // up x3
+                          //     templates.copy('tileHighlight', this.x, this.y + 192) // down x3
+                          //     templates.copy('tileHighlight', this.x - 256, this.y) // left x4
+                          //     templates.copy('tileHighlight', this.x + 256, this.y) // right x4
+                          //     templates.copy('tileHighlight', this.x, this.y - 256) // up x4
+                          //     templates.copy('tileHighlight', this.x, this.y + 256) // down x4
+                          //     templates.copy('tileHighlight', this.x - 320, this.y) // left x5
+                          //     templates.copy('tileHighlight', this.x + 320, this.y) // right x5
+                          //     templates.copy('tileHighlight', this.x, this.y - 320) // up x5
+                          //     templates.copy('tileHighlight', this.x, this.y + 320) // down x5
+                          //     templates.copy('tileHighlight', this.x - 384, this.y) // left x6
+                          //     templates.copy('tileHighlight', this.x + 384, this.y) // right x6
+                          //     templates.copy('tileHighlight', this.x, this.y - 384) // up x6
+                          //     templates.copy('tileHighlight', this.x, this.y + 384) // down x6
+                          //     templates.copy('tileHighlight', this.x - 448, this.y) // left x7
+                          //     templates.copy('tileHighlight', this.x + 448, this.y) // right x7
+                          //     templates.copy('tileHighlight', this.x, this.y - 448) // up x7
+                          //     templates.copy('tileHighlight', this.x, this.y + 448) // down x7
+                          //     templates.copy('tileHighlight', this.x - 448, this.y) // left x8
+                          //     templates.copy('tileHighlight', this.x + 448, this.y) // right x8
+                          //     templates.copy('tileHighlight', this.x, this.y - 448) // up x8
+                          //     templates.copy('tileHighlight', this.x, this.y + 448) // down x8
+                          //     templates.copy('tileHighlight', this.x - 512, this.y) // left x8
+                          //     templates.copy('tileHighlight', this.x + 512, this.y) // right x8
+                          //     templates.copy('tileHighlight', this.x, this.y - 512) // up x8
+                          //     templates.copy('tileHighlight', this.x, this.y + 512) // down x8
                       }
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713842371458
+                lastmod: 1713906725866
                 uid: RhhdhCbR2dnB7M
               - type: behavior
                 name: rookMoveWhite
@@ -2747,48 +2795,72 @@ assets:
                       if (localStorage.getItem('whichPlayerTurn') === '1') {
                           if (movesetType === 2) {
                               //rook movement
-                              templates.copy('tileHighlight', this.x - 64, this.y) // left
-                              templates.copy('tileHighlight', this.x + 64, this.y)// right
-                              templates.copy('tileHighlight', this.x, this.y - 64) // up
-                              templates.copy('tileHighlight', this.x, this.y + 64) // down
-                              templates.copy('tileHighlight', this.x - 128, this.y) // left x2
-                              templates.copy('tileHighlight', this.x + 128, this.y) // right x2
-                              templates.copy('tileHighlight', this.x, this.y - 128) // up x2
-                              templates.copy('tileHighlight', this.x, this.y + 128) // down x2
-                              templates.copy('tileHighlight', this.x - 192, this.y) // left x3
-                              templates.copy('tileHighlight', this.x + 192, this.y) // right x3
-                              templates.copy('tileHighlight', this.x, this.y - 192) // up x3
-                              templates.copy('tileHighlight', this.x, this.y + 192) // down x3
-                              templates.copy('tileHighlight', this.x - 256, this.y) // left x4
-                              templates.copy('tileHighlight', this.x + 256, this.y) // right x4
-                              templates.copy('tileHighlight', this.x, this.y - 256) // up x4
-                              templates.copy('tileHighlight', this.x, this.y + 256) // down x4
-                              templates.copy('tileHighlight', this.x - 320, this.y) // left x5
-                              templates.copy('tileHighlight', this.x + 320, this.y) // right x5
-                              templates.copy('tileHighlight', this.x, this.y - 320) // up x5
-                              templates.copy('tileHighlight', this.x, this.y + 320) // down x5
-                              templates.copy('tileHighlight', this.x - 384, this.y) // left x6
-                              templates.copy('tileHighlight', this.x + 384, this.y) // right x6
-                              templates.copy('tileHighlight', this.x, this.y - 384) // up x6
-                              templates.copy('tileHighlight', this.x, this.y + 384) // down x6
-                              templates.copy('tileHighlight', this.x - 448, this.y) // left x7
-                              templates.copy('tileHighlight', this.x + 448, this.y) // right x7
-                              templates.copy('tileHighlight', this.x, this.y - 448) // up x7
-                              templates.copy('tileHighlight', this.x, this.y + 448) // down x7
-                              templates.copy('tileHighlight', this.x - 448, this.y) // left x8
-                              templates.copy('tileHighlight', this.x + 448, this.y) // right x8
-                              templates.copy('tileHighlight', this.x, this.y - 448) // up x8
-                              templates.copy('tileHighlight', this.x, this.y + 448) // down x8
-                              templates.copy('tileHighlight', this.x - 512, this.y) // left x8
-                              templates.copy('tileHighlight', this.x + 512, this.y) // right x8
-                              templates.copy('tileHighlight', this.x, this.y - 512) // up x8
-                              templates.copy('tileHighlight', this.x, this.y + 512) // down x8
+                              for (let direction of [[1,0],[0,1],[-1,0],[0,-1]]) {
+                                  let pos = [this.x, this.y];
+                                  let hit = false;
+                                  while (!hit) {
+                                      pos[0] += direction[0]*64;
+                                      pos[1] += direction[1]*64;
+                                      if (pos[0] < 415-16 || pos[0] > 863+16 || pos[1] < 137-16 || pos[1] > 585+16) { // out of bounds
+                                          hit = true;
+                                          break;
+                                      }
+                                      if (place.occupied(this, pos[0], pos[1], 'White')) { // hit friendly piece
+                                          hit = true;
+                                          break;
+                                      }
+                                      if (place.occupied(this, pos[0], pos[1], 'Black')) { // hit enemy piece
+                                          templates.copy('tileHighlight', pos[0], pos[1]);
+                                          hit = true;
+                                          break;
+                                      }
+                                      if (!hit) {
+                                          templates.copy('tileHighlight', pos[0], pos[1]);
+                                      }
+                                  }
+                              }
+                              // templates.copy('tileHighlight', this.x - 64, this.y) // left
+                              // templates.copy('tileHighlight', this.x + 64, this.y)// right
+                              // templates.copy('tileHighlight', this.x, this.y - 64) // up
+                              // templates.copy('tileHighlight', this.x, this.y + 64) // down
+                              // templates.copy('tileHighlight', this.x - 128, this.y) // left x2
+                              // templates.copy('tileHighlight', this.x + 128, this.y) // right x2
+                              // templates.copy('tileHighlight', this.x, this.y - 128) // up x2
+                              // templates.copy('tileHighlight', this.x, this.y + 128) // down x2
+                              // templates.copy('tileHighlight', this.x - 192, this.y) // left x3
+                              // templates.copy('tileHighlight', this.x + 192, this.y) // right x3
+                              // templates.copy('tileHighlight', this.x, this.y - 192) // up x3
+                              // templates.copy('tileHighlight', this.x, this.y + 192) // down x3
+                              // templates.copy('tileHighlight', this.x - 256, this.y) // left x4
+                              // templates.copy('tileHighlight', this.x + 256, this.y) // right x4
+                              // templates.copy('tileHighlight', this.x, this.y - 256) // up x4
+                              // templates.copy('tileHighlight', this.x, this.y + 256) // down x4
+                              // templates.copy('tileHighlight', this.x - 320, this.y) // left x5
+                              // templates.copy('tileHighlight', this.x + 320, this.y) // right x5
+                              // templates.copy('tileHighlight', this.x, this.y - 320) // up x5
+                              // templates.copy('tileHighlight', this.x, this.y + 320) // down x5
+                              // templates.copy('tileHighlight', this.x - 384, this.y) // left x6
+                              // templates.copy('tileHighlight', this.x + 384, this.y) // right x6
+                              // templates.copy('tileHighlight', this.x, this.y - 384) // up x6
+                              // templates.copy('tileHighlight', this.x, this.y + 384) // down x6
+                              // templates.copy('tileHighlight', this.x - 448, this.y) // left x7
+                              // templates.copy('tileHighlight', this.x + 448, this.y) // right x7
+                              // templates.copy('tileHighlight', this.x, this.y - 448) // up x7
+                              // templates.copy('tileHighlight', this.x, this.y + 448) // down x7
+                              // templates.copy('tileHighlight', this.x - 448, this.y) // left x8
+                              // templates.copy('tileHighlight', this.x + 448, this.y) // right x8
+                              // templates.copy('tileHighlight', this.x, this.y - 448) // up x8
+                              // templates.copy('tileHighlight', this.x, this.y + 448) // down x8
+                              // templates.copy('tileHighlight', this.x - 512, this.y) // left x8
+                              // templates.copy('tileHighlight', this.x + 512, this.y) // right x8
+                              // templates.copy('tileHighlight', this.x, this.y - 512) // up x8
+                              // templates.copy('tileHighlight', this.x, this.y + 512) // down x8
                           }
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713842425183
+                lastmod: 1713906696444
                 uid: dQ8HQ1DdftWz2W
           - type: folder
             uid: m18HQK5CP3RK4B
@@ -2808,44 +2880,68 @@ assets:
                       if (localStorage.getItem('whichPlayerTurn') === '2') {
                           if (movesetType === 3) {
                           //bishop movement
-                          templates.copy('tileHighlight', this.x - 64, this.y - 64)
-                          templates.copy('tileHighlight', this.x - 64, this.y + 64)
-                          templates.copy('tileHighlight', this.x + 64, this.y - 64)
-                          templates.copy('tileHighlight', this.x + 64, this.y + 64)
-                          templates.copy('tileHighlight', this.x - 128, this.y - 128)
-                          templates.copy('tileHighlight', this.x - 128, this.y + 128)
-                          templates.copy('tileHighlight', this.x + 128, this.y - 128)
-                          templates.copy('tileHighlight', this.x + 128, this.y + 128)
-                          templates.copy('tileHighlight', this.x - 192, this.y - 192)
-                          templates.copy('tileHighlight', this.x - 192, this.y + 192)
-                          templates.copy('tileHighlight', this.x + 192, this.y - 192)
-                          templates.copy('tileHighlight', this.x + 192, this.y + 192)
-                          templates.copy('tileHighlight', this.x - 256, this.y - 256)
-                          templates.copy('tileHighlight', this.x - 256, this.y + 256)
-                          templates.copy('tileHighlight', this.x + 256, this.y - 256)
-                          templates.copy('tileHighlight', this.x + 256, this.y + 256)
-                          templates.copy('tileHighlight', this.x - 320, this.y - 320)
-                          templates.copy('tileHighlight', this.x - 320, this.y + 320)
-                          templates.copy('tileHighlight', this.x + 320, this.y - 320)
-                          templates.copy('tileHighlight', this.x + 320, this.y + 320)
-                          templates.copy('tileHighlight', this.x - 384, this.y - 384)
-                          templates.copy('tileHighlight', this.x - 384, this.y + 384)
-                          templates.copy('tileHighlight', this.x + 384, this.y - 384)
-                          templates.copy('tileHighlight', this.x + 384, this.y + 384)
-                          templates.copy('tileHighlight', this.x - 448, this.y - 448)
-                          templates.copy('tileHighlight', this.x - 448, this.y + 448)
-                          templates.copy('tileHighlight', this.x + 448, this.y - 448)
-                          templates.copy('tileHighlight', this.x + 448, this.y + 448)
-                          templates.copy('tileHighlight', this.x - 512, this.y - 512)
-                          templates.copy('tileHighlight', this.x - 512, this.y + 512)
-                          templates.copy('tileHighlight', this.x + 512, this.y - 512)
-                          templates.copy('tileHighlight', this.x + 512, this.y + 512)
+                          for (let direction of [[1,1],[1,-1],[-1,-1],[-1,1]]) {
+                              let pos = [this.x, this.y];
+                              let hit = false;
+                              while (!hit) {
+                                  pos[0] += direction[0]*64;
+                                  pos[1] += direction[1]*64;
+                                  if (pos[0] < 415-16 || pos[0] > 863+16 || pos[1] < 137-16 || pos[1] > 585+16) { // out of bounds
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (place.occupied(this, pos[0], pos[1], 'Black')) { // hit friendly piece
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (place.occupied(this, pos[0], pos[1], 'White')) { // hit enemy piece
+                                      templates.copy('tileHighlight', pos[0], pos[1]);
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (!hit) {
+                                      templates.copy('tileHighlight', pos[0], pos[1]);
+                                  }
+                              }
+                          }
+                          // templates.copy('tileHighlight', this.x - 64, this.y - 64)
+                          // templates.copy('tileHighlight', this.x - 64, this.y + 64)
+                          // templates.copy('tileHighlight', this.x + 64, this.y - 64)
+                          // templates.copy('tileHighlight', this.x + 64, this.y + 64)
+                          // templates.copy('tileHighlight', this.x - 128, this.y - 128)
+                          // templates.copy('tileHighlight', this.x - 128, this.y + 128)
+                          // templates.copy('tileHighlight', this.x + 128, this.y - 128)
+                          // templates.copy('tileHighlight', this.x + 128, this.y + 128)
+                          // templates.copy('tileHighlight', this.x - 192, this.y - 192)
+                          // templates.copy('tileHighlight', this.x - 192, this.y + 192)
+                          // templates.copy('tileHighlight', this.x + 192, this.y - 192)
+                          // templates.copy('tileHighlight', this.x + 192, this.y + 192)
+                          // templates.copy('tileHighlight', this.x - 256, this.y - 256)
+                          // templates.copy('tileHighlight', this.x - 256, this.y + 256)
+                          // templates.copy('tileHighlight', this.x + 256, this.y - 256)
+                          // templates.copy('tileHighlight', this.x + 256, this.y + 256)
+                          // templates.copy('tileHighlight', this.x - 320, this.y - 320)
+                          // templates.copy('tileHighlight', this.x - 320, this.y + 320)
+                          // templates.copy('tileHighlight', this.x + 320, this.y - 320)
+                          // templates.copy('tileHighlight', this.x + 320, this.y + 320)
+                          // templates.copy('tileHighlight', this.x - 384, this.y - 384)
+                          // templates.copy('tileHighlight', this.x - 384, this.y + 384)
+                          // templates.copy('tileHighlight', this.x + 384, this.y - 384)
+                          // templates.copy('tileHighlight', this.x + 384, this.y + 384)
+                          // templates.copy('tileHighlight', this.x - 448, this.y - 448)
+                          // templates.copy('tileHighlight', this.x - 448, this.y + 448)
+                          // templates.copy('tileHighlight', this.x + 448, this.y - 448)
+                          // templates.copy('tileHighlight', this.x + 448, this.y + 448)
+                          // templates.copy('tileHighlight', this.x - 512, this.y - 512)
+                          // templates.copy('tileHighlight', this.x - 512, this.y + 512)
+                          // templates.copy('tileHighlight', this.x + 512, this.y - 512)
+                          // templates.copy('tileHighlight', this.x + 512, this.y + 512)
                       }
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713841921196
+                lastmod: 1713906405044
                 uid: zn6CnBrBLc1BFh
               - type: behavior
                 name: kingMoveBlack
@@ -2922,81 +3018,105 @@ assets:
 
                       if (localStorage.getItem('whichPlayerTurn') === '2') {
                           if (movesetType === 4) {
-                          templates.copy('tileHighlight', this.x - 64, this.y - 64)
-                          templates.copy('tileHighlight', this.x - 64, this.y + 64)
-                          templates.copy('tileHighlight', this.x + 64, this.y - 64)
-                          templates.copy('tileHighlight', this.x + 64, this.y + 64)
-                          templates.copy('tileHighlight', this.x - 128, this.y - 128)
-                          templates.copy('tileHighlight', this.x - 128, this.y + 128)
-                          templates.copy('tileHighlight', this.x + 128, this.y - 128)
-                          templates.copy('tileHighlight', this.x + 128, this.y + 128)
-                          templates.copy('tileHighlight', this.x - 192, this.y - 192)
-                          templates.copy('tileHighlight', this.x - 192, this.y + 192)
-                          templates.copy('tileHighlight', this.x + 192, this.y - 192)
-                          templates.copy('tileHighlight', this.x + 192, this.y + 192)
-                          templates.copy('tileHighlight', this.x - 256, this.y - 256)
-                          templates.copy('tileHighlight', this.x - 256, this.y + 256)
-                          templates.copy('tileHighlight', this.x + 256, this.y - 256)
-                          templates.copy('tileHighlight', this.x + 256, this.y + 256)
-                          templates.copy('tileHighlight', this.x - 320, this.y - 320)
-                          templates.copy('tileHighlight', this.x - 320, this.y + 320)
-                          templates.copy('tileHighlight', this.x + 320, this.y - 320)
-                          templates.copy('tileHighlight', this.x + 320, this.y + 320)
-                          templates.copy('tileHighlight', this.x - 384, this.y - 384)
-                          templates.copy('tileHighlight', this.x - 384, this.y + 384)
-                          templates.copy('tileHighlight', this.x + 384, this.y - 384)
-                          templates.copy('tileHighlight', this.x + 384, this.y + 384)
-                          templates.copy('tileHighlight', this.x - 448, this.y - 448)
-                          templates.copy('tileHighlight', this.x - 448, this.y + 448)
-                          templates.copy('tileHighlight', this.x + 448, this.y - 448)
-                          templates.copy('tileHighlight', this.x + 448, this.y + 448)
-                          templates.copy('tileHighlight', this.x - 512, this.y - 512)
-                          templates.copy('tileHighlight', this.x - 512, this.y + 512)
-                          templates.copy('tileHighlight', this.x + 512, this.y - 512)
-                          templates.copy('tileHighlight', this.x + 512, this.y + 512)
+                          for (let direction of [[1,1],[1,-1],[-1,-1],[-1,1],[1,0],[0,1],[-1,0],[0,-1]]) {
+                              let pos = [this.x, this.y];
+                              let hit = false;
+                              while (!hit) {
+                                  pos[0] += direction[0]*64;
+                                  pos[1] += direction[1]*64;
+                                  if (pos[0] < 415-16 || pos[0] > 863+16 || pos[1] < 137-16 || pos[1] > 585+16) { // out of bounds
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (place.occupied(this, pos[0], pos[1], 'Black')) { // hit friendly piece
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (place.occupied(this, pos[0], pos[1], 'White')) { // hit enemy piece
+                                      templates.copy('tileHighlight', pos[0], pos[1]);
+                                      hit = true;
+                                      break;
+                                  }
+                                  if (!hit) {
+                                      templates.copy('tileHighlight', pos[0], pos[1]);
+                                  }
+                              }
+                          }
+                          // templates.copy('tileHighlight', this.x - 64, this.y - 64)
+                          // templates.copy('tileHighlight', this.x - 64, this.y + 64)
+                          // templates.copy('tileHighlight', this.x + 64, this.y - 64)
+                          // templates.copy('tileHighlight', this.x + 64, this.y + 64)
+                          // templates.copy('tileHighlight', this.x - 128, this.y - 128)
+                          // templates.copy('tileHighlight', this.x - 128, this.y + 128)
+                          // templates.copy('tileHighlight', this.x + 128, this.y - 128)
+                          // templates.copy('tileHighlight', this.x + 128, this.y + 128)
+                          // templates.copy('tileHighlight', this.x - 192, this.y - 192)
+                          // templates.copy('tileHighlight', this.x - 192, this.y + 192)
+                          // templates.copy('tileHighlight', this.x + 192, this.y - 192)
+                          // templates.copy('tileHighlight', this.x + 192, this.y + 192)
+                          // templates.copy('tileHighlight', this.x - 256, this.y - 256)
+                          // templates.copy('tileHighlight', this.x - 256, this.y + 256)
+                          // templates.copy('tileHighlight', this.x + 256, this.y - 256)
+                          // templates.copy('tileHighlight', this.x + 256, this.y + 256)
+                          // templates.copy('tileHighlight', this.x - 320, this.y - 320)
+                          // templates.copy('tileHighlight', this.x - 320, this.y + 320)
+                          // templates.copy('tileHighlight', this.x + 320, this.y - 320)
+                          // templates.copy('tileHighlight', this.x + 320, this.y + 320)
+                          // templates.copy('tileHighlight', this.x - 384, this.y - 384)
+                          // templates.copy('tileHighlight', this.x - 384, this.y + 384)
+                          // templates.copy('tileHighlight', this.x + 384, this.y - 384)
+                          // templates.copy('tileHighlight', this.x + 384, this.y + 384)
+                          // templates.copy('tileHighlight', this.x - 448, this.y - 448)
+                          // templates.copy('tileHighlight', this.x - 448, this.y + 448)
+                          // templates.copy('tileHighlight', this.x + 448, this.y - 448)
+                          // templates.copy('tileHighlight', this.x + 448, this.y + 448)
+                          // templates.copy('tileHighlight', this.x - 512, this.y - 512)
+                          // templates.copy('tileHighlight', this.x - 512, this.y + 512)
+                          // templates.copy('tileHighlight', this.x + 512, this.y - 512)
+                          // templates.copy('tileHighlight', this.x + 512, this.y + 512)
 
-                          templates.copy('tileHighlight', this.x - 64, this.y) // left
-                              templates.copy('tileHighlight', this.x + 64, this.y)// right
-                              templates.copy('tileHighlight', this.x, this.y - 64) // up
-                              templates.copy('tileHighlight', this.x, this.y + 64) // down
-                              templates.copy('tileHighlight', this.x - 128, this.y) // left x2
-                              templates.copy('tileHighlight', this.x + 128, this.y) // right x2
-                              templates.copy('tileHighlight', this.x, this.y - 128) // up x2
-                              templates.copy('tileHighlight', this.x, this.y + 128) // down x2
-                              templates.copy('tileHighlight', this.x - 192, this.y) // left x3
-                              templates.copy('tileHighlight', this.x + 192, this.y) // right x3
-                              templates.copy('tileHighlight', this.x, this.y - 192) // up x3
-                              templates.copy('tileHighlight', this.x, this.y + 192) // down x3
-                              templates.copy('tileHighlight', this.x - 256, this.y) // left x4
-                              templates.copy('tileHighlight', this.x + 256, this.y) // right x4
-                              templates.copy('tileHighlight', this.x, this.y - 256) // up x4
-                              templates.copy('tileHighlight', this.x, this.y + 256) // down x4
-                              templates.copy('tileHighlight', this.x - 320, this.y) // left x5
-                              templates.copy('tileHighlight', this.x + 320, this.y) // right x5
-                              templates.copy('tileHighlight', this.x, this.y - 320) // up x5
-                              templates.copy('tileHighlight', this.x, this.y + 320) // down x5
-                              templates.copy('tileHighlight', this.x - 384, this.y) // left x6
-                              templates.copy('tileHighlight', this.x + 384, this.y) // right x6
-                              templates.copy('tileHighlight', this.x, this.y - 384) // up x6
-                              templates.copy('tileHighlight', this.x, this.y + 384) // down x6
-                              templates.copy('tileHighlight', this.x - 448, this.y) // left x7
-                              templates.copy('tileHighlight', this.x + 448, this.y) // right x7
-                              templates.copy('tileHighlight', this.x, this.y - 448) // up x7
-                              templates.copy('tileHighlight', this.x, this.y + 448) // down x7
-                              templates.copy('tileHighlight', this.x - 448, this.y) // left x8
-                              templates.copy('tileHighlight', this.x + 448, this.y) // right x8
-                              templates.copy('tileHighlight', this.x, this.y - 448) // up x8
-                              templates.copy('tileHighlight', this.x, this.y + 448) // down x8
-                              templates.copy('tileHighlight', this.x - 512, this.y) // left x8
-                              templates.copy('tileHighlight', this.x + 512, this.y) // right x8
-                              templates.copy('tileHighlight', this.x, this.y - 512) // up x8
-                              templates.copy('tileHighlight', this.x, this.y + 512) // down x8
+                          // templates.copy('tileHighlight', this.x - 64, this.y) // left
+                          //     templates.copy('tileHighlight', this.x + 64, this.y)// right
+                          //     templates.copy('tileHighlight', this.x, this.y - 64) // up
+                          //     templates.copy('tileHighlight', this.x, this.y + 64) // down
+                          //     templates.copy('tileHighlight', this.x - 128, this.y) // left x2
+                          //     templates.copy('tileHighlight', this.x + 128, this.y) // right x2
+                          //     templates.copy('tileHighlight', this.x, this.y - 128) // up x2
+                          //     templates.copy('tileHighlight', this.x, this.y + 128) // down x2
+                          //     templates.copy('tileHighlight', this.x - 192, this.y) // left x3
+                          //     templates.copy('tileHighlight', this.x + 192, this.y) // right x3
+                          //     templates.copy('tileHighlight', this.x, this.y - 192) // up x3
+                          //     templates.copy('tileHighlight', this.x, this.y + 192) // down x3
+                          //     templates.copy('tileHighlight', this.x - 256, this.y) // left x4
+                          //     templates.copy('tileHighlight', this.x + 256, this.y) // right x4
+                          //     templates.copy('tileHighlight', this.x, this.y - 256) // up x4
+                          //     templates.copy('tileHighlight', this.x, this.y + 256) // down x4
+                          //     templates.copy('tileHighlight', this.x - 320, this.y) // left x5
+                          //     templates.copy('tileHighlight', this.x + 320, this.y) // right x5
+                          //     templates.copy('tileHighlight', this.x, this.y - 320) // up x5
+                          //     templates.copy('tileHighlight', this.x, this.y + 320) // down x5
+                          //     templates.copy('tileHighlight', this.x - 384, this.y) // left x6
+                          //     templates.copy('tileHighlight', this.x + 384, this.y) // right x6
+                          //     templates.copy('tileHighlight', this.x, this.y - 384) // up x6
+                          //     templates.copy('tileHighlight', this.x, this.y + 384) // down x6
+                          //     templates.copy('tileHighlight', this.x - 448, this.y) // left x7
+                          //     templates.copy('tileHighlight', this.x + 448, this.y) // right x7
+                          //     templates.copy('tileHighlight', this.x, this.y - 448) // up x7
+                          //     templates.copy('tileHighlight', this.x, this.y + 448) // down x7
+                          //     templates.copy('tileHighlight', this.x - 448, this.y) // left x8
+                          //     templates.copy('tileHighlight', this.x + 448, this.y) // right x8
+                          //     templates.copy('tileHighlight', this.x, this.y - 448) // up x8
+                          //     templates.copy('tileHighlight', this.x, this.y + 448) // down x8
+                          //     templates.copy('tileHighlight', this.x - 512, this.y) // left x8
+                          //     templates.copy('tileHighlight', this.x + 512, this.y) // right x8
+                          //     templates.copy('tileHighlight', this.x, this.y - 512) // up x8
+                          //     templates.copy('tileHighlight', this.x, this.y + 512) // down x8
                       }
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713842384832
+                lastmod: 1713906654504
                 uid: fGRmt3c7QthKzm
               - type: behavior
                 name: rookMoveBlack
@@ -3009,48 +3129,72 @@ assets:
                       if (localStorage.getItem('whichPlayerTurn') === '2') {
                           if (movesetType === 2) {
                               //rook movement
-                              templates.copy('tileHighlight', this.x - 64, this.y) // left
-                              templates.copy('tileHighlight', this.x + 64, this.y)// right
-                              templates.copy('tileHighlight', this.x, this.y - 64) // up
-                              templates.copy('tileHighlight', this.x, this.y + 64) // down
-                              templates.copy('tileHighlight', this.x - 128, this.y) // left x2
-                              templates.copy('tileHighlight', this.x + 128, this.y) // right x2
-                              templates.copy('tileHighlight', this.x, this.y - 128) // up x2
-                              templates.copy('tileHighlight', this.x, this.y + 128) // down x2
-                              templates.copy('tileHighlight', this.x - 192, this.y) // left x3
-                              templates.copy('tileHighlight', this.x + 192, this.y) // right x3
-                              templates.copy('tileHighlight', this.x, this.y - 192) // up x3
-                              templates.copy('tileHighlight', this.x, this.y + 192) // down x3
-                              templates.copy('tileHighlight', this.x - 256, this.y) // left x4
-                              templates.copy('tileHighlight', this.x + 256, this.y) // right x4
-                              templates.copy('tileHighlight', this.x, this.y - 256) // up x4
-                              templates.copy('tileHighlight', this.x, this.y + 256) // down x4
-                              templates.copy('tileHighlight', this.x - 320, this.y) // left x5
-                              templates.copy('tileHighlight', this.x + 320, this.y) // right x5
-                              templates.copy('tileHighlight', this.x, this.y - 320) // up x5
-                              templates.copy('tileHighlight', this.x, this.y + 320) // down x5
-                              templates.copy('tileHighlight', this.x - 384, this.y) // left x6
-                              templates.copy('tileHighlight', this.x + 384, this.y) // right x6
-                              templates.copy('tileHighlight', this.x, this.y - 384) // up x6
-                              templates.copy('tileHighlight', this.x, this.y + 384) // down x6
-                              templates.copy('tileHighlight', this.x - 448, this.y) // left x7
-                              templates.copy('tileHighlight', this.x + 448, this.y) // right x7
-                              templates.copy('tileHighlight', this.x, this.y - 448) // up x7
-                              templates.copy('tileHighlight', this.x, this.y + 448) // down x7
-                              templates.copy('tileHighlight', this.x - 448, this.y) // left x8
-                              templates.copy('tileHighlight', this.x + 448, this.y) // right x8
-                              templates.copy('tileHighlight', this.x, this.y - 448) // up x8
-                              templates.copy('tileHighlight', this.x, this.y + 448) // down x8
-                              templates.copy('tileHighlight', this.x - 512, this.y) // left x8
-                              templates.copy('tileHighlight', this.x + 512, this.y) // right x8
-                              templates.copy('tileHighlight', this.x, this.y - 512) // up x8
-                              templates.copy('tileHighlight', this.x, this.y + 512) // down x8
+                              for (let direction of [[1,0],[0,1],[-1,0],[0,-1]]) {
+                                  let pos = [this.x, this.y];
+                                  let hit = false;
+                                  while (!hit) {
+                                      pos[0] += direction[0]*64;
+                                      pos[1] += direction[1]*64;
+                                      if (pos[0] < 415-16 || pos[0] > 863+16 || pos[1] < 137-16 || pos[1] > 585+16) { // out of bounds
+                                          hit = true;
+                                          break;
+                                      }
+                                      if (place.occupied(this, pos[0], pos[1], 'Black')) { // hit friendly piece
+                                          hit = true;
+                                          break;
+                                      }
+                                      if (place.occupied(this, pos[0], pos[1], 'White')) { // hit enemy piece
+                                          templates.copy('tileHighlight', pos[0], pos[1]);
+                                          hit = true;
+                                          break;
+                                      }
+                                      if (!hit) {
+                                          templates.copy('tileHighlight', pos[0], pos[1]);
+                                      }
+                                  }
+                              }
+                              // templates.copy('tileHighlight', this.x - 64, this.y) // left
+                              // templates.copy('tileHighlight', this.x + 64, this.y)// right
+                              // templates.copy('tileHighlight', this.x, this.y - 64) // up
+                              // templates.copy('tileHighlight', this.x, this.y + 64) // down
+                              // templates.copy('tileHighlight', this.x - 128, this.y) // left x2
+                              // templates.copy('tileHighlight', this.x + 128, this.y) // right x2
+                              // templates.copy('tileHighlight', this.x, this.y - 128) // up x2
+                              // templates.copy('tileHighlight', this.x, this.y + 128) // down x2
+                              // templates.copy('tileHighlight', this.x - 192, this.y) // left x3
+                              // templates.copy('tileHighlight', this.x + 192, this.y) // right x3
+                              // templates.copy('tileHighlight', this.x, this.y - 192) // up x3
+                              // templates.copy('tileHighlight', this.x, this.y + 192) // down x3
+                              // templates.copy('tileHighlight', this.x - 256, this.y) // left x4
+                              // templates.copy('tileHighlight', this.x + 256, this.y) // right x4
+                              // templates.copy('tileHighlight', this.x, this.y - 256) // up x4
+                              // templates.copy('tileHighlight', this.x, this.y + 256) // down x4
+                              // templates.copy('tileHighlight', this.x - 320, this.y) // left x5
+                              // templates.copy('tileHighlight', this.x + 320, this.y) // right x5
+                              // templates.copy('tileHighlight', this.x, this.y - 320) // up x5
+                              // templates.copy('tileHighlight', this.x, this.y + 320) // down x5
+                              // templates.copy('tileHighlight', this.x - 384, this.y) // left x6
+                              // templates.copy('tileHighlight', this.x + 384, this.y) // right x6
+                              // templates.copy('tileHighlight', this.x, this.y - 384) // up x6
+                              // templates.copy('tileHighlight', this.x, this.y + 384) // down x6
+                              // templates.copy('tileHighlight', this.x - 448, this.y) // left x7
+                              // templates.copy('tileHighlight', this.x + 448, this.y) // right x7
+                              // templates.copy('tileHighlight', this.x, this.y - 448) // up x7
+                              // templates.copy('tileHighlight', this.x, this.y + 448) // down x7
+                              // templates.copy('tileHighlight', this.x - 448, this.y) // left x8
+                              // templates.copy('tileHighlight', this.x + 448, this.y) // right x8
+                              // templates.copy('tileHighlight', this.x, this.y - 448) // up x8
+                              // templates.copy('tileHighlight', this.x, this.y + 448) // down x8
+                              // templates.copy('tileHighlight', this.x - 512, this.y) // left x8
+                              // templates.copy('tileHighlight', this.x + 512, this.y) // right x8
+                              // templates.copy('tileHighlight', this.x, this.y - 512) // up x8
+                              // templates.copy('tileHighlight', this.x, this.y + 512) // down x8
                           }
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713842462805
+                lastmod: 1713906698151
                 uid: NzG5gtKM76Ldg8
       - type: behavior
         name: MovementRNG
@@ -4320,8 +4464,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713843870993
+                extends:
+                  cgroup: Black
+                lastmod: 1713906769694
                 uid: fRPP2qMjHP5G36
                 behaviors:
                   - zn6CnBrBLc1BFh
