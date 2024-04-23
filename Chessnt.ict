@@ -5286,8 +5286,8 @@ settings:
     version:
       - 0
       - 0
-      - 1
-    versionPostfix: ''
+      - 2
+    versionPostfix: '1'
     appId: com.halfbakedsoftware.chessnt
   rendering:
     usePixiLegacy: true
