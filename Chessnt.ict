@@ -5596,7 +5596,7 @@ settings:
       - 0
       - 0
       - 2
-    versionPostfix: '1'
+    versionPostfix: '2'
     appId: com.halfbakedsoftware.chessnt
   rendering:
     usePixiLegacy: true
