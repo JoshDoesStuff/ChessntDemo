@@ -2251,26 +2251,6 @@ assets:
     name: Behaviors
     lastmod: 1712788023612
     entries:
-      - type: behavior
-        name: MovementRNG
-        behaviorType: template
-        events:
-          - eventKey: OnStep
-            code: |-
-              if (localStorage.getItem('moveTypeLocked') === '0') {
-                  let moveType = random(5)
-                  moveType = Math.round(moveType)
-                  localStorage.setItem('moveType',moveType.toString())
-                  localStorage.setItem('moveTypeLocked','1')
-                  console.log(moveType)
-              } else if (localStorage.getItem('moveTypeLocked') === '1'){
-                  console.log('Type Locked')
-              }
-            arguments: {}
-            lib: core
-        specification: []
-        lastmod: 1713840057664
-        uid: 9kQmCDF92f2LmF
       - type: folder
         uid: MT1wghDfHD56WN
         colorClass: act
@@ -2802,6 +2782,60 @@ assets:
                 specification: []
                 lastmod: 1713842462805
                 uid: NzG5gtKM76Ldg8
+      - type: behavior
+        name: MovementRNG
+        behaviorType: template
+        events:
+          - eventKey: OnStep
+            code: |-
+              if (localStorage.getItem('moveTypeLocked') === '0') {
+                  let moveType = random(5)
+                  moveType = Math.round(moveType)
+                  localStorage.setItem('moveType',moveType.toString())
+                  localStorage.setItem('moveTypeLocked','1')
+                  console.log(moveType)
+              } else if (localStorage.getItem('moveTypeLocked') === '1'){
+                  console.log('Type Locked')
+              }
+            arguments: {}
+            lib: core
+        specification: []
+        lastmod: 1713840057664
+        uid: 9kQmCDF92f2LmF
+      - type: behavior
+        name: takePieceWhite
+        behaviorType: template
+        events:
+          - eventKey: OnDraw
+            code: |-
+              if (localStorage.getItem('whichPlayerTurn') === '2') {
+                  if (place.occupied(this, this.x, this.y, 'Black')) {
+                  let opponentPiece = place.occupied(this, this.x, this.y, 'Black')
+                  opponentPiece.kill = true;
+              }
+              }
+            arguments: {}
+            lib: core
+        specification: []
+        lastmod: 1713844307591
+        uid: c4FmWf8Gt6C2wM
+      - type: behavior
+        name: takePieceBlack
+        behaviorType: template
+        events:
+          - eventKey: OnDraw
+            code: |-
+              if (localStorage.getItem('whichPlayerTurn') === '1') {
+                  if (place.occupied(this, this.x, this.y, 'White')) {
+                  let opponentPiece = place.occupied(this, this.x, this.y, 'White')
+                  opponentPiece.kill = true;
+              }
+              }
+            arguments: {}
+            lib: core
+        specification: []
+        lastmod: 1713844311040
+        uid: ktbt9Rt25pGJQp
   - lastmod: 1713673669586
     type: texture
     name: RNGTest
@@ -3471,7 +3505,7 @@ assets:
                 arguments: {}
                 lib: core
             extends: {}
-            lastmod: 1713841536236
+            lastmod: 1713843704315
             uid: LW4nkB3525ndtH
             behaviors: []
           - type: folder
@@ -3522,15 +3556,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841029253
+                lastmod: 1713843865240
                 uid: fc9KqcQ9Tpd6CT
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecequeen
@@ -3572,15 +3607,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841328426
+                lastmod: 1713843964926
                 uid: gfwnqcmj7qr3W7
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecepawn1
@@ -3622,15 +3658,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841085964
+                lastmod: 1713843889722
                 uid: h1KgqHTcKTcdCQ
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecerook1
@@ -3645,18 +3682,9 @@ assets:
                     code: |
                       if (localStorage.getItem('whichPlayerTurn') === '2') { 
                           localStorage.setItem('pieceID', 'bpr1')
-                          // this.y += Math.sign(1) * -64;
-                          // console.log('p1 has taken its turn')
-                          
-                          // return;
-                          
                           for (let highlight of templates.list['tileHighlight']) {
                                   highlight.kill = true;
                           }
-
-                           templates.copy('tileHighlight', this.x - 1, this.y + 60)
-
-                          // localStorage.setItem('whichPlayerTurn','2')
                       }
 
                        else if (localStorage.getItem('whichPlayerTurn') === '1') {
@@ -3678,10 +3706,18 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713821517675
+                extends:
+                  cgroup: Black
+                lastmod: 1713843970702
                 uid: 34tHBwnK2JD9G3
-                behaviors: []
+                behaviors:
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
+                  - 7tqF4N6kwND23N
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecebishop1
@@ -3723,15 +3759,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841742587
+                lastmod: 1713843762690
                 uid: fQqRH69jNHkNhJ
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
-                  - RhhdhCbR2dnB7M
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpieceking
@@ -3773,15 +3810,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841010273
+                lastmod: 1713843856218
                 uid: Q8rKpCqqHb8bBT
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecebishop2
@@ -3823,15 +3861,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713840950663
+                lastmod: 1713843769147
                 uid: tb8z2np1JRqQ5R
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpieceknight2
@@ -3872,15 +3911,16 @@ assets:
                     arguments: {}
                     lib: core
                 extends: {}
-                lastmod: 1713841046610
+                lastmod: 1713843870993
                 uid: fRPP2qMjHP5G36
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecerook2
@@ -3921,15 +3961,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841350355
+                lastmod: 1713843997683
                 uid: 6Qj7nM9B5TR8fb
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecepawn2
@@ -3971,15 +4012,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841147982
+                lastmod: 1713843887322
                 uid: pCCFf6346MQNFK
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecepawn3
@@ -4021,15 +4063,15 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841207234
+                lastmod: 1713843901895
                 uid: PzJbpppGJhDRDz
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecepawn4
@@ -4071,15 +4113,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841256882
+                lastmod: 1713843912050
                 uid: THfbFcmLGHtQJm
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecepawn5
@@ -4121,15 +4164,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841169255
+                lastmod: 1713843930190
                 uid: RR3wKKhfDFJJ22
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecepawn6
@@ -4171,15 +4215,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841291169
+                lastmod: 1713843937896
                 uid: hg7wzWngKTddf8
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecepawn7
@@ -4221,15 +4266,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841278400
+                lastmod: 1713843948802
                 uid: 8Ht67d31fwdf6B
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - NzG5gtKM76Ldg8
+                  - fGRmt3c7QthKzm
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecepawn8
@@ -4271,15 +4317,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713841309127
+                lastmod: 1713843955784
                 uid: h31fgMcbN5BGrT
                 behaviors:
-                  - JpzwtHfC8W7DLL
-                  - gf9cpcJ4MJMdmQ
-                  - jrGK6Dqmjb8NPd
+                  - zn6CnBrBLc1BFh
+                  - RgCwFJQzzJj2J5
+                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
-                  - RhhdhCbR2dnB7M
-                  - dQ8HQ1DdftWz2W
+                  - fGRmt3c7QthKzm
+                  - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
           - type: folder
             uid: 4RbGTWt65N5c6m
             colorClass: act
@@ -4331,7 +4378,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840748951
+                lastmod: 1713844083168
                 uid: L2HfLRgdwCq3h8
                 behaviors:
                   - RhhdhCbR2dnB7M
@@ -4340,6 +4387,7 @@ assets:
                   - JpzwtHfC8W7DLL
                   - dQ8HQ1DdftWz2W
                   - Md8CWCW3bH4TcW
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepieceknight1
@@ -4381,7 +4429,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840095990
+                lastmod: 1713844034223
                 uid: W5NGLtKdr8Tmkr
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4390,6 +4438,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecerook1
@@ -4431,7 +4480,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840522464
+                lastmod: 1713844184515
                 uid: NfJqh1GcfLqdtB
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4440,6 +4489,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecequeen
@@ -4481,7 +4531,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840651364
+                lastmod: 1713844175234
                 uid: Q1Rn3GzGNTK6Lf
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4490,6 +4540,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecebishop1
@@ -4503,7 +4554,7 @@ assets:
                   - eventKey: OnPointerClick
                     code: |
                       if (localStorage.getItem('whichPlayerTurn') === '1') { 
-                           
+                           localStorage.setItem('pieceID','wpb1')
                           for (let highlight of templates.list['tileHighlight']) {
                                   highlight.kill = true;
                           }
@@ -4530,7 +4581,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840087499
+                lastmod: 1713844007235
                 uid: c191gHKgH6NQg8
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4539,6 +4590,7 @@ assets:
                   - RhhdhCbR2dnB7M
                   - Md8CWCW3bH4TcW
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepieceking
@@ -4580,7 +4632,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840092060
+                lastmod: 1713844023196
                 uid: Trp2t7jtmF7HW3
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4589,6 +4641,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecepawn2
@@ -4602,7 +4655,7 @@ assets:
                   - eventKey: OnPointerClick
                     code: |
                       if (localStorage.getItem('whichPlayerTurn') === '1') { 
-                           
+                           localStorage.setItem('pieceID','wpp2')
                           for (let highlight of templates.list['tileHighlight']) {
                                   highlight.kill = true;
                           }
@@ -4629,7 +4682,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840118918
+                lastmod: 1713844104701
                 uid: WMMNFgBMhWMghz
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4638,6 +4691,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecepawn3
@@ -4679,7 +4733,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840153045
+                lastmod: 1713844124351
                 uid: KKRnqJHBd8zNK6
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4688,6 +4742,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecepawn4
@@ -4729,7 +4784,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840172785
+                lastmod: 1713844133916
                 uid: qDKbwHtRPPbrD2
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4738,6 +4793,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecepawn5
@@ -4779,7 +4835,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840258199
+                lastmod: 1713844141340
                 uid: P5R5qjCdnqn52N
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4788,6 +4844,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecepawn6
@@ -4829,7 +4886,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840286598
+                lastmod: 1713844160061
                 uid: nQwW5mF5TrPDJ9
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4838,6 +4895,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecepawn7
@@ -4879,7 +4937,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840418007
+                lastmod: 1713844156798
                 uid: HThbL6PrFPFm7J
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4888,6 +4946,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecepawn8
@@ -4929,7 +4988,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840480314
+                lastmod: 1713844168978
                 uid: p6QDLHpfhMfG5c
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4938,6 +4997,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecebishop2
@@ -4979,7 +5039,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840089774
+                lastmod: 1713844025591
                 uid: tfGwRLPjC5C9Kt
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -4988,6 +5048,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepieceknight2
@@ -5001,7 +5062,7 @@ assets:
                   - eventKey: OnPointerClick
                     code: |
                       if (localStorage.getItem('whichPlayerTurn') === '1') { 
-                           
+                           localStorage.setItem('pieceID','wpkn2')
                           for (let highlight of templates.list['tileHighlight']) {
                                   highlight.kill = true;
                           }
@@ -5028,7 +5089,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713840097755
+                lastmod: 1713844075297
                 uid: cNmzDtw4T87KTR
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5037,6 +5098,7 @@ assets:
                   - Md8CWCW3bH4TcW
                   - RhhdhCbR2dnB7M
                   - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
               - type: template
                 baseClass: AnimatedSprite
                 name: whitepiecerook2
@@ -5051,16 +5113,9 @@ assets:
                     code: |
                       if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpr1')
-                          // this.y += Math.sign(1) * -64;
-                          // console.log('p1 has taken its turn')
-                          // localStorage.setItem('whichPlayerTurn','2')
-                          // return;
-                          
-                          for (let highlight of templates.list['tileHighlight']) {
+                           for (let highlight of templates.list['tileHighlight']) {
                                   highlight.kill = true;
                           }
-
-                           templates.copy('tileHighlight', this.x - 1,this.y - 380)
                       }
 
                        else if (localStorage.getItem('whichPlayerTurn') === '2') {
@@ -5084,9 +5139,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713834905118
+                lastmod: 1713844197293
                 uid: bbnKM9kqzTnQ1k
-                behaviors: []
+                behaviors:
+                  - JpzwtHfC8W7DLL
+                  - gf9cpcJ4MJMdmQ
+                  - jrGK6Dqmjb8NPd
+                  - Md8CWCW3bH4TcW
+                  - RhhdhCbR2dnB7M
+                  - dQ8HQ1DdftWz2W
+                  - c4FmWf8Gt6C2wM
 settings:
   authoring:
     author: Josh G & Skye Y
