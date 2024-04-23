@@ -1614,9 +1614,21 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 0
+            'y': 0
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kzgrhWD99djDgj
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713845359991
+        lastmod: 1713849345534
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
@@ -3899,7 +3911,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713845483249
+                lastmod: 1713845938689
                 uid: Q8rKpCqqHb8bBT
                 behaviors:
                   - zn6CnBrBLc1BFh
