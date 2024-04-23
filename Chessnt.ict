@@ -1768,9 +1768,21 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 0
+            'y': 0
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kzgrhWD99djDgj
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713902959385
+        lastmod: 1713903159646
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
@@ -2403,8 +2415,8 @@ assets:
         onstep: ''
         ondraw: ''
         onleave: ''
-        gridX: 64
-        gridY: 64
+        gridX: 32
+        gridY: 32
         diagonalGrid: false
         disableGrid: false
         simulate: true
@@ -2432,6 +2444,42 @@ assets:
             scaleY: 1
             repeat: repeat
         copies:
+          - x: 640
+            'y': 360
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 2
+              'y': 2
+            rotation: 0
+            uid: JQWPJdTLbJknm1
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 640
+            'y': 360
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 2
+              'y': 2
+            rotation: 0
+            uid: HcgDQQKnPzLRLm
+            exts: {}
+            customProperties: {}
+            bindings: {}
+          - x: 64
+            'y': 64
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kM7KtL3WdrCCqm
+            exts: {}
+            customProperties: {}
+            bindings: {}
           - x: 0
             'y': 0
             opacity: 1
@@ -2446,7 +2494,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713845165189
+        lastmod: 1713903323951
         events:
           - eventKey: OnRoomStart
             code: >-
@@ -3225,24 +3273,6 @@ assets:
                 lastmod: 1713299746400
                 uid: 2dcrwq4crRb7QD
                 behaviors: []
-              - type: template
-                baseClass: AnimatedSprite
-                name: WhiteWins
-                depth: 0
-                texture: nNtQLbDBfQCKdp
-                playAnimationOnStart: false
-                loopAnimation: true
-                animationFPS: 30
-                visible: true
-                events:
-                  - eventKey: OnStep
-                    lib: core
-                    code: this.move();
-                    arguments: {}
-                extends: {}
-                lastmod: 1713902875498
-                uid: HcgDQQKnPzLRLm
-                behaviors: []
           - type: folder
             uid: 6Gp71PcmW6dcqk
             colorClass: act
@@ -3727,11 +3757,49 @@ assets:
                 events:
                   - eventKey: OnStep
                     lib: core
-                    code: this.move();
+                    code: >-
+                      if (localStorage.getItem('winnerWinnerChickenDinner') ===
+                      'Black') {
+                          this.visible = true;
+                      }
+
+
+                      if (localStorage.getItem('winnerWinnerChickenDinner') ===
+                      'White') {
+                          this.visible = false;
+                      }
                     arguments: {}
                 extends: {}
-                lastmod: 1713902883096
+                lastmod: 1713903372829
                 uid: JQWPJdTLbJknm1
+                behaviors: []
+              - type: template
+                baseClass: AnimatedSprite
+                name: WhiteWins
+                depth: 0
+                texture: nNtQLbDBfQCKdp
+                playAnimationOnStart: false
+                loopAnimation: true
+                animationFPS: 30
+                visible: true
+                events:
+                  - eventKey: OnStep
+                    lib: core
+                    code: >-
+                      if (localStorage.getItem('winnerWinnerChickenDinner') ===
+                      'White') {
+                          this.visible = true;
+                      }
+
+
+                      if (localStorage.getItem('winnerWinnerChickenDinner') ===
+                      'Black') {
+                          this.visible = false;
+                      }
+                    arguments: {}
+                extends: {}
+                lastmod: 1713903381864
+                uid: HcgDQQKnPzLRLm
                 behaviors: []
       - type: folder
         uid: JJFBqHkwNT8PgQ
