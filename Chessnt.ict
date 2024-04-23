@@ -1177,8 +1177,8 @@ assets:
         onstep: ''
         ondraw: ''
         onleave: ''
-        gridX: 1
-        gridY: 1
+        gridX: 64
+        gridY: 64
         diagonalGrid: false
         disableGrid: false
         simulate: true
@@ -1616,7 +1616,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713832992675
+        lastmod: 1713834756447
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
@@ -2896,9 +2896,9 @@ assets:
             events:
               - eventKey: OnPointerClick
                 code: |-
-                  var mvX = this.x + 1
+                  var mvX = this.x
 
-                  var mvY = (this.y - 4)
+                  var mvY = this.y
 
                   localStorage.setItem('moveToX', mvX.toString())
                   localStorage.setItem('moveToY', mvY.toString())
@@ -2912,18 +2912,28 @@ assets:
                       localStorage.setItem('whichPlayerTurn','1')
                   }
 
+                  for (let highlight of templates.list['tileHighlight']) {
+                          highlight.kill = true;
+                  }
+
                   this.kill = true
                 arguments: {}
                 lib: core
               - eventKey: OnCreate
-                code: |-
+                code: >-
                   if (place.occupied(this, this.x, this.y, 'White')) {
+                      this.kill = true;
+                  }
+
+
+                  if (this.x < 415-16 || this.x > 863+16 || this.y < 137-16 ||
+                  this.y > 585+16) {
                       this.kill = true;
                   }
                 arguments: {}
                 lib: core
             extends: {}
-            lastmod: 1713826116345
+            lastmod: 1713834733957
             uid: LW4nkB3525ndtH
             behaviors: []
           - type: folder
@@ -3770,7 +3780,6 @@ assets:
                     code: |
                       let movesetType = Number(localStorage.getItem('moveType'))
 
-
                       if (localStorage.getItem('whichPlayerTurn') === '1') { 
                           localStorage.setItem('pieceID', 'wpp1')
                        
@@ -3825,7 +3834,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713832570991
+                lastmod: 1713834762209
                 uid: L2HfLRgdwCq3h8
                 behaviors:
                   - 9kQmCDF92f2LmF
@@ -3874,8 +3883,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820843818
+                extends:
+                  cgroup: White
+                lastmod: 1713834851465
                 uid: W5NGLtKdr8Tmkr
                 behaviors: []
               - type: template
@@ -3923,8 +3933,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820968563
+                extends:
+                  cgroup: White
+                lastmod: 1713834901893
                 uid: NfJqh1GcfLqdtB
                 behaviors: []
               - type: template
@@ -3972,8 +3983,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820962181
+                extends:
+                  cgroup: White
+                lastmod: 1713834898272
                 uid: Q1Rn3GzGNTK6Lf
                 behaviors: []
               - type: template
@@ -4023,7 +4035,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713825870955
+                lastmod: 1713834853754
                 uid: c191gHKgH6NQg8
                 behaviors: []
               - type: template
@@ -4071,8 +4083,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820822562
+                extends:
+                  cgroup: White
+                lastmod: 1713834845041
                 uid: Trp2t7jtmF7HW3
                 behaviors: []
               - type: template
@@ -4120,8 +4133,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713832131310
+                extends:
+                  cgroup: White
+                lastmod: 1713834865075
                 uid: WMMNFgBMhWMghz
                 behaviors: []
               - type: template
@@ -4169,8 +4183,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820860987
+                extends:
+                  cgroup: White
+                lastmod: 1713834869044
                 uid: KKRnqJHBd8zNK6
                 behaviors: []
               - type: template
@@ -4218,8 +4233,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820928809
+                extends:
+                  cgroup: White
+                lastmod: 1713834873255
                 uid: qDKbwHtRPPbrD2
                 behaviors: []
               - type: template
@@ -4267,8 +4283,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820948051
+                extends:
+                  cgroup: White
+                lastmod: 1713834879655
                 uid: P5R5qjCdnqn52N
                 behaviors: []
               - type: template
@@ -4316,8 +4333,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820934864
+                extends:
+                  cgroup: White
+                lastmod: 1713834883105
                 uid: nQwW5mF5TrPDJ9
                 behaviors: []
               - type: template
@@ -4365,8 +4383,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820939305
+                extends:
+                  cgroup: White
+                lastmod: 1713834886864
                 uid: HThbL6PrFPFm7J
                 behaviors: []
               - type: template
@@ -4414,8 +4433,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820953458
+                extends:
+                  cgroup: White
+                lastmod: 1713834890915
                 uid: p6QDLHpfhMfG5c
                 behaviors: []
               - type: template
@@ -4463,8 +4483,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820815572
+                extends:
+                  cgroup: White
+                lastmod: 1713834847464
                 uid: tfGwRLPjC5C9Kt
                 behaviors: []
               - type: template
@@ -4512,8 +4533,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820845978
+                extends:
+                  cgroup: White
+                lastmod: 1713834849570
                 uid: cNmzDtw4T87KTR
                 behaviors: []
               - type: template
@@ -4561,8 +4583,9 @@ assets:
                       }
                     arguments: {}
                     lib: core
-                extends: {}
-                lastmod: 1713820973905
+                extends:
+                  cgroup: White
+                lastmod: 1713834905118
                 uid: bbnKM9kqzTnQ1k
                 behaviors: []
 settings:
