@@ -2863,12 +2863,12 @@ assets:
                   localStorage.setItem('moveTypeLocked','1')
                   console.log(moveType)
               } else if (localStorage.getItem('moveTypeLocked') === '1'){
-                  console.log('Type Locked')
+                  // console.log('Type Locked')
               }
             arguments: {}
             lib: core
         specification: []
-        lastmod: 1713840057664
+        lastmod: 1713845408548
         uid: 9kQmCDF92f2LmF
       - type: behavior
         name: takePieceWhite
