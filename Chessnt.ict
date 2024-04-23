@@ -1350,18 +1350,6 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
-          - x: 671
-            'y': 137
-            opacity: 1
-            tint: 16777215
-            scale:
-              x: 0.375
-              'y': 0.375
-            rotation: 0
-            uid: 34tHBwnK2JD9G3
-            exts: {}
-            customProperties: {}
-            bindings: {}
           - x: 607
             'y': 137
             opacity: 1
@@ -1614,9 +1602,21 @@ assets:
             exts: {}
             customProperties: {}
             bindings: {}
+          - x: 671
+            'y': 137
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 0.375
+              'y': 0.375
+            rotation: 0
+            uid: Q8rKpCqqHb8bBT
+            exts: {}
+            customProperties: {}
+            bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713834756447
+        lastmod: 1713845359991
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
@@ -2244,6 +2244,74 @@ assets:
         events: []
         behaviors: []
         uid: 8F8L352CR9Fmmn
+      - type: room
+        oncreate: ''
+        onstep: ''
+        ondraw: ''
+        onleave: ''
+        gridX: 64
+        gridY: 64
+        diagonalGrid: false
+        disableGrid: false
+        simulate: true
+        width: 1280
+        height: 720
+        restrictCamera: false
+        restrictMaxX: 1280
+        restrictMinX: 1280
+        restrictMaxY: 720
+        restrictMinY: 720
+        isUi: false
+        name: winScreen
+        backgroundColor: '#000000'
+        follow: -1
+        backgrounds:
+          - depth: 0
+            texture: Tqn3Ng77WK9tzM
+            shiftX: 0
+            shiftY: 0
+            parallaxX: 1
+            parallaxY: 1
+            movementX: 0
+            movementY: 0
+            scaleX: 1
+            scaleY: 1
+            repeat: repeat
+        copies:
+          - x: 0
+            'y': 0
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            rotation: 0
+            uid: kzgrhWD99djDgj
+            exts: {}
+            customProperties: {}
+            bindings: {}
+        tiles: []
+        extends: {}
+        lastmod: 1713845165189
+        events:
+          - eventKey: OnRoomStart
+            code: >-
+              console.log(localStorage.getItem('winnerWinnerChickenDinner') + "
+              Wins!")
+
+
+              localStorage.setItem('transitioning', '1')
+
+
+              if (localStorage.getItem('transitioning') === '1') {
+                  localStorage.setItem('isBlackNeeded','0')
+                  transition.slideIn(500, 'left')
+                  localStorage.setItem('transitioning', '0')
+              }
+            arguments: {}
+            lib: core
+        behaviors: []
+        uid: 4kB3pKG26cdKg1
   - type: folder
     uid: wt7zbhKgJFR14m
     colorClass: act
@@ -3579,7 +3647,7 @@ assets:
                   - eventKey: OnPointerClick
                     code: |
                       if (localStorage.getItem('whichPlayerTurn') === '2') { 
-                          localStorage.setItem('pieceID', 'bpk')
+                          localStorage.setItem('pieceID', 'bpq')
                           
                           for (let highlight of templates.list['tileHighlight']) {
                                   highlight.kill = true;
@@ -3607,7 +3675,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843964926
+                lastmod: 1713845233588
                 uid: gfwnqcmj7qr3W7
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -3658,7 +3726,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843889722
+                lastmod: 1713844923310
                 uid: h1KgqHTcKTcdCQ
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -3806,11 +3874,32 @@ assets:
                           
                           localStorage.setItem('timeToMove','0')
                       }
+
+
+                      if (this.kill === true) {
+                          localStorage.setItem('winnerWinnerChickenDinner','White')
+                          rooms.switch('winScreen')
+                      }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDestroy
+                    code: |-
+                      localStorage.setItem('winnerWinnerChickenDinner','Black')
+
+
+                      let transitionOut = transition.slideOut(500,'left')
+
+
+                      transitionOut.then(() => {
+                          localStorage.setItem('transitioning', '1')
+                          rooms.switch('winScreen');
+                          localStorage.setItem('transitioning','0')
+                      })
                     arguments: {}
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843856218
+                lastmod: 1713845239304
                 uid: Q8rKpCqqHb8bBT
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4012,7 +4101,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843887322
+                lastmod: 1713844919818
                 uid: pCCFf6346MQNFK
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4063,15 +4152,16 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843901895
+                lastmod: 1713844930075
                 uid: PzJbpppGJhDRDz
                 behaviors:
                   - zn6CnBrBLc1BFh
                   - RgCwFJQzzJj2J5
-                  - kJ4Gb1G34pgkt8
                   - 7tqF4N6kwND23N
+                  - kJ4Gb1G34pgkt8
                   - fGRmt3c7QthKzm
                   - NzG5gtKM76Ldg8
+                  - ktbt9Rt25pGJQp
               - type: template
                 baseClass: AnimatedSprite
                 name: blackpiecepawn4
@@ -4113,7 +4203,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843912050
+                lastmod: 1713844933611
                 uid: THfbFcmLGHtQJm
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4164,7 +4254,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843930190
+                lastmod: 1713844936798
                 uid: RR3wKKhfDFJJ22
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4215,7 +4305,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843937896
+                lastmod: 1713844940426
                 uid: hg7wzWngKTddf8
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4266,7 +4356,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843948802
+                lastmod: 1713844943679
                 uid: 8Ht67d31fwdf6B
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4628,11 +4718,38 @@ assets:
                           
                           localStorage.setItem('timeToMove','0')
                       }
+
+
+
+                      // if (this.kill === true) {
+
+                      //     console.log('I ded')
+
+                      //    
+                      localStorage.setItem('winnerWinnerChickenDinner','Black')
+
+                      //     rooms.switch('winScreen');
+
+                      // }
+                    arguments: {}
+                    lib: core
+                  - eventKey: OnDestroy
+                    code: |2-
+
+                       localStorage.setItem('winnerWinnerChickenDinner','Black')
+                        
+                      let transitionOut = transition.slideOut(500,'left')
+
+                      transitionOut.then(() => {
+                          localStorage.setItem('transitioning', '1')
+                          rooms.switch('winScreen')
+                          localStorage.setItem('transitioning','0')
+                      })
                     arguments: {}
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844023196
+                lastmod: 1713845083457
                 uid: Trp2t7jtmF7HW3
                 behaviors:
                   - JpzwtHfC8W7DLL
