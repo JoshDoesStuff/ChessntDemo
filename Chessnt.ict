@@ -3080,8 +3080,8 @@ assets:
                                   }
                               }
 
-                              if (place.occupied(this, this.x + 64, this.y + 64, 'White')) { // capture left
-                                  templates.copy('tileHighlight', this.x + 64, this.y + 64)
+                              if (place.occupied(this, this.x - 64, this.y + 64, 'White')) { // capture left
+                                  templates.copy('tileHighlight', this.x - 64, this.y + 64)
                               }
                               if (place.occupied(this, this.x + 64, this.y + 64, 'White')) { // capture right
                                   templates.copy('tileHighlight', this.x + 64, this.y + 64)
@@ -3091,7 +3091,7 @@ assets:
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713922888588
+                lastmod: 1713934523932
                 uid: 7tqF4N6kwND23N
               - type: behavior
                 name: queenMoveBlack
