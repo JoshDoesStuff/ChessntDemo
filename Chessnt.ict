@@ -3299,9 +3299,9 @@ assets:
           - eventKey: OnStep
             code: |-
               if (localStorage.getItem('moveTypeLocked') === '0') {
-                  let roll = Math.floor(random(20));
+                  let roll = Math.floor(random(15));
                   console.log(roll);
-                  if (roll == 0) { // 1 in 20
+                  if (roll == 0) { // 1 in 15
                       let moveType = random(5)
                       moveType = Math.round(moveType)
                       localStorage.setItem('moveType',moveType.toString())
@@ -3339,6 +3339,40 @@ assets:
                       for (let copy of templates.list['whitepiecequeen']) { copy.moveType = moveType }
                       for (let copy of templates.list['whitepiecerook1']) { copy.moveType = moveType }
                       for (let copy of templates.list['whitepiecerook2']) { copy.moveType = moveType }
+                  } else {
+                      for (let copy of templates.list['blackpiecebishop1']) { copy.moveType = 3 }
+                      for (let copy of templates.list['blackpiecebishop2']) { copy.moveType = 3 }
+                      for (let copy of templates.list['blackpieceking']) { copy.moveType = 5 }
+                      for (let copy of templates.list['blackpieceknight1']) { copy.moveType = 1 }
+                      for (let copy of templates.list['blackpieceknight2']) { copy.moveType = 1 }
+                      for (let copy of templates.list['blackpiecepawn1']) { copy.moveType = 0 }
+                      for (let copy of templates.list['blackpiecepawn2']) { copy.moveType = 0 }
+                      for (let copy of templates.list['blackpiecepawn3']) { copy.moveType = 0 }
+                      for (let copy of templates.list['blackpiecepawn4']) { copy.moveType = 0 }
+                      for (let copy of templates.list['blackpiecepawn5']) { copy.moveType = 0 }
+                      for (let copy of templates.list['blackpiecepawn6']) { copy.moveType = 0 }
+                      for (let copy of templates.list['blackpiecepawn7']) { copy.moveType = 0 }
+                      for (let copy of templates.list['blackpiecepawn8']) { copy.moveType = 0 }
+                      for (let copy of templates.list['blackpiecequeen']) { copy.moveType = 4 }
+                      for (let copy of templates.list['blackpiecerook1']) { copy.moveType = 2 }
+                      for (let copy of templates.list['blackpiecerook2']) { copy.moveType = 2 }
+                      
+                      for (let copy of templates.list['whitepiecebishop1']) { copy.moveType = 3 }
+                      for (let copy of templates.list['whitepiecebishop2']) { copy.moveType = 3 }
+                      for (let copy of templates.list['whitepieceking']) { copy.moveType = 5 }
+                      for (let copy of templates.list['whitepieceknight1']) { copy.moveType = 1 }
+                      for (let copy of templates.list['whitepieceknight2']) { copy.moveType = 1 }
+                      for (let copy of templates.list['whitepiecepawn1']) { copy.moveType = 0 }
+                      for (let copy of templates.list['whitepiecepawn2']) { copy.moveType = 0 }
+                      for (let copy of templates.list['whitepiecepawn3']) { copy.moveType = 0 }
+                      for (let copy of templates.list['whitepiecepawn4']) { copy.moveType = 0 }
+                      for (let copy of templates.list['whitepiecepawn5']) { copy.moveType = 0 }
+                      for (let copy of templates.list['whitepiecepawn6']) { copy.moveType = 0 }
+                      for (let copy of templates.list['whitepiecepawn7']) { copy.moveType = 0 }
+                      for (let copy of templates.list['whitepiecepawn8']) { copy.moveType = 0 }
+                      for (let copy of templates.list['whitepiecequeen']) { copy.moveType = 4 }
+                      for (let copy of templates.list['whitepiecerook1']) { copy.moveType = 2 }
+                      for (let copy of templates.list['whitepiecerook2']) { copy.moveType = 2 }
                   }
                   localStorage.setItem('moveTypeLocked','1')
                   // console.log(moveType)
@@ -3348,7 +3382,7 @@ assets:
             arguments: {}
             lib: core
         specification: []
-        lastmod: 1713923289523
+        lastmod: 1713991595879
         uid: 9kQmCDF92f2LmF
       - type: behavior
         name: takePieceWhite
