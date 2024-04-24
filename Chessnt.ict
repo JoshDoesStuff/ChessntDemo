@@ -1782,7 +1782,7 @@ assets:
             bindings: {}
         tiles: []
         extends: {}
-        lastmod: 1713903159646
+        lastmod: 1713912204973
         events:
           - eventKey: OnRoomStart
             code: 'localStorage.setItem(''whichPlayerTurn'',''1'')'
@@ -2540,8 +2540,12 @@ assets:
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
+
+                      let movesetType = this.moveType;
+
 
                       if (localStorage.getItem('whichPlayerTurn') === '1') {
                           if (movesetType === 3) {
@@ -2603,19 +2607,24 @@ assets:
                           // templates.copy('tileHighlight', this.x + 512, this.y - 512)
                           // templates.copy('tileHighlight', this.x + 512, this.y + 512)
                       }
+
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713906388350
+                lastmod: 1713922933398
                 uid: JpzwtHfC8W7DLL
               - type: behavior
                 name: kingMoveWhite
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
+
+                      let movesetType = this.moveType;
+
 
                       if (localStorage.getItem('whichPlayerTurn') === '1') {
                           if (movesetType === 5) {
@@ -2624,20 +2633,29 @@ assets:
                               templates.copy('tileHighlight', this.x + 64, this.y) // right
                               templates.copy('tileHighlight', this.x, this.y - 64) // up
                               templates.copy('tileHighlight', this.x, this.y + 64) // down
+                              // JOSH KINGS CAN MOVE IN ALL 8 DIRECTIONS
+                              templates.copy('tileHighlight', this.x - 64, this.y - 64) // left
+                              templates.copy('tileHighlight', this.x - 64, this.y + 64) // right
+                              templates.copy('tileHighlight', this.x + 64, this.y - 64) // up
+                              templates.copy('tileHighlight', this.x + 64, this.y + 64) // down
                           }
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713842112792
+                lastmod: 1713922933421
                 uid: gf9cpcJ4MJMdmQ
               - type: behavior
                 name: knightMoveWhite
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
+
+                      let movesetType = this.moveType;
+
 
                       if (localStorage.getItem('whichPlayerTurn') === '1') {
                           if (movesetType === 1) {
@@ -2651,36 +2669,59 @@ assets:
                           templates.copy('tileHighlight', this.x - 128, this.y - 64) // left two up one
                           templates.copy('tileHighlight', this.x - 64, this.y - 128) // up two left one
                       }
+
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713842178851
+                lastmod: 1713922933430
                 uid: jrGK6Dqmjb8NPd
               - type: behavior
                 name: pawnMoveWhite
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
+
+                      let movesetType = this.moveType;
+
 
                       if (movesetType === 0) {
                           //pawn movement
-                          templates.copy('tileHighlight', this.x , this.y - 64)
+                          if (!(place.occupied(this, this.x, this.y - 64, 'White') || place.occupied(this, this.x, this.y - 64, 'Black'))) {
+                              templates.copy('tileHighlight', this.x , this.y - 64)
+                              if (!this.madeMove) {
+                                  if (!(place.occupied(this, this.x, this.y - 128, 'White') || place.occupied(this, this.x, this.y - 128, 'Black'))) {
+                                      templates.copy('tileHighlight', this.x , this.y - 128)
+                                  }
+                              }
+                          }
+
+                          if (place.occupied(this, this.x - 64, this.y - 64, 'Black')) { // capture left
+                              templates.copy('tileHighlight', this.x - 64, this.y - 64)
+                          }
+                          if (place.occupied(this, this.x + 64, this.y - 64, 'Black')) { // capture right
+                              templates.copy('tileHighlight', this.x + 64, this.y - 64)
+                          }
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713839869061
+                lastmod: 1713922933433
                 uid: Md8CWCW3bH4TcW
               - type: behavior
                 name: queenMoveWhite
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
+
+                      let movesetType = this.moveType;
+
 
                       if (localStorage.getItem('whichPlayerTurn') === '1') {
                           if (movesetType === 4) {
@@ -2778,19 +2819,24 @@ assets:
                           //     templates.copy('tileHighlight', this.x, this.y - 512) // up x8
                           //     templates.copy('tileHighlight', this.x, this.y + 512) // down x8
                       }
+
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713906725866
+                lastmod: 1713922933436
                 uid: RhhdhCbR2dnB7M
               - type: behavior
                 name: rookMoveWhite
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
+
+                      let movesetType = this.moveType;
+
 
                       if (localStorage.getItem('whichPlayerTurn') === '1') {
                           if (movesetType === 2) {
@@ -2860,7 +2906,7 @@ assets:
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713906696444
+                lastmod: 1713922933439
                 uid: dQ8HQ1DdftWz2W
           - type: folder
             uid: m18HQK5CP3RK4B
@@ -2874,8 +2920,12 @@ assets:
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
+
+                      let movesetType = this.moveType;
+
 
                       if (localStorage.getItem('whichPlayerTurn') === '2') {
                           if (movesetType === 3) {
@@ -2937,19 +2987,24 @@ assets:
                           // templates.copy('tileHighlight', this.x + 512, this.y - 512)
                           // templates.copy('tileHighlight', this.x + 512, this.y + 512)
                       }
+
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713906405044
+                lastmod: 1713921776612
                 uid: zn6CnBrBLc1BFh
               - type: behavior
                 name: kingMoveBlack
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
+
+                      let movesetType = this.moveType;
+
 
                       if (localStorage.getItem('whichPlayerTurn') === '2') {
                           if (movesetType === 5) {
@@ -2958,20 +3013,29 @@ assets:
                               templates.copy('tileHighlight', this.x + 64, this.y) // right
                               templates.copy('tileHighlight', this.x, this.y - 64) // up
                               templates.copy('tileHighlight', this.x, this.y + 64) // down
+                              // JOSH KINGS CAN MOVE IN ALL 8 DIRECTIONS
+                              templates.copy('tileHighlight', this.x - 64, this.y - 64) // left
+                              templates.copy('tileHighlight', this.x - 64, this.y + 64) // right
+                              templates.copy('tileHighlight', this.x + 64, this.y - 64) // up
+                              templates.copy('tileHighlight', this.x + 64, this.y + 64) // down
                           }
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713842126958
+                lastmod: 1713922888556
                 uid: RgCwFJQzzJj2J5
               - type: behavior
                 name: knightMoveBlack
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
+
+                      let movesetType = this.moveType;
+
 
                       if (localStorage.getItem('whichPlayerTurn') === '2') {
                           if (movesetType === 1) {
@@ -2985,36 +3049,61 @@ assets:
                           templates.copy('tileHighlight', this.x - 128, this.y - 64) // left two up one
                           templates.copy('tileHighlight', this.x - 64, this.y - 128) // up two left one
                       }
+
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713842198215
+                lastmod: 1713922888583
                 uid: kJ4Gb1G34pgkt8
               - type: behavior
                 name: pawnMoveBlack
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
 
-                      if (movesetType === 0) {
-                          //pawn movement
-                          templates.copy('tileHighlight', this.x , this.y + 64)
+                      let movesetType = this.moveType;
+
+
+                      if (localStorage.getItem('whichPlayerTurn') === '2') {
+                          if (movesetType === 0) {
+                              //pawn movement
+                              if (!(place.occupied(this, this.x, this.y + 64, 'White') || place.occupied(this, this.x, this.y + 64, 'Black'))) {
+                                  templates.copy('tileHighlight', this.x , this.y + 64)
+                                  if (!this.madeMove) {
+                                      if (!(place.occupied(this, this.x, this.y + 128, 'White') || place.occupied(this, this.x, this.y + 128, 'Black'))) {
+                                          templates.copy('tileHighlight', this.x , this.y + 128)
+                                      }
+                                  }
+                              }
+
+                              if (place.occupied(this, this.x + 64, this.y + 64, 'White')) { // capture left
+                                  templates.copy('tileHighlight', this.x + 64, this.y + 64)
+                              }
+                              if (place.occupied(this, this.x + 64, this.y + 64, 'White')) { // capture right
+                                  templates.copy('tileHighlight', this.x + 64, this.y + 64)
+                              }
+                          }
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713840861269
+                lastmod: 1713922888588
                 uid: 7tqF4N6kwND23N
               - type: behavior
                 name: queenMoveBlack
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
+
+                      let movesetType = this.moveType;
+
 
                       if (localStorage.getItem('whichPlayerTurn') === '2') {
                           if (movesetType === 4) {
@@ -3112,19 +3201,24 @@ assets:
                           //     templates.copy('tileHighlight', this.x, this.y - 512) // up x8
                           //     templates.copy('tileHighlight', this.x, this.y + 512) // down x8
                       }
+
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713906654504
+                lastmod: 1713922888592
                 uid: fGRmt3c7QthKzm
               - type: behavior
                 name: rookMoveBlack
                 behaviorType: template
                 events:
                   - eventKey: OnPointerClick
-                    code: |-
-                      let movesetType = Number(localStorage.getItem('moveType'))
+                    code: >-
+                      // let movesetType =
+                      Number(localStorage.getItem('moveType'))
+
+                      let movesetType = this.moveType;
+
 
                       if (localStorage.getItem('whichPlayerTurn') === '2') {
                           if (movesetType === 2) {
@@ -3194,7 +3288,7 @@ assets:
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713906698151
+                lastmod: 1713922888595
                 uid: NzG5gtKM76Ldg8
       - type: behavior
         name: MovementRNG
@@ -3203,18 +3297,56 @@ assets:
           - eventKey: OnStep
             code: |-
               if (localStorage.getItem('moveTypeLocked') === '0') {
-                  let moveType = random(5)
-                  moveType = Math.round(moveType)
-                  localStorage.setItem('moveType',moveType.toString())
+                  let roll = Math.floor(random(20));
+                  console.log(roll);
+                  if (roll == 0) { // 1 in 20
+                      let moveType = random(5)
+                      moveType = Math.round(moveType)
+                      localStorage.setItem('moveType',moveType.toString())
+                      // i hate this
+                      for (let copy of templates.list['blackpiecebishop1']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecebishop2']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpieceking']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpieceknight1']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpieceknight2']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecepawn1']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecepawn2']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecepawn3']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecepawn4']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecepawn5']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecepawn6']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecepawn7']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecepawn8']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecequeen']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecerook1']) { copy.moveType = moveType }
+                      for (let copy of templates.list['blackpiecerook2']) { copy.moveType = moveType }
+                      
+                      for (let copy of templates.list['whitepiecebishop1']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecebishop2']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepieceking']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepieceknight1']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepieceknight2']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecepawn1']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecepawn2']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecepawn3']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecepawn4']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecepawn5']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecepawn6']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecepawn7']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecepawn8']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecequeen']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecerook1']) { copy.moveType = moveType }
+                      for (let copy of templates.list['whitepiecerook2']) { copy.moveType = moveType }
+                  }
                   localStorage.setItem('moveTypeLocked','1')
-                  console.log(moveType)
+                  // console.log(moveType)
               } else if (localStorage.getItem('moveTypeLocked') === '1'){
                   // console.log('Type Locked')
               }
             arguments: {}
             lib: core
         specification: []
-        lastmod: 1713845408548
+        lastmod: 1713923289523
         uid: 9kQmCDF92f2LmF
       - type: behavior
         name: takePieceWhite
@@ -3248,7 +3380,7 @@ assets:
             arguments: {}
             lib: core
         specification: []
-        lastmod: 1713844311040
+        lastmod: 1713911897955
         uid: ktbt9Rt25pGJQp
   - lastmod: 1713673669586
     type: texture
@@ -4038,7 +4170,7 @@ assets:
                 arguments: {}
                 lib: core
             extends: {}
-            lastmod: 1713843704315
+            lastmod: 1713920775418
             uid: LW4nkB3525ndtH
             behaviors: []
           - type: folder
@@ -4083,13 +4215,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 1;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843865240
+                lastmod: 1713921371318
                 uid: fc9KqcQ9Tpd6CT
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4134,20 +4271,25 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 4;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713845233588
+                lastmod: 1713921531147
                 uid: gfwnqcmj7qr3W7
                 behaviors:
                   - zn6CnBrBLc1BFh
-                  - RgCwFJQzzJj2J5
                   - kJ4Gb1G34pgkt8
-                  - 7tqF4N6kwND23N
+                  - RgCwFJQzzJj2J5
                   - fGRmt3c7QthKzm
+                  - 7tqF4N6kwND23N
                   - NzG5gtKM76Ldg8
                   - ktbt9Rt25pGJQp
               - type: template
@@ -4185,13 +4327,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713844923310
+                lastmod: 1713921473235
                 uid: h1KgqHTcKTcdCQ
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4235,13 +4382,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 2;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843970702
+                lastmod: 1713923719781
                 uid: 34tHBwnK2JD9G3
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4286,13 +4438,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 3;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843762690
+                lastmod: 1713921354947
                 uid: fQqRH69jNHkNhJ
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4337,6 +4494,7 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
 
@@ -4362,9 +4520,13 @@ assets:
                       })
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 5;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713845938689
+                lastmod: 1713921365081
                 uid: Q8rKpCqqHb8bBT
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4409,13 +4571,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 3;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843769147
+                lastmod: 1713921360853
                 uid: tb8z2np1JRqQ5R
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4460,13 +4627,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 1;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713906769694
+                lastmod: 1713921467503
                 uid: fRPP2qMjHP5G36
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4489,7 +4661,7 @@ assets:
                   - eventKey: OnPointerClick
                     code: |
                       if (localStorage.getItem('whichPlayerTurn') === '2') { 
-                           
+                          localStorage.setItem('pieceID', 'bpr2')
                           for (let highlight of templates.list['tileHighlight']) {
                                   highlight.kill = true;
                           }
@@ -4510,13 +4682,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 2;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843997683
+                lastmod: 1713923713994
                 uid: 6Qj7nM9B5TR8fb
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4561,13 +4738,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713844919818
+                lastmod: 1713921477753
                 uid: pCCFf6346MQNFK
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4612,13 +4794,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713844930075
+                lastmod: 1713921482109
                 uid: PzJbpppGJhDRDz
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4663,13 +4850,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713844933611
+                lastmod: 1713921491556
                 uid: THfbFcmLGHtQJm
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4714,13 +4906,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713844936798
+                lastmod: 1713921497656
                 uid: RR3wKKhfDFJJ22
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4765,13 +4962,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713844940426
+                lastmod: 1713921504990
                 uid: hg7wzWngKTddf8
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4816,13 +5018,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713844943679
+                lastmod: 1713921509019
                 uid: 8Ht67d31fwdf6B
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4867,13 +5074,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: Black
-                lastmod: 1713843955784
+                lastmod: 1713921513015
                 uid: h31fgMcbN5BGrT
                 behaviors:
                   - zn6CnBrBLc1BFh
@@ -4928,13 +5140,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844083168
+                lastmod: 1713922983669
                 uid: L2HfLRgdwCq3h8
                 behaviors:
                   - RhhdhCbR2dnB7M
@@ -4979,13 +5196,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 1;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844034223
+                lastmod: 1713922973121
                 uid: W5NGLtKdr8Tmkr
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5030,13 +5252,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 2;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844184515
+                lastmod: 1713923681212
                 uid: NfJqh1GcfLqdtB
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5081,13 +5308,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 4;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844175234
+                lastmod: 1713923126570
                 uid: Q1Rn3GzGNTK6Lf
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5131,13 +5363,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 3;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844007235
+                lastmod: 1713922961766
                 uid: c191gHKgH6NQg8
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5182,6 +5419,7 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
 
@@ -5213,9 +5451,13 @@ assets:
                       })
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 5;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713845469269
+                lastmod: 1713922967833
                 uid: Trp2t7jtmF7HW3
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5259,13 +5501,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844104701
+                lastmod: 1713922989703
                 uid: WMMNFgBMhWMghz
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5310,13 +5557,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844124351
+                lastmod: 1713922993950
                 uid: KKRnqJHBd8zNK6
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5361,13 +5613,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844133916
+                lastmod: 1713923028152
                 uid: qDKbwHtRPPbrD2
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5412,13 +5669,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844141340
+                lastmod: 1713923033117
                 uid: P5R5qjCdnqn52N
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5463,13 +5725,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844160061
+                lastmod: 1713923070455
                 uid: nQwW5mF5TrPDJ9
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5514,13 +5781,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844156798
+                lastmod: 1713923113201
                 uid: HThbL6PrFPFm7J
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5565,13 +5837,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 0;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844168978
+                lastmod: 1713923118165
                 uid: p6QDLHpfhMfG5c
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5616,13 +5893,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 3;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844025591
+                lastmod: 1713922961794
                 uid: tfGwRLPjC5C9Kt
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5666,13 +5948,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 1;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844075297
+                lastmod: 1713922978051
                 uid: cNmzDtw4T87KTR
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5695,7 +5982,7 @@ assets:
                   - eventKey: OnPointerClick
                     code: |
                       if (localStorage.getItem('whichPlayerTurn') === '1') { 
-                          localStorage.setItem('pieceID', 'wpr1')
+                          localStorage.setItem('pieceID', 'wpr2')
                            for (let highlight of templates.list['tileHighlight']) {
                                   highlight.kill = true;
                           }
@@ -5716,13 +6003,18 @@ assets:
                           this.y = Number(mvY)
                           this.x = Number(mvX)
                           
+                          this.madeMove = true;
                           localStorage.setItem('timeToMove','0')
                       }
                     arguments: {}
                     lib: core
+                  - eventKey: OnCreate
+                    code: this.moveType = this.moveType ?? 2;
+                    arguments: {}
+                    lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713844197293
+                lastmod: 1713923699170
                 uid: bbnKM9kqzTnQ1k
                 behaviors:
                   - JpzwtHfC8W7DLL
