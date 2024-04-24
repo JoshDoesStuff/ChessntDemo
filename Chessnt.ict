@@ -2688,28 +2688,30 @@ assets:
                       let movesetType = this.moveType;
 
 
-                      if (movesetType === 0) {
-                          //pawn movement
-                          if (!(place.occupied(this, this.x, this.y - 64, 'White') || place.occupied(this, this.x, this.y - 64, 'Black'))) {
-                              templates.copy('tileHighlight', this.x , this.y - 64)
-                              if (!this.madeMove) {
-                                  if (!(place.occupied(this, this.x, this.y - 128, 'White') || place.occupied(this, this.x, this.y - 128, 'Black'))) {
-                                      templates.copy('tileHighlight', this.x , this.y - 128)
+                      if (localStorage.getItem('whichPlayerTurn') === '1') {
+                          if (movesetType === 0) {
+                              //pawn movement
+                              if (!(place.occupied(this, this.x, this.y - 64, 'White') || place.occupied(this, this.x, this.y - 64, 'Black'))) {
+                                  templates.copy('tileHighlight', this.x , this.y - 64)
+                                  if (!this.madeMove) {
+                                      if (!(place.occupied(this, this.x, this.y - 128, 'White') || place.occupied(this, this.x, this.y - 128, 'Black'))) {
+                                          templates.copy('tileHighlight', this.x , this.y - 128)
+                                      }
                                   }
                               }
-                          }
 
-                          if (place.occupied(this, this.x - 64, this.y - 64, 'Black')) { // capture left
-                              templates.copy('tileHighlight', this.x - 64, this.y - 64)
-                          }
-                          if (place.occupied(this, this.x + 64, this.y - 64, 'Black')) { // capture right
-                              templates.copy('tileHighlight', this.x + 64, this.y - 64)
+                              if (place.occupied(this, this.x - 64, this.y - 64, 'Black')) { // capture left
+                                  templates.copy('tileHighlight', this.x - 64, this.y - 64)
+                              }
+                              if (place.occupied(this, this.x + 64, this.y - 64, 'Black')) { // capture right
+                                  templates.copy('tileHighlight', this.x + 64, this.y - 64)
+                              }
                           }
                       }
                     arguments: {}
                     lib: core
                 specification: []
-                lastmod: 1713922933433
+                lastmod: 1713938799020
                 uid: Md8CWCW3bH4TcW
               - type: behavior
                 name: queenMoveWhite
@@ -5151,7 +5153,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713922983669
+                lastmod: 1713938700037
                 uid: L2HfLRgdwCq3h8
                 behaviors:
                   - RhhdhCbR2dnB7M
@@ -5512,7 +5514,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713922989703
+                lastmod: 1713938702547
                 uid: WMMNFgBMhWMghz
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5568,7 +5570,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713922993950
+                lastmod: 1713938704715
                 uid: KKRnqJHBd8zNK6
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5624,7 +5626,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713923028152
+                lastmod: 1713938707945
                 uid: qDKbwHtRPPbrD2
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5680,7 +5682,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713923033117
+                lastmod: 1713938710620
                 uid: P5R5qjCdnqn52N
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5736,7 +5738,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713923070455
+                lastmod: 1713938713052
                 uid: nQwW5mF5TrPDJ9
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5792,7 +5794,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713923113201
+                lastmod: 1713938715286
                 uid: HThbL6PrFPFm7J
                 behaviors:
                   - JpzwtHfC8W7DLL
@@ -5848,7 +5850,7 @@ assets:
                     lib: core
                 extends:
                   cgroup: White
-                lastmod: 1713923118165
+                lastmod: 1713938717310
                 uid: p6QDLHpfhMfG5c
                 behaviors:
                   - JpzwtHfC8W7DLL
